@@ -4,13 +4,23 @@
     "date": "2026-11-20",
     "topic": "Space & Tech",
     "level": "news",
-    "title": "SpaceX catches Starship from orbit - but only half the plan worked"
+    "title": "SpaceX catches Starship from orbit - but only half the plan worked",
+    "teaser": "火箭第一次從太空回來被塔「夾住」，但只成功一半"
+  },
+  {
+    "id": "2026-11-20-why-starship-catch-matters",
+    "date": "2026-11-20",
+    "topic": "Space & Tech",
+    "level": "feature",
+    "title": "Why catching a rocket matters - and what it does not prove",
+    "teaser": "接住火箭到底有什麼了不起？從機票價格看懂太空的成本"
   },
   {
     "id": "2026-11-19-autodna",
     "date": "2026-11-19",
     "topic": "Science & Tech",
     "level": "news",
-    "title": "AI runs its own biology lab - and stores a sentence in DNA"
+    "title": "AI runs its own biology lab - and stores a sentence in DNA",
+    "teaser": "AI 自己跑生物實驗室，還把一句話存進 DNA 再讀出來"
   }
 ]

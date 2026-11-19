@@ -1,0 +1,158 @@
+{
+  "id": "2026-11-20-why-starship-catch-matters",
+  "date": "2026-11-20",
+  "topic": "Space & Tech",
+  "level": "feature",
+  "title": "Why catching a rocket matters - and what it does not prove",
+  "dek": "SpaceX's tower caught a Starship returning from orbit. To see why that is a big deal, start with an aeroplane ticket.",
+  "sources": [
+    { "name": "SpaceQ: Starship Flight 15", "url": "https://spaceq.ca/?p=53437" },
+    { "name": "Nature World News: Half the double catch worked", "url": "https://www.natureworldnews.com/articles/73881/20261117/half-double-catch-worked-starship-flight-15-brings-ship-home-orbit-first-time.htm" },
+    { "name": "Metavert: Reusable launch vehicles (cost per kilogram)", "url": "https://metavert.io/reusable-launch-vehicles" },
+    { "name": "NewSpace Economy: Falcon 9 and Starship cost claims", "url": "https://newspaceeconomy.ca/?p=198590" },
+    { "name": "Basenor: Starship HLS and the road to the Moon", "url": "https://www.basenor.com/blogs/news/spacex-starship-hls-what-the-road-to-the-moon-looks-like-now" }
+  ],
+  "predict": {
+    "prompt": "Before you read: which of these do you think are TRUE? Tick all you believe.",
+    "statements": [
+      { "text": "Falcon 9 already reuses the whole rocket.", "truth": false, "why": "Only its first stage is reused; the upper stage is thrown away every time." },
+      { "text": "Reusing rockets is meant to make launches cheaper.", "truth": true, "why": "Like aeroplanes, hardware that flies again does not have to be rebuilt each time." },
+      { "text": "Customers can already buy Starship launches at $10 a kilogram.", "truth": false, "why": "$10-$50 is a target, not an established price." },
+      { "text": "Starship matters for NASA's plans to go back to the Moon.", "truth": true, "why": "NASA plans to use a version of Starship as its Moon lander." }
+    ]
+  },
+  "article": [
+    "When SpaceX's giant tower arms closed around a returning Starship on 14 November, the company celebrated a first. But what does the milestone actually mean - and what does it not mean?",
+    "To understand why a catch matters, think about air travel. Imagine if every passenger jet were scrapped after a single flight: tickets would be unaffordable. For most of the space age, rockets worked exactly like that, and each launch threw away hardware worth tens of millions of dollars.",
+    "SpaceX began to change this about a decade ago by landing and reusing the first stage of its Falcon 9 rocket. Analysts estimate this helped bring the cost of putting a kilogram into orbit down to roughly $2,700, compared with $10,000 or more in the era of throwaway rockets. Yet Falcon 9's upper stage is still discarded on every flight.",
+    "Starship is designed to go further: both of its stages are meant to return and fly again quickly. If that works, supporters believe launch costs could fall to somewhere between $10 and $50 a kilogram. Catching the upper stage, which faces the fiercest heat as it plunges back through the atmosphere, is an essential step towards that goal.",
+    "Cheaper, more frequent launches would ripple outwards. Starship can carry far more of SpaceX's newest Starlink internet satellites, each of which handles about ten times the traffic of the previous model. Elon Musk has said SpaceX will retire Falcon 9 once Starship flies reliably every week.",
+    "The milestone also matters for the Moon. NASA plans to use a version of Starship to land astronauts there, but the lander must be refuelled in orbit, by some estimates with around ten tanker flights. That plan only makes sense if launches become routine and affordable.",
+    "Nevertheless, caution is warranted. The $10-to-$50 figure is a target, not an established price, and some analysts point out that Musk's numbers describe SpaceX's own costs rather than what customers will pay. On the same flight, the booster was lost, and no Ship has yet been inspected, refuelled and relaunched quickly - the real test of reuse.",
+    "In short, the catch shows that the hardest piece of the puzzle can come home intact. Whether it can turn into cheap, airline-style spaceflight is a question the next few years will answer."
+  ],
+  "glossary": [
+    { "word": "milestone", "zh": "里程碑", "def": "an important event that marks progress" },
+    { "word": "scrapped", "zh": "報廢", "def": "thrown away because it is no longer wanted" },
+    { "word": "unaffordable", "zh": "負擔不起的", "def": "too expensive for people to pay for" },
+    { "word": "Analysts", "zh": "分析師", "def": "experts who study information and explain it" },
+    { "word": "discarded", "zh": "丟棄", "def": "thrown away" },
+    { "word": "fiercest", "zh": "最猛烈的", "def": "the most intense or violent" },
+    { "word": "essential", "zh": "必要的；不可或缺的", "def": "absolutely necessary" },
+    { "word": "ripple outwards", "zh": "像漣漪般擴散", "def": "spread its effects more and more widely" },
+    { "word": "retire", "zh": "使退役", "def": "stop using something because it is old or replaced" },
+    { "word": "routine", "zh": "例行的；常態的", "def": "ordinary and done regularly" },
+    { "word": "warranted", "zh": "有正當理由的；合理的", "def": "reasonable or justified in the situation" },
+    { "word": "intact", "zh": "完整無缺的", "def": "not damaged or broken" }
+  ],
+  "tasks": [
+    {
+      "type": "mcq",
+      "skill": "main_idea",
+      "q": "Which sentence best sums up the WHOLE article?",
+      "options": [
+        "Catching Starship is a key step towards cheap, reusable spaceflight, but it does not prove that yet",
+        "SpaceX has now made spaceflight as cheap as air travel",
+        "SpaceX will stop using Falcon 9 next year",
+        "SpaceX's newest Starlink satellites carry ten times more traffic"
+      ],
+      "answer": 0,
+      "explain": "A matches the question in paragraph 1 and the answer in paragraph 8. B is an overclaim (paragraph 7 says the costs are only targets). C twists paragraph 5: Falcon 9 retires only once Starship flies weekly. D is one detail from paragraph 5."
+    },
+    {
+      "type": "order",
+      "skill": "structure",
+      "q": "Put the history of rocket reuse in order (paragraphs 2-4).",
+      "items": [
+        "Rockets are thrown away after every launch",
+        "Falcon 9 lands and reuses its first stage",
+        "A Starship upper stage is caught by the tower",
+        "Both stages return and fly again quickly (the goal)"
+      ],
+      "explain": "Signal words help: \"For most of the space age\" (past), \"about a decade ago\" (Falcon 9), \"on 14 November\" (the catch), and \"is designed to\" / \"goal\" (the future)."
+    },
+    {
+      "type": "match",
+      "skill": "scanning",
+      "q": "Scan the article: what does each figure refer to?",
+      "pairs": [
+        { "left": "$10,000+", "right": "cost per kilogram in the throwaway-rocket era" },
+        { "left": "$2,700", "right": "cost per kilogram with Falcon 9" },
+        { "left": "$10-$50", "right": "hoped-for cost per kilogram with Starship" },
+        { "left": "14 November", "right": "the day the Ship was caught" },
+        { "left": "a decade ago", "right": "when Falcon 9 reuse began" }
+      ],
+      "explain": "The three money figures tell a story of falling costs. Notice the last one is a hope, not a fact (paragraph 7)."
+    },
+    {
+      "type": "tfng",
+      "skill": "detail",
+      "q": "True, False or Not Given?",
+      "statements": [
+        { "text": "Falcon 9's upper stage is reused on every flight.", "answer": "F", "explain": "Paragraph 3: it \"is still discarded on every flight\"." },
+        { "text": "The upper stage faces extreme heat when it comes back through the atmosphere.", "answer": "T", "explain": "Paragraph 4: it \"faces the fiercest heat as it plunges back through the atmosphere\"." },
+        { "text": "Starship will take passengers to Mars within five years.", "answer": "NG", "explain": "Mars is never mentioned in the article." },
+        { "text": "Some analysts say Musk's figures describe SpaceX's own costs, not customer prices.", "answer": "T", "explain": "Paragraph 7 says exactly this, in slightly different words." },
+        { "text": "NASA has fixed a date for the Starship Moon landing.", "answer": "NG", "explain": "Paragraph 6 explains NASA's plan but gives no date at all." }
+      ]
+    },
+    {
+      "type": "mcq",
+      "skill": "inference",
+      "q": "From paragraph 6, what can we infer about refuelling the Moon lander with many tanker flights?",
+      "options": [
+        "It would be far too costly unless launches become cheap and frequent",
+        "It has already been tested successfully many times",
+        "It is no longer part of NASA's plan",
+        "It will be done by Falcon 9 rockets"
+      ],
+      "answer": 0,
+      "explain": "\"That plan only makes sense if launches become routine and affordable\" - so without cheap, frequent launches, ten tanker flights would be impractical. B, C and D are not supported."
+    },
+    {
+      "type": "mcq",
+      "skill": "vocab",
+      "q": "In paragraph 7, \"caution is warranted\" is closest in meaning to:",
+      "options": [
+        "it is reasonable to be careful",
+        "being careful is not allowed",
+        "there is nothing to worry about",
+        "the law guarantees safety"
+      ],
+      "answer": 0,
+      "explain": "\"Nevertheless\" signals a turn, and the rest of the paragraph lists reasons to be careful. So caution is justified - \"warranted\"."
+    },
+    {
+      "type": "mcq",
+      "skill": "structure",
+      "q": "Why does the writer compare rockets to passenger jets in paragraph 2?",
+      "options": [
+        "To explain why throwing rockets away makes launches so expensive",
+        "To argue that rockets are safer than aeroplanes",
+        "To suggest that SpaceX should start an airline",
+        "To show that aeroplane tickets are becoming more expensive"
+      ],
+      "answer": 0,
+      "explain": "The analogy makes an unfamiliar idea familiar: scrapping a jet after one flight would make tickets unaffordable, and that is how rockets used to work."
+    }
+  ],
+  "sentence": {
+    "text": "The $10-to-$50 figure is a target, not an established price, and some analysts point out that Musk's numbers describe SpaceX's own costs rather than what customers will pay.",
+    "chunks": [
+      { "text": "The $10-to-$50 figure", "role": "主詞 Subject" },
+      { "text": "is", "role": "動詞 Verb" },
+      { "text": "a target, not an established price,", "role": "補語 What it is (and is not)" },
+      { "text": "and", "role": "連接 And" },
+      { "text": "some analysts point out", "role": "第二個主詞＋動詞 Subject + verb 2" },
+      { "text": "that Musk's numbers describe SpaceX's own costs", "role": "他們指出的內容 What they point out" },
+      { "text": "rather than what customers will pay.", "role": "對比：不是什麼 Rather than (contrast)" }
+    ],
+    "q": "Tap the part that tells you what Musk's numbers do NOT describe.",
+    "answer": 6,
+    "gist": "每公斤 10 到 50 美元只是目標、不是已確定的價格；也有分析師指出，Musk 說的是 SpaceX 自己的成本，而不是客戶實際要付的價錢。"
+  },
+  "write": {
+    "prompt": "Do you think reusable rockets will make space travel common in your lifetime? Write 2-3 sentences in English, using one word from today's list.",
+    "sample": "I think reusable rockets could make space travel more routine, but I am not sure it will happen soon. The catch was an important milestone, yet caution is warranted until a Ship actually flies again."
+  }
+}

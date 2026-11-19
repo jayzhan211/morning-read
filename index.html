@@ -186,12 +186,13 @@ async function home(){
 
   $app.innerHTML = `
     <div class="mast"><h1>Morning Read</h1><small>讀報練習</small></div>
+    <p class="hint" style="margin:-8px 0 16px">挑一篇有興趣的讀就好，讀過的都會留著。</p>
     ${list.map(l=>{
       const st = DB.lessons[l.id];
       const badge = st?.done ? `<span class="pill done">✓ 完成</span>` : st && (st.step>0) ? `<span class="pill prog">讀到一半</span>` : `<span class="pill">NEW</span>`;
       return `<a class="card lesson" href="#/l/${encodeURIComponent(l.id)}">
         <div class="meta">${badge}<span>${esc(l.date)}</span><span>· ${esc(l.topic||"")}</span><span>· ${l.level==="feature"?"長篇 Feature":"新聞 News"}</span></div>
-        <h3>${esc(l.title)}</h3></a>`;
+        <h3>${esc(l.title)}</h3>${l.teaser?`<p class="hint" style="margin:2px 0 0">${esc(l.teaser)}</p>`:""}</a>`;
     }).join("") || `<p class="empty">還沒有文章</p>`}
     <h2 class="sec">能力分析 · Skills</h2>
     <div class="card">
