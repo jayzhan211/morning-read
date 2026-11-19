@@ -1,0 +1,160 @@
+{
+  "id": "2026-11-20-moderna-cancer-vaccine",
+  "date": "2026-11-20",
+  "topic": "Health & Science",
+  "level": "news",
+  "title": "A vaccine made from your own tumour cuts melanoma's return",
+  "dek": "After more than a century of failures, a personalised mRNA cancer vaccine has succeeded in a large trial. Big questions remain.",
+  "sources": [
+    { "name": "Reuters (via ARY News): Success after a century of failures - inside Moderna and Merck's cancer vaccine breakthrough", "url": "https://arynews.tv/success-after-a-century-of-failures-inside-moderna-and-mercks-cancer-vaccine-breakthrough" },
+    { "name": "TNND: Personalized mRNA melanoma vaccine cuts relapse risk in late-stage trial", "url": "https://foxbaltimore.com/news/nation-world/moderna-merck-personalized-mrna-melanoma-vaccine-cuts-relapse-risk-in-late-stage-trial" },
+    { "name": "pharmaphorum: MSD, Moderna skin cancer vaccine scores historic phase 3 win", "url": "https://pharmaphorum.com/news/msd-moderna-skin-cancer-vaccine-scores-historic-phase-3-win" },
+    { "name": "Nordic Life Science: Merck, Moderna report positive melanoma trial results", "url": "https://nordiclifescience.org/?p=99954" }
+  ],
+  "predict": {
+    "prompt": "Before you read: which of these do you think are TRUE? Tick all you believe.",
+    "statements": [
+      { "text": "Each patient's vaccine is made for them personally.", "truth": true, "why": "It is built from the mutations in that patient's own tumour." },
+      { "text": "The vaccine cures all types of cancer.", "truth": false, "why": "It was tested in melanoma only, and is untested in cancers with fewer mutations." },
+      { "text": "It uses the same mRNA technology as a Covid-19 vaccine.", "truth": true, "why": "Moderna's Covid-19 vaccine also uses mRNA." },
+      { "text": "It has been proven to help patients live longer.", "truth": false, "why": "Researchers do not yet know whether it improves survival." }
+    ]
+  },
+  "article": [
+    "A personalised vaccine built from a patient's own tumour has cut the risk of skin cancer returning, in what experts call the first late-stage success for a cancer-treating vaccine after more than a century of failed attempts.",
+    "The treatment, called intismeran and developed by Moderna and Merck, uses mRNA - the same technology behind Moderna's Covid-19 vaccine. mRNA works like a set of instructions that tells cells which proteins to make. Here, the instructions describe proteins found only on the patient's cancer cells, so that the immune system learns to recognise them and attack.",
+    "The process starts after surgery. Doctors sequence the removed tumour to find its unique mutations, and Moderna then manufactures a vaccine aimed at 34 of them. Because it is custom-made, it can target dozens of mutations at once, whereas earlier vaccines that aimed at just one or two failed.",
+    "The trial involved 1,137 people whose melanoma, the deadliest form of skin cancer, had been surgically removed. All received Keytruda, a standard drug that helps immune cells fight cancer; 757 also received the vaccine, while 380 received a placebo. Adding the vaccine reduced the risk of the cancer returning or of death by 42%, and the risk of it spreading by 38%, compared with Keytruda alone. Reported side effects included soreness where the injection was given.",
+    "Melanoma was a deliberate choice. Its tumours carry an unusually high number of mutations, giving the vaccine plenty of targets, and treating patients at an early stage left time to make each custom vaccine.",
+    "That choice also marks the limits of the result. The approach is untested in cancers with fewer mutations, such as lung, kidney and pancreatic cancer. Full results have not yet appeared in a peer-reviewed journal, and researchers do not yet know whether the vaccine helps patients live longer.",
+    "Even so, the findings have raised hopes well beyond medicine. Moderna's shares more than doubled after the results, and regulators in the US are reviewing the treatment, with approval possible as soon as next year. The two companies are already testing it in other cancers.",
+    "For a field long defined by disappointment, a vaccine that teaches the body to recognise its own disease may finally be moving from promise to practice."
+  ],
+  "glossary": [
+    { "word": "personalised", "zh": "個人化的", "def": "made for one particular person" },
+    { "word": "recognise", "zh": "辨認出", "def": "know what something is because you have learned it before" },
+    { "word": "sequence", "zh": "定序", "def": "work out the order of the letters in DNA" },
+    { "word": "mutations", "zh": "突變", "def": "changes in the DNA of a cell" },
+    { "word": "manufactures", "zh": "製造", "def": "makes something, often in large amounts" },
+    { "word": "deadliest", "zh": "最致命的", "def": "causing the most deaths" },
+    { "word": "placebo", "zh": "安慰劑", "def": "a fake treatment with no medicine in it, used for comparison" },
+    { "word": "deliberate", "zh": "刻意的；經過考慮的", "def": "done on purpose, after careful thought" },
+    { "word": "untested", "zh": "未經測試的", "def": "not yet tried or checked" },
+    { "word": "peer-reviewed", "zh": "經同儕審查的", "def": "checked by other experts before being published" },
+    { "word": "regulators", "zh": "監管機關", "def": "official bodies that make sure rules are followed" },
+    { "word": "disappointment", "zh": "失望", "def": "the feeling when something is not as good as you hoped" }
+  ],
+  "tasks": [
+    {
+      "type": "mcq",
+      "skill": "main_idea",
+      "q": "Which headline best sums up the WHOLE article?",
+      "options": [
+        "Personalised mRNA vaccine cuts melanoma's return in large trial, but key questions remain",
+        "Scientists find a cure for every kind of cancer",
+        "Moderna's shares more than double",
+        "Covid-19 vaccines can now prevent skin cancer"
+      ],
+      "answer": 0,
+      "explain": "B is an overclaim (paragraph 6: untested in other cancers). C is a single detail from paragraph 7. D distorts paragraph 2: the vaccine only shares the mRNA technology with the Covid-19 vaccine."
+    },
+    {
+      "type": "order",
+      "skill": "structure",
+      "q": "Put the treatment steps in order (paragraphs 2-4).",
+      "items": [
+        "Surgeons remove the tumour",
+        "Doctors sequence it to find its unique mutations",
+        "Moderna makes a vaccine aimed at 34 of them",
+        "The patient receives the vaccine together with Keytruda",
+        "The immune system learns to recognise the cancer cells"
+      ],
+      "explain": "\"The process starts after surgery\" (paragraph 3) gives you the first step; the purpose - teaching the immune system - is explained in paragraph 2."
+    },
+    {
+      "type": "match",
+      "skill": "scanning",
+      "q": "Scan the article: what does each number refer to?",
+      "pairs": [
+        { "left": "1,137", "right": "people in the trial" },
+        { "left": "757", "right": "people who got the vaccine" },
+        { "left": "380", "right": "people who got a placebo" },
+        { "left": "42%", "right": "lower risk of the cancer returning or death" },
+        { "left": "38%", "right": "lower risk of the cancer spreading" },
+        { "left": "34", "right": "mutations each vaccine targets" }
+      ],
+      "explain": "757 + 380 = 1,137 - a quick check that you matched the trial numbers correctly."
+    },
+    {
+      "type": "tfng",
+      "skill": "detail",
+      "q": "True, False or Not Given?",
+      "statements": [
+        { "text": "Every patient in the trial received Keytruda.", "answer": "T", "explain": "Paragraph 4: \"All received Keytruda\"." },
+        { "text": "The vaccine has been shown to help patients live longer.", "answer": "F", "explain": "Paragraph 6: researchers \"do not yet know\" whether it helps patients live longer." },
+        { "text": "The vaccine costs less than Keytruda.", "answer": "NG", "explain": "Price is never mentioned." },
+        { "text": "The approach has already worked in pancreatic cancer.", "answer": "F", "explain": "Paragraph 6: it is untested in cancers such as pancreatic cancer." },
+        { "text": "Most patients in the trial were over 60.", "answer": "NG", "explain": "Patients' ages are not given anywhere." }
+      ]
+    },
+    {
+      "type": "mcq",
+      "skill": "inference",
+      "q": "Why might the vaccine work less well in cancers with fewer mutations?",
+      "options": [
+        "There would be fewer unique targets for the immune system to learn",
+        "Those cancers cannot be removed by surgery",
+        "Keytruda does not exist for those cancers",
+        "mRNA cannot enter those cells"
+      ],
+      "answer": 0,
+      "explain": "Paragraph 5 says melanoma's many mutations give \"plenty of targets\". Fewer mutations means fewer targets. B, C and D are never said."
+    },
+    {
+      "type": "mcq",
+      "skill": "vocab",
+      "q": "In paragraph 5, \"Melanoma was a deliberate choice\" means it was:",
+      "options": [
+        "chosen on purpose, for good reasons",
+        "chosen by accident",
+        "chosen by the patients themselves",
+        "chosen because it is the most common cancer"
+      ],
+      "answer": 0,
+      "explain": "The next sentence gives the reasons for the choice (many mutations, time to make the vaccine), so it was planned - deliberate."
+    },
+    {
+      "type": "mcq",
+      "skill": "structure",
+      "q": "What is the main job of paragraph 6?",
+      "options": [
+        "To point out the limits of the result",
+        "To describe the side effects of the vaccine",
+        "To explain how mRNA works",
+        "To show that the trial was a failure"
+      ],
+      "answer": 0,
+      "explain": "Its first sentence says it: \"That choice also marks the limits of the result.\" D goes too far - the trial succeeded, it just did not answer every question."
+    }
+  ],
+  "sentence": {
+    "text": "Its tumours carry an unusually high number of mutations, giving the vaccine plenty of targets, and treating patients at an early stage left time to make each custom vaccine.",
+    "chunks": [
+      { "text": "Its tumours", "role": "主詞 1 Subject 1" },
+      { "text": "carry", "role": "動詞 1 Verb 1" },
+      { "text": "an unusually high number of mutations,", "role": "受詞 Object" },
+      { "text": "giving the vaccine plenty of targets,", "role": "結果 Result (-ing)" },
+      { "text": "and", "role": "連接 And" },
+      { "text": "treating patients at an early stage", "role": "主詞 2（動名詞）Subject 2 (-ing noun)" },
+      { "text": "left", "role": "動詞 2 Verb 2" },
+      { "text": "time to make each custom vaccine.", "role": "受詞 Object" }
+    ],
+    "q": "Tap the part that is the SUBJECT of the verb \"left\".",
+    "answer": 5,
+    "gist": "黑色素瘤的腫瘤突變特別多，讓疫苗有很多目標可以瞄準；而在早期就治療病人，也讓每支客製疫苗有時間做出來。"
+  },
+  "write": {
+    "prompt": "If you were a doctor, would you recommend this vaccine to a patient now, or wait for more results? Write 2-3 sentences in English and give one reason.",
+    "sample": "I would recommend it to high-risk melanoma patients once it is approved, because it lowered the risk of the cancer returning. However, I would explain that it is still untested in other cancers and that we do not yet know if it helps people live longer."
+  }
+}
