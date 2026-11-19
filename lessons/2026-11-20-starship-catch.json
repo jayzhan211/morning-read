@@ -1,0 +1,155 @@
+{
+  "id": "2026-11-20-starship-catch",
+  "date": "2026-11-20",
+  "topic": "Space & Tech",
+  "level": "news",
+  "title": "SpaceX catches Starship from orbit - but only half the plan worked",
+  "dek": "For the first time, a launch tower caught the rocket's upper stage after a flight to space. The giant booster was lost.",
+  "sources": [
+    { "name": "SpaceQ: Starship Flight 15 - first upper-stage catch, booster lost", "url": "https://spaceq.ca/?p=53437" },
+    { "name": "Nature World News: Half the double catch worked", "url": "https://www.natureworldnews.com/articles/73881/20261117/half-double-catch-worked-starship-flight-15-brings-ship-home-orbit-first-time.htm" },
+    { "name": "Space.com: Starship Flight 15 photos", "url": "https://www.space.com/space-exploration/launches-spacecraft/relive-starships-historic-flight-15-with-our-best-photos-from-launch-and-mechazilla-tower-catch" }
+  ],
+  "predict": {
+    "prompt": "Before you read: which of these do you think are TRUE? Tick all you believe.",
+    "statements": [
+      { "text": "Both parts of the rocket were caught by the tower.", "truth": false, "why": "Only the upper stage (the Ship) was caught. The booster was destroyed over the Gulf of Mexico." },
+      { "text": "The Ship released satellites while it was in orbit.", "truth": true, "why": "It released 26 Starlink internet satellites." },
+      { "text": "SpaceX already knows exactly why the booster failed.", "truth": false, "why": "The root cause is still under investigation, and SpaceX's explanation changed." },
+      { "text": "The caught Ship has already flown again.", "truth": false, "why": "SpaceX has not yet shown it can quickly inspect, refuel and relaunch a Ship." }
+    ]
+  },
+  "article": [
+    "SpaceX has caught the upper stage of its giant Starship rocket with the arms of its launch tower for the first time, a milestone the company sees as essential to making rockets as reusable as aeroplanes. But the flight, on 13 and 14 November, also showed how far the programme still has to go.",
+    "Starship has two parts: a huge booster called Super Heavy, which lifts the rocket off the ground, and an upper stage, simply called \"Ship\", which travels into space. Flight 15 was the company's first attempt to catch both parts on the same mission.",
+    "The upper stage, known as Ship 42, reached orbit, released 26 of SpaceX's newest Starlink internet satellites and circled the Earth about 14 times. Before heading home, three of those satellites photographed its heat shield, and engineers confirmed that the protective tiles were in good condition. About 22 and a half hours after lift-off, the tower's mechanical arms, nicknamed \"chopsticks\", closed around the returning Ship.",
+    "The booster was less fortunate. A few minutes into the flight, it cut short a key engine burn after a low-fuel alarm, abandoned its planned return to the tower and diverted over the Gulf of Mexico, where it was destroyed just above the water. Elon Musk blamed slight underperformance of its engines, but the root cause is still under investigation, and SpaceX's own explanation shifted in the days after the flight.",
+    "The loss is costly. Each Super Heavy carries 33 Raptor engines, and all four boosters of the newest design have now been lost, taking 132 engines with them. A destroyed booster also cannot be inspected for wear, which is precisely the information engineers need before flying hardware again.",
+    "Even the successful catch proves less than it may appear. Recovering a Ship from orbit is not the same as reusing it: true reuse means quickly checking, refuelling and relaunching the vehicle, which SpaceX has not yet demonstrated.",
+    "The stakes extend beyond the company. NASA plans to use a version of Starship to land astronauts on the Moon, a plan that depends on SpaceX transferring fuel between spacecraft in orbit, a technique it has yet to test.",
+    "The next flight is expected to be the first Starship launch from Florida, although no date has been announced. For now, SpaceX has shown that half of its ambitious double catch can work; the other half remains unproven."
+  ],
+  "glossary": [
+    { "word": "milestone", "zh": "里程碑", "def": "an important event that marks progress" },
+    { "word": "reusable", "zh": "可重複使用的", "def": "able to be used again" },
+    { "word": "orbit", "zh": "軌道", "def": "the curved path of an object travelling around a planet" },
+    { "word": "abandoned", "zh": "放棄", "def": "stopped doing something that was planned" },
+    { "word": "diverted", "zh": "改道", "def": "changed direction to go somewhere else" },
+    { "word": "underperformance", "zh": "表現不如預期", "def": "working less well than expected" },
+    { "word": "root cause", "zh": "根本原因", "def": "the most basic reason why a problem happened" },
+    { "word": "precisely", "zh": "恰恰；正是", "def": "exactly" },
+    { "word": "demonstrated", "zh": "證明；展示", "def": "showed clearly that something works or is true" },
+    { "word": "stakes", "zh": "利害關係", "def": "what could be won or lost" },
+    { "word": "ambitious", "zh": "有野心的；難度高的", "def": "needing great effort or skill to succeed" },
+    { "word": "unproven", "zh": "未經證實的", "def": "not yet shown to work or be true" }
+  ],
+  "tasks": [
+    {
+      "type": "mcq",
+      "skill": "main_idea",
+      "q": "Which headline best sums up the WHOLE article?",
+      "options": [
+        "SpaceX catches Starship's upper stage, but full reuse is still unproven",
+        "SpaceX builds the world's first fully reusable rocket",
+        "Starlink satellites take photos of Starship's heat shield",
+        "Booster failure forces NASA to cancel its Moon landing"
+      ],
+      "answer": 0,
+      "explain": "B goes too far: only the Ship was caught (paragraphs 1, 6). C is one small detail from paragraph 3. D twists paragraph 7: NASA's plan depends on Starship, but nothing was cancelled."
+    },
+    {
+      "type": "order",
+      "skill": "structure",
+      "q": "Put the Ship's journey in the right order (paragraph 3).",
+      "items": [
+        "The Ship reaches orbit",
+        "It releases 26 Starlink satellites",
+        "Satellites photograph its heat shield",
+        "It heads home towards the tower",
+        "The tower's \"chopsticks\" catch it"
+      ],
+      "explain": "Paragraph 3 tells the story in time order. \"Before heading home\" signals that the photos came before the return."
+    },
+    {
+      "type": "match",
+      "skill": "scanning",
+      "q": "Scan the article: what does each number refer to?",
+      "pairs": [
+        { "left": "26", "right": "Starlink satellites released" },
+        { "left": "14", "right": "times the Ship circled the Earth" },
+        { "left": "22.5", "right": "hours from lift-off to the catch" },
+        { "left": "33", "right": "engines on each Super Heavy booster" },
+        { "left": "132", "right": "engines lost with the four newest boosters" }
+      ],
+      "explain": "\"22.5\" is written in words (\"22 and a half\") in paragraph 3 - when scanning for numbers, look for number words too."
+    },
+    {
+      "type": "tfng",
+      "skill": "detail",
+      "q": "True, False or Not Given?",
+      "statements": [
+        { "text": "Engineers checked the heat shield before the Ship came back.", "answer": "T", "explain": "Paragraph 3: before heading home, satellites photographed it and engineers confirmed the tiles were in good condition." },
+        { "text": "The booster landed safely in the Gulf of Mexico.", "answer": "F", "explain": "Paragraph 4: it was destroyed just above the water." },
+        { "text": "The heat shield was damaged during the return through the atmosphere.", "answer": "NG", "explain": "The article only describes the check BEFORE the return. Nothing is said about damage afterwards." },
+        { "text": "SpaceX has already tested moving fuel between spacecraft in orbit.", "answer": "F", "explain": "Paragraph 7: it is a technique SpaceX \"has yet to test\"." },
+        { "text": "The first Starship launch from Florida will carry astronauts.", "answer": "NG", "explain": "Paragraph 8 only says it will be the first launch from Florida, with no date. Astronauts are never mentioned for it." }
+      ]
+    },
+    {
+      "type": "mcq",
+      "skill": "inference",
+      "q": "Why does the writer say the catch \"proves less than it may appear\" (paragraph 6)?",
+      "options": [
+        "Catching the Ship does not show that it can be quickly flown again",
+        "The Ship was badly damaged when the tower caught it",
+        "The catch happened much later than SpaceX had planned",
+        "Other companies have already caught rockets in the same way"
+      ],
+      "answer": 0,
+      "explain": "Paragraph 6 explains it right after the colon: true reuse means checking, refuelling and relaunching quickly, which has not been shown. B, C and D are never said."
+    },
+    {
+      "type": "mcq",
+      "skill": "vocab",
+      "q": "In paragraph 4, \"the root cause is still under investigation\" - \"root cause\" means:",
+      "options": [
+        "the most basic reason behind the problem",
+        "the first warning sign of the problem",
+        "the person who caused the problem",
+        "a small side effect of the problem"
+      ],
+      "answer": 0,
+      "explain": "Musk offered one explanation (engine underperformance), \"but\" the deeper reason is still being investigated. Roots are what is underneath - the basic reason."
+    },
+    {
+      "type": "mcq",
+      "skill": "structure",
+      "q": "Why does the writer mention NASA's Moon plans in paragraph 7?",
+      "options": [
+        "To show that Starship's progress matters beyond SpaceX itself",
+        "To argue that NASA should stop working with SpaceX",
+        "To explain why the booster ran low on fuel",
+        "To show that the Moon landing has already been tested"
+      ],
+      "answer": 0,
+      "explain": "The paragraph opens with its main point: \"The stakes extend beyond the company.\" The NASA example supports that point."
+    }
+  ],
+  "sentence": {
+    "text": "NASA plans to use a version of Starship to land astronauts on the Moon, a plan that depends on SpaceX transferring fuel between spacecraft in orbit, a technique it has yet to test.",
+    "chunks": [
+      { "text": "NASA", "role": "主詞 Subject" },
+      { "text": "plans", "role": "動詞 Verb" },
+      { "text": "to use a version of Starship to land astronauts on the Moon,", "role": "計畫內容 What NASA plans" },
+      { "text": "a plan that depends on SpaceX transferring fuel between spacecraft in orbit,", "role": "補充說明這個計畫 Describes the plan" },
+      { "text": "a technique it has yet to test.", "role": "補充說明這項技術 Describes the technique" }
+    ],
+    "q": "Tap the part that tells you what the Moon plan depends on.",
+    "answer": 3,
+    "gist": "NASA 打算用改版的 Starship 送太空人登月；這個計畫要靠 SpaceX 在軌道上替太空船互相加油，而這項技術 SpaceX 還沒測試過。"
+  },
+  "write": {
+    "prompt": "Was Flight 15 a success or a failure? Write 2-3 sentences in English. Try to use one word from today's word list.",
+    "sample": "I think Flight 15 was an important milestone, but not a complete success. Catching the Ship shows the idea can work, yet true reuse is still unproven because the booster was lost."
+  }
+}

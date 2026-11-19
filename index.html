@@ -277,7 +277,8 @@ function stepRead(){
   readStart = Date.now();
   shell(`<div class="step-label">Step 2 · 閱讀</div>
     <p class="timer">虛線字可以點開看意思。先別查，試著從上下文猜，再點開確認。</p>
-    ${articleHTML()}`, false);
+    ${articleHTML()}
+    <div class="src"><b>原始新聞</b> · 讀完可以點開看原文：<br>${(LES.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("<br>")}</div>`, false);
   wireGlossary($app);
   cta("讀完了，開始作答 →", ()=>{ const st=L(LES.id); st.readSec = Math.round((Date.now()-readStart)/1000); save(); go(1); });
 }
