@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Morning Read · 讀報練習</title>
+<style>
+:root{
+  --paper:#f6f1e7; --card:#fffdf8; --ink:#1f1b16; --muted:#6f665a; --line:#e3dacb;
+  --accent:#b4441f; --accent-soft:#f3dccf; --ok:#2f7a4a; --ok-soft:#dcefe2; --bad:#b23a3a; --bad-soft:#f6dcdc;
+  --ng:#5a5f8c; --ng-soft:#e2e3f2;
+  --serif: "Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Noto Serif TC","Songti TC",serif;
+  --sans: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC",sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-text-size-adjust:100%}
+.wrap{max-width:680px;margin:0 auto;padding:20px 18px 120px}
+a{color:var(--accent)}
+button{font:inherit;cursor:pointer;color:inherit}
+.mast{border-bottom:3px double var(--ink);padding-bottom:10px;margin-bottom:22px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.mast h1{font-family:var(--serif);font-size:30px;margin:0;letter-spacing:-.5px}
+.mast small{color:var(--muted);font-size:13px}
+.mast a{text-decoration:none;color:inherit}
+h2.sec{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:28px 0 10px;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px}
+.lesson{display:block;text-decoration:none;color:inherit;transition:transform .12s}
+.lesson:active{transform:scale(.99)}
+.lesson .meta{font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.lesson h3{font-family:var(--serif);font-size:20px;margin:6px 0 4px;line-height:1.25}
+.pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:11px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+.pill.done{background:var(--ok-soft);color:var(--ok)}
+.pill.prog{background:#f5ead0;color:#8a6a12}
+.skill-row{display:grid;grid-template-columns:92px 1fr 52px;align-items:center;gap:10px;margin:9px 0;font-size:14px}
+.bar{height:9px;border-radius:9px;background:#ece4d6;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:9px;background:var(--ok)}
+.bar i.mid{background:#c99a2e}.bar i.low{background:var(--bad)}
+.skill-row span:last-child{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.hint{font-size:13px;color:var(--muted);line-height:1.6}
+.weak{margin-top:10px;padding:10px 12px;background:var(--bad-soft);border-radius:10px;font-size:14px;line-height:1.55}
+
+/* lesson */
+.topbar{position:sticky;top:0;z-index:5;background:var(--paper);padding:10px 0 8px;margin:-20px 0 14px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+.topbar .back{border:none;background:none;font-size:22px;padding:0 6px 0 0}
+.prog{flex:1;height:6px;background:#ece4d6;border-radius:6px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--accent);transition:width .3s}
+.topbar .peek{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:5px 11px;font-size:13px}
+.step-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+.q{font-family:var(--serif);font-size:21px;line-height:1.35;margin:0 0 16px}
+.opt{display:block;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;margin:9px 0;font-size:16px;line-height:1.4}
+.opt.sel{border-color:var(--ink)}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt[disabled]{cursor:default}
+.check{display:flex;gap:12px;align-items:flex-start}
+.check .box{flex:none;width:22px;height:22px;border:2px solid var(--muted);border-radius:6px;margin-top:1px;display:grid;place-items:center;font-size:14px}
+.opt.sel .box{background:var(--ink);border-color:var(--ink);color:#fff}
+.explain{margin-top:12px;padding:12px 14px;border-radius:12px;font-size:15px;line-height:1.6;background:#efe8da}
+.explain b{display:block;margin-bottom:2px}
+.explain.good{background:var(--ok-soft)}.explain.bad{background:var(--bad-soft)}
+.cta{position:fixed;left:0;right:0;bottom:0;padding:12px 18px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--paper) 30%)}
+.cta button{display:block;width:100%;max-width:644px;margin:0 auto;border:none;border-radius:14px;padding:15px;font-size:17px;font-weight:700;background:var(--ink);color:#fff}
+.cta button[disabled]{opacity:.35}
+
+.article h1{font-family:var(--serif);font-size:27px;line-height:1.2;margin:4px 0 8px}
+.article .dek{font-family:var(--serif);font-size:17px;color:var(--muted);line-height:1.5;margin:0 0 18px}
+.article p{font-family:var(--serif);font-size:18px;line-height:1.7;margin:0 0 16px}
+.article p .pn{font-family:var(--sans);font-size:11px;color:var(--muted);margin-right:6px;vertical-align:2px}
+.g{border-bottom:2px dotted var(--accent);cursor:pointer}
+.g.seen{border-bottom-style:solid;background:var(--accent-soft)}
+.pop{position:fixed;left:50%;transform:translateX(-50%);bottom:90px;width:min(92vw,520px);background:var(--ink);color:#fff;border-radius:14px;padding:14px 16px;z-index:30;box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:15px;line-height:1.5}
+.pop b{font-family:var(--serif);font-size:19px}
+.pop .zh{color:#f6c9a8;margin-left:8px}
+.timer{font-size:13px;color:var(--muted);margin:-6px 0 14px}
+
+.order-item{display:flex;align-items:center;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;font-size:15px;line-height:1.4}
+.order-item .n{flex:none;width:26px;height:26px;border-radius:50%;background:#ece4d6;display:grid;place-items:center;font-size:13px;font-weight:700}
+.order-item .mv{margin-left:auto;display:flex;gap:4px}
+.order-item .mv button{border:1px solid var(--line);background:var(--paper);border-radius:8px;width:34px;height:34px;font-size:15px}
+.order-item.right{border-color:var(--ok);background:var(--ok-soft)}
+.order-item.wrong{border-color:var(--bad);background:var(--bad-soft)}
+
+.match-row{display:flex;align-items:center;gap:10px;margin:10px 0}
+.match-row .num{flex:none;min-width:70px;font-family:var(--serif);font-size:22px;font-weight:700}
+.match-row select{flex:1;min-width:0;font:inherit;font-size:15px;padding:10px;border-radius:10px;border:1.5px solid var(--line);background:var(--card)}
+.match-row.right select{border-color:var(--ok);background:var(--ok-soft)}
+.match-row.wrong select{border-color:var(--bad);background:var(--bad-soft)}
+.match-fix{font-size:13px;color:var(--bad);margin:-6px 0 6px 80px}
+
+.tf{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0}
+.tf p{margin:0 0 10px;font-size:16px;line-height:1.45}
+.tf .btns{display:flex;gap:8px}
+.tf .btns button{flex:1;border:1.5px solid var(--line);background:var(--paper);border-radius:10px;padding:9px 0;font-weight:700;font-size:14px}
+.tf .btns button.sel{border-color:var(--ink);background:var(--ink);color:#fff}
+.tf .btns button.right{border-color:var(--ok);background:var(--ok);color:#fff}
+.tf .btns button.wrong{border-color:var(--bad);background:var(--bad-soft);color:var(--bad)}
+.tf .ex{font-size:14px;line-height:1.55;color:var(--muted);margin-top:8px}
+
+.chunks{font-family:var(--serif);font-size:19px;line-height:2.1}
+.chunk{border-radius:6px;padding:2px 3px;cursor:pointer;border-bottom:2px solid transparent}
+.chunk:hover{background:#efe8da}
+.chunk.sel{background:var(--ink);color:#fff}
+.chunk.r0{background:#f3dccf}.chunk.r1{background:#f7e3a8}.chunk.r2{background:#dcefe2}.chunk.r3{background:#e2e3f2}.chunk.r4{background:#f7e3a8}.chunk.r5{background:#dcefe2}.chunk.r6{background:#f6dcdc}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.legend span{font-size:12px;padding:3px 8px;border-radius:8px}
+
+textarea{width:100%;min-height:130px;font:inherit;font-size:16px;line-height:1.55;padding:12px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);resize:vertical}
+.small-btn{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 12px;font-size:14px;margin:8px 8px 0 0}
+.sample{font-family:var(--serif);font-size:17px;line-height:1.6}
+
+.overlay{position:fixed;inset:0;background:var(--paper);z-index:20;overflow:auto;padding:16px 18px 80px}
+.overlay .close{position:sticky;top:0;display:block;margin-left:auto;border:none;background:var(--ink);color:#fff;border-radius:99px;padding:7px 14px;font-size:14px}
+.score-big{font-family:var(--serif);font-size:54px;font-weight:700;margin:0}
+.predict-review li{margin:8px 0;line-height:1.5}
+.src{font-size:13px;color:var(--muted);line-height:1.6;margin-top:24px;border-top:1px solid var(--line);padding-top:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><p class="empty">Loading…</p></div>
+<div class="cta" id="cta" hidden><button id="ctaBtn"></button></div>
+
+<script>
+const SKILLS = {
+  main_idea: "抓主旨", detail: "細節判斷", scanning: "掃讀找資訊",
+  inference: "推論", vocab: "字義推測", structure: "句子／結構"
+};
+const SKILL_TIPS = {
+  main_idea: "讀完先用一句英文講這篇在說什麼，再看選項；小心「誇大」和「只講一個細節」的選項。",
+  detail: "T/F/NG：題目要能在文中找到依據才是 T 或 F；文中沒提到就是 Not Given，別用常識補。",
+  scanning: "找數字、人名時別從頭讀，眼睛先跳到目標，再只讀前後那句。",
+  inference: "答案一定要能被某一句話支持，先回文中找那句，再比對選項。",
+  vocab: "生字看前後文：後面常常緊接著舉例或解釋它。",
+  structure: "長句先找主詞＋動詞，把 that / until / which 後面的部分先括起來。"
+};
+
+/* ---------- storage ---------- */
+const KEY = "morningread:v1";
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)) || {lessons:{}}; }catch(e){ return {lessons:{}}; } }
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(DB)); }catch(e){} }
+let DB = load();
+function L(id){ return DB.lessons[id] ||= {step:0, results:{}, predict:null, write:"", seen:[], done:false}; }
+
+/* results: key -> {skill, ok:bool}; first attempt only */
+function record(st, key, skill, ok){ if(!(key in st.results)){ st.results[key] = {skill, ok}; save(); } }
+
+function skillStats(){
+  const s = {}; for(const k in SKILLS) s[k] = {ok:0, n:0};
+  for(const id in DB.lessons){ for(const r of Object.values(DB.lessons[id].results||{})){ if(s[r.skill]){ s[r.skill].n++; if(r.ok) s[r.skill].ok++; } } }
+  return s;
+}
+
+/* ---------- helpers ---------- */
+const $app = document.getElementById("app");
+const $cta = document.getElementById("cta"), $ctaBtn = document.getElementById("ctaBtn");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function cta(label, fn, disabled=false){ $cta.hidden = !label; $ctaBtn.textContent = label||""; $ctaBtn.disabled = disabled; $ctaBtn.onclick = fn; }
+async function getJSON(p){ const r = await fetch(p, {cache:"no-cache"}); if(!r.ok) throw new Error(p+" "+r.status); return r.json(); }
+function shuffle(a, seed){ a = a.slice(); let x = seed || 7; for(let i=a.length-1;i>0;i--){ x = (x*9301+49297)%233280; const j = Math.floor(x/233280*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function hash(s){ let h=0; for(const c of s) h=(h*31+c.charCodeAt(0))|0; return Math.abs(h)+1; }
+
+/* ---------- router ---------- */
+window.addEventListener("hashchange", route);
+route();
+function route(){
+  window.scrollTo(0,0);
+  const m = location.hash.match(/^#\/l\/(.+)$/);
+  m ? openLesson(decodeURIComponent(m[1])) : home();
+}
+
+/* ---------- home ---------- */
+async function home(){
+  cta(null);
+  let list = [];
+  try{ list = await getJSON("lessons/index.json"); }catch(e){ $app.innerHTML = `<p class="empty">讀不到課程清單 (${esc(e.message)})</p>`; return; }
+  list.sort((a,b)=> b.date.localeCompare(a.date));
+  const stats = skillStats();
+  const total = Object.values(stats).reduce((a,b)=>a+b.n,0);
+  let weakest = null;
+  for(const k in stats){ const s = stats[k]; if(s.n>=2){ const r = s.ok/s.n; if(!weakest || r < weakest.r) weakest = {k, r}; } }
+
+  const rows = Object.entries(SKILLS).map(([k,name])=>{
+    const s = stats[k]; const r = s.n ? s.ok/s.n : 0;
+    const cls = !s.n ? "" : r>=.75 ? "" : r>=.5 ? "mid" : "low";
+    return `<div class="skill-row"><span>${name}</span><div class="bar"><i class="${cls}" style="width:${s.n? Math.max(4,r*100):0}%"></i></div><span>${s.n? s.ok+"/"+s.n : "–"}</span></div>`;
+  }).join("");
+
+  $app.innerHTML = `
+    <div class="mast"><h1>Morning Read</h1><small>讀報練習</small></div>
+    ${list.map(l=>{
+      const st = DB.lessons[l.id];
+      const badge = st?.done ? `<span class="pill done">✓ 完成</span>` : st && (st.step>0) ? `<span class="pill prog">讀到一半</span>` : `<span class="pill">NEW</span>`;
+      return `<a class="card lesson" href="#/l/${encodeURIComponent(l.id)}">
+        <div class="meta">${badge}<span>${esc(l.date)}</span><span>· ${esc(l.topic||"")}</span><span>· ${l.level==="feature"?"長篇 Feature":"新聞 News"}</span></div>
+        <h3>${esc(l.title)}</h3></a>`;
+    }).join("") || `<p class="empty">還沒有文章</p>`}
+    <h2 class="sec">能力分析 · Skills</h2>
+    <div class="card">
+      ${rows}
+      ${ total ? (weakest && weakest.r < .75 ? `<div class="weak"><b>目前最弱：${SKILLS[weakest.k]}</b><br>${SKILL_TIPS[weakest.k]}</div>` : `<p class="hint">目前沒有明顯弱項，繼續保持。</p>`)
+               : `<p class="hint">做完第一篇後，這裡會顯示每種題型的答對率，看出是單字還是抓重點的問題。</p>` }
+    </div>`;
+}
+
+/* ---------- lesson ---------- */
+let LES = null;
+async function openLesson(id){
+  try{ LES = await getJSON("lessons/"+id+".json"); }catch(e){ $app.innerHTML = `<p class="empty">找不到這篇 (${esc(e.message)})</p>`; cta(null); return; }
+  const st = L(id);
+  LES.steps = ["predict","read", ...LES.tasks.map((_,i)=>"t"+i), "sentence","write","summary"];
+  if(st.done) st.step = LES.steps.length-1;
+  renderStep();
+}
+function go(delta){ const st = L(LES.id); st.step = Math.max(0, Math.min(LES.steps.length-1, st.step+delta)); if(st.step===LES.steps.length-1) st.done = true; save(); window.scrollTo(0,0); renderStep(); }
+
+function shell(inner, showPeek=true){
+  const st = L(LES.id);
+  const pct = (st.step)/(LES.steps.length-1)*100;
+  $app.innerHTML = `<div class="topbar"><button class="back" onclick="location.hash='#/'" aria-label="back">←</button>
+    <div class="prog"><i style="width:${pct}%"></i></div>
+    ${showPeek? `<button class="peek" onclick="peek()">📄 回看文章</button>`:""}</div>${inner}`;
+}
+
+function renderStep(){
+  const st = L(LES.id); const s = LES.steps[st.step];
+  if(s==="predict") return stepPredict();
+  if(s==="read") return stepRead();
+  if(s==="sentence") return stepSentence();
+  if(s==="write") return stepWrite();
+  if(s==="summary") return stepSummary();
+  const t = LES.tasks[+s.slice(1)], key = s;
+  ({mcq:taskMCQ, order:taskOrder, match:taskMatch, tfng:taskTFNG})[t.type](t, key);
+}
+
+/* predict */
+function stepPredict(){
+  const st = L(LES.id); const p = LES.predict;
+  const sel = new Set(st.predict || []);
+  shell(`<div class="step-label">Step 1 · 先猜再讀</div>
+    <h2 class="q">${esc(LES.title)}</h2>
+    <p class="hint">${esc(p.prompt)}</p>
+    ${p.statements.map((x,i)=>`<button class="opt check ${sel.has(i)?"sel":""}" data-i="${i}"><span class="box">${sel.has(i)?"✓":""}</span><span>${esc(x.text)}</span></button>`).join("")}
+    <p class="hint">讀完後會揭曉你猜對幾個。帶著問題讀，比較容易抓到重點。</p>`, false);
+  $app.querySelectorAll(".opt").forEach(b=> b.onclick = ()=>{ const i=+b.dataset.i; sel.has(i)?sel.delete(i):sel.add(i); st.predict=[...sel]; save(); stepPredict(); });
+  cta("開始閱讀 →", ()=>{ st.predict = [...sel]; save(); go(1); });
+}
+
+/* read */
+function markGlossary(text, used){
+  let html = esc(text);
+  for(const g of LES.glossary||[]){
+    if(used.has(g.word)) continue;
+    const re = new RegExp("\\b("+g.word.replace(/[.*+?^${}()|[\]\\]/g,"\\$&").replace(/ /g,"\\s+")+")\\b","i");
+    if(re.test(html)){ html = html.replace(re, `<span class="g" data-w="${esc(g.word)}">$1</span>`); used.add(g.word); }
+  }
+  return html;
+}
+function articleHTML(){
+  const used = new Set();
+  return `<div class="article"><h1>${esc(LES.title)}</h1><p class="dek">${esc(LES.dek||"")}</p>
+    ${LES.article.map((p,i)=>`<p><span class="pn">${i+1}</span>${markGlossary(p, used)}</p>`).join("")}</div>`;
+}
+function wireGlossary(root){
+  const st = L(LES.id);
+  root.querySelectorAll(".g").forEach(el=>{
+    if(st.seen.includes(el.dataset.w)) el.classList.add("seen");
+    el.onclick = e=>{ e.stopPropagation(); const g = LES.glossary.find(x=>x.word===el.dataset.w); showPop(g); if(!st.seen.includes(g.word)){ st.seen.push(g.word); save(); } el.classList.add("seen"); };
+  });
+}
+function showPop(g){
+  document.querySelector(".pop")?.remove();
+  const d = document.createElement("div"); d.className="pop";
+  d.innerHTML = `<b>${esc(g.word)}</b><span class="zh">${esc(g.zh)}</span><div style="margin-top:4px">${esc(g.def)}</div>`;
+  document.body.appendChild(d); setTimeout(()=>document.addEventListener("click", ()=>d.remove(), {once:true}), 0);
+}
+let readStart = 0;
+function stepRead(){
+  readStart = Date.now();
+  shell(`<div class="step-label">Step 2 · 閱讀</div>
+    <p class="timer">虛線字可以點開看意思。先別查，試著從上下文猜，再點開確認。</p>
+    ${articleHTML()}`, false);
+  wireGlossary($app);
+  cta("讀完了，開始作答 →", ()=>{ const st=L(LES.id); st.readSec = Math.round((Date.now()-readStart)/1000); save(); go(1); });
+}
+function peek(){
+  const o = document.createElement("div"); o.className="overlay";
+  o.innerHTML = `<button class="close">關閉 ✕</button>${articleHTML()}`;
+  document.body.appendChild(o); wireGlossary(o);
+  o.querySelector(".close").onclick = ()=>o.remove();
+}
+
+function qHeader(t){ const st=L(LES.id); return `<div class="step-label">Step 3 · 題目 ${st.step-1}/${LES.tasks.length} · ${SKILLS[t.skill]||""}</div><h2 class="q">${esc(t.q)}</h2>`; }
+function explainBox(ok, text, label){ return `<div class="explain ${ok===true?"good":ok===false?"bad":""}"><b>${label ?? (ok?"答對了 ✓":"再看一次 ✗")}</b>${esc(text)}</div>`; }
+
+/* mcq */
+function taskMCQ(t, key){
+  const st = L(LES.id); const prev = st.results[key];
+  const order = shuffle(t.options.map((_,i)=>i), hash(LES.id+key));
+  let picked = st["pick_"+key];
+  const answered = picked !== undefined;
+  shell(qHeader(t) + order.map(i=>{
+    let cls = ""; if(answered){ if(i===t.answer) cls="right"; else if(i===picked) cls="wrong"; }
+    return `<button class="opt ${cls}" data-i="${i}" ${answered?"disabled":""}>${esc(t.options[i])}</button>`;
+  }).join("") + (answered? explainBox(picked===t.answer, t.explain):""));
+  if(!answered) $app.querySelectorAll(".opt").forEach(b=> b.onclick = ()=>{ const i=+b.dataset.i; st["pick_"+key]=i; record(st,key,t.skill,i===t.answer); taskMCQ(t,key); });
+  cta(answered? "下一題 →" : "選一個答案", ()=>go(1), !answered);
+}
+
+/* order */
+function taskOrder(t, key){
+  const st = L(LES.id);
+  let cur = st["ord_"+key] || shuffle(t.items.map((_,i)=>i), hash(LES.id+key));
+  if(cur.every((v,i)=>v===i)) cur = cur.slice().reverse();
+  const checked = !!st["ordDone_"+key];
+  const render = ()=>{
+    shell(qHeader(t) + cur.map((idx,pos)=>`<div class="order-item ${checked?(idx===pos?"right":"wrong"):""}">
+      <span class="n">${pos+1}</span><span>${esc(t.items[idx])}</span>
+      ${checked?"":`<span class="mv"><button data-p="${pos}" data-d="-1" aria-label="up">↑</button><button data-p="${pos}" data-d="1" aria-label="down">↓</button></span>`}</div>`).join("")
+      + (checked? explainBox(cur.every((v,i)=>v===i), t.explain) + (cur.every((v,i)=>v===i)?"":`<p class="hint">正確順序：<br>${t.items.map((x,i)=>`${i+1}. ${esc(x)}`).join("<br>")}</p>`) : `<p class="hint">用 ↑ ↓ 調整順序。</p>`));
+    $app.querySelectorAll(".mv button").forEach(b=> b.onclick = ()=>{
+      const p=+b.dataset.p, q=p+(+b.dataset.d); if(q<0||q>=cur.length) return;
+      [cur[p],cur[q]]=[cur[q],cur[p]]; st["ord_"+key]=cur; save(); render();
+    });
+  };
+  render();
+  cta(checked? "下一題 →" : "確認順序", ()=>{
+    if(checked) return go(1);
+    st["ord_"+key]=cur; st["ordDone_"+key]=true; record(st,key,t.skill,cur.every((v,i)=>v===i)); taskOrder(t,key);
+  });
+}
+
+/* match */
+function taskMatch(t, key){
+  const st = L(LES.id);
+  const picks = st["m_"+key] || {};
+  const checked = !!st["mDone_"+key];
+  const opts = shuffle(t.pairs.map(p=>p.right), hash(LES.id+key));
+  shell(qHeader(t) + t.pairs.map((p,i)=>{
+    const ok = picks[i]===p.right;
+    return `<div class="match-row ${checked?(ok?"right":"wrong"):""}"><span class="num">${esc(p.left)}</span>
+      <select data-i="${i}" ${checked?"disabled":""}><option value="">— 選擇 —</option>${opts.map(o=>`<option ${picks[i]===o?"selected":""}>${esc(o)}</option>`).join("")}</select></div>
+      ${checked&&!ok?`<div class="match-fix">→ ${esc(p.right)}</div>`:""}`;
+  }).join("") + (checked? explainBox(null, t.explain, "小技巧"):""));
+  $app.querySelectorAll("select").forEach(s=> s.onchange = ()=>{ picks[s.dataset.i]=s.value; st["m_"+key]=picks; save(); cta("確認", submit, Object.keys(picks).filter(k=>picks[k]).length<t.pairs.length); });
+  const submit = ()=>{ st["mDone_"+key]=true; t.pairs.forEach((p,i)=>record(st,key+"_"+i,t.skill,picks[i]===p.right)); taskMatch(t,key); };
+  checked ? cta("下一題 →", ()=>go(1)) : cta("確認", submit, Object.keys(picks).filter(k=>picks[k]).length<t.pairs.length);
+}
+
+/* tfng */
+function taskTFNG(t, key){
+  const st = L(LES.id);
+  const picks = st["tf_"+key] || {};
+  const lab = {T:"True", F:"False", NG:"Not Given"};
+  const allDone = t.statements.every((_,i)=>picks[i]);
+  shell(qHeader(t) + `<p class="hint">T = 文中說是；F = 文中說相反；NG = 文中沒提到。每題作答後立刻看解析。</p>` + t.statements.map((s,i)=>{
+    const p = picks[i];
+    return `<div class="tf"><p>${i+1}. ${esc(s.text)}</p><div class="btns">${["T","F","NG"].map(v=>{
+      let cls=""; if(p){ if(v===s.answer) cls="right"; else if(v===p) cls="wrong"; }
+      return `<button data-i="${i}" data-v="${v}" class="${cls}" ${p?"disabled":""}>${lab[v]}</button>`; }).join("")}</div>
+      ${p? `<div class="ex">${p===s.answer?"✓ ":"✗ "}${esc(s.explain)}</div>`:""}</div>`;
+  }).join(""));
+  $app.querySelectorAll(".btns button").forEach(b=> b.onclick = ()=>{
+    const i=+b.dataset.i, v=b.dataset.v; picks[i]=v; st["tf_"+key]=picks;
+    record(st, key+"_"+i, t.skill, v===t.statements[i].answer);
+    const y = window.scrollY; taskTFNG(t,key); window.scrollTo(0,y);
+  });
+  cta(allDone? "下一題 →":"每題都要作答", ()=>go(1), !allDone);
+}
+
+/* sentence */
+function stepSentence(){
+  const st = L(LES.id); const s = LES.sentence; const key="sentence";
+  const picked = st.pick_sentence; const answered = picked!==undefined;
+  shell(`<div class="step-label">Step 4 · 長句拆解 · ${SKILLS.structure}</div>
+    <h2 class="q">${esc(s.q)}</h2>
+    <div class="card chunks">${s.chunks.map((c,i)=>`<span class="chunk ${answered?"r"+(i%7):""} ${!answered&&false?"sel":""}" data-i="${i}">${esc(c.text)}</span>`).join(" ")}</div>
+    ${answered? explainBox(picked===s.answer, "", picked===s.answer?"答對了 ✓":"答案是 until… 那段 ✗")
+      + `<div class="legend">${s.chunks.map((c,i)=>`<span class="chunk r${i%7}">${esc(c.role)}</span>`).join("")}</div>
+         <div class="explain" style="margin-top:12px"><b>中文大意</b>${esc(s.gist)}</div>` : `<p class="hint">直接點句子裡的那一段。</p>`}`);
+  if(!answered) $app.querySelectorAll(".chunk").forEach(c=> c.onclick = ()=>{ st.pick_sentence=+c.dataset.i; record(st,key,"structure",+c.dataset.i===s.answer); stepSentence(); });
+  cta(answered? "下一步 →":"點選一段", ()=>go(1), !answered);
+}
+
+/* write */
+function stepWrite(){
+  const st = L(LES.id); const w = LES.write;
+  shell(`<div class="step-label">Step 5 · 用英文說說看</div>
+    <h2 class="q">${esc(w.prompt)}</h2>
+    <textarea id="wt" placeholder="Write here…">${esc(st.write||"")}</textarea>
+    <div><button class="small-btn" id="copy">📋 複製我的回答</button><button class="small-btn" id="showS">看範例</button></div>
+    <div id="sample" ${st.showSample?"":"hidden"} class="explain" style="margin-top:12px"><b>Sample answer</b><span class="sample">${esc(w.sample)}</span></div>`);
+  const ta = document.getElementById("wt");
+  ta.oninput = ()=>{ st.write = ta.value; save(); };
+  document.getElementById("showS").onclick = ()=>{ st.showSample=true; save(); document.getElementById("sample").hidden=false; };
+  document.getElementById("copy").onclick = async (e)=>{ try{ await navigator.clipboard.writeText(ta.value); e.target.textContent="✓ 已複製"; }catch(_){ ta.select(); } };
+  cta("完成 →", ()=>go(1));
+}
+
+/* summary */
+function stepSummary(){
+  const st = L(LES.id);
+  const res = Object.values(st.results);
+  const ok = res.filter(r=>r.ok).length;
+  const by = {}; res.forEach(r=>{ by[r.skill] ||= {ok:0,n:0}; by[r.skill].n++; if(r.ok) by[r.skill].ok++; });
+  const pred = new Set(st.predict||[]);
+  const predOk = LES.predict.statements.filter((s,i)=> pred.has(i)===s.truth).length;
+  const words = (LES.glossary||[]).filter(g=> st.seen.includes(g.word));
+  shell(`<div class="step-label">完成 · Summary</div>
+    <p class="score-big">${ok}<span style="font-size:24px;color:var(--muted)"> / ${res.length}</span></p>
+    <p class="hint">${st.readSec? `閱讀時間 ${Math.floor(st.readSec/60)} 分 ${st.readSec%60} 秒 · `:""}第一次作答才計分</p>
+    <h2 class="sec">這篇的題型表現</h2>
+    <div class="card">${Object.entries(by).map(([k,s])=>{ const r=s.ok/s.n; return `<div class="skill-row"><span>${SKILLS[k]}</span><div class="bar"><i class="${r>=.75?"":r>=.5?"mid":"low"}" style="width:${Math.max(4,r*100)}%"></i></div><span>${s.ok}/${s.n}</span></div>`; }).join("")}</div>
+    <h2 class="sec">讀前的猜測 · ${predOk}/${LES.predict.statements.length}</h2>
+    <div class="card"><ul class="predict-review" style="padding-left:18px;margin:0">${LES.predict.statements.map((s,i)=>`<li>${pred.has(i)===s.truth?"✓":"✗"} <b>${esc(s.text)}</b> — ${s.truth?"True":"False"}. <span class="hint">${esc(s.why)}</span></li>`).join("")}</ul></div>
+    <h2 class="sec">生字 · 你點開過 ${words.length} 個</h2>
+    <div class="card">${(LES.glossary||[]).map(g=>`<div style="margin:6px 0;line-height:1.5"><b style="font-family:var(--serif)">${esc(g.word)}</b> <span style="color:var(--accent)">${esc(g.zh)}</span> ${st.seen.includes(g.word)?"":"<span class='hint'>(沒點過)</span>"}<br><span class="hint">${esc(g.def)}</span></div>`).join("")}</div>
+    <div class="src"><b>Sources</b> · 文章依以下報導改寫為練習用版本：<br>${(LES.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("<br>")}</div>
+    <button class="small-btn" id="redo" style="margin-top:18px">↺ 重做這篇（不影響第一次的分數）</button>`, false);
+  document.getElementById("redo").onclick = ()=>{ const keep = {results:st.results, seen:st.seen, readSec:st.readSec}; DB.lessons[LES.id] = {step:0, predict:null, write:"", done:false, ...keep}; save(); renderStep(); };
+  cta("回到首頁", ()=>location.hash="#/");
+}
+</script>
+</body>
+</html>
