@@ -5,7 +5,8 @@
     "topic": "Space & Tech",
     "level": "news",
     "title": "SpaceX catches Starship from orbit - but only half the plan worked",
-    "teaser": "火箭第一次從太空回來被塔「夾住」，但只成功一半"
+    "teaser": "火箭第一次從太空回來被塔「夾住」，但只成功一半",
+    "hidden": true
   },
   {
     "id": "2026-11-20-why-starship-catch-matters",
@@ -29,8 +30,7 @@
     "topic": "Energy & Chemistry",
     "level": "news",
     "title": "Hotter than the Sun: fusion's record year - and its biggest catch",
-    "teaser": "比太陽核心還熱好幾倍：核融合今年連破紀錄，但還差最關鍵的一步",
-    "hidden": true
+    "teaser": "比太陽核心還熱好幾倍：核融合今年連破紀錄，但還差最關鍵的一步"
   },
   {
     "id": "2026-11-20-room-temp-superconductivity",
@@ -38,8 +38,7 @@
     "topic": "Physics & Chemistry",
     "level": "news",
     "title": "Electron pairs that survive the heat: a step towards room-temperature superconductors",
-    "teaser": "電子在室溫也能「牽手」：離不用冷卻的超導體又近一步",
-    "hidden": true
+    "teaser": "電子在室溫也能「牽手」：離不用冷卻的超導體又近一步"
   },
   {
     "id": "2026-11-19-autodna",
