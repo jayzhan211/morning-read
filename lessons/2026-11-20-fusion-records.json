@@ -1,0 +1,157 @@
+{
+  "id": "2026-11-20-fusion-records",
+  "date": "2026-11-20",
+  "topic": "Energy & Chemistry",
+  "level": "news",
+  "title": "Hotter than the Sun: fusion's record year - and its biggest catch",
+  "dek": "Machines in the US and South Korea broke temperature and time records in 2026. None has yet made more power than it uses.",
+  "sources": [
+    { "name": "American Nuclear Society: Helion sets temperature record", "url": "https://www.ans.org/news/2026-02-18/article-7765/fusion-roundup-helion-sets-temperature-record-inertia-raises-450m/" },
+    { "name": "Fortune: Helion hits 150 million degree plasma temperature", "url": "https://dc.fortune.com/2026/02/13/sam-altman-fusion-helion-energy-milestone-doubters-grid-power-2028/" },
+    { "name": "My Modern Met: KSTAR ran for 102 seconds", "url": "https://mymodernmet.com/kfe-kstar-102-seconds/" },
+    { "name": "GadgetReview: KSTAR tungsten divertors", "url": "https://www.gadgetreview.com/?p=383648" },
+    { "name": "E&E News: Fusion investments surge 69 percent", "url": "https://www.eenews.net/articles/fusion-investments-surge-69-percent-as-first-company-goes-public/" }
+  ],
+  "predict": {
+    "prompt": "Before you read: which of these do you think are TRUE? Tick all you believe.",
+    "statements": [
+      { "text": "Fusion machines can now be hotter than the centre of the Sun.", "truth": true, "why": "100 million °C is about seven times the Sun's core temperature." },
+      { "text": "A fusion power plant already sends electricity to homes.", "truth": false, "why": "No machine has yet made more electricity than it consumes; Helion only hopes to switch on a plant by 2028." },
+      { "text": "Fusion fuel is made from forms of hydrogen.", "truth": true, "why": "Deuterium and tritium are isotopes of hydrogen." },
+      { "text": "Investors are losing interest in fusion.", "truth": false, "why": "Fusion companies raised a record $4.5 billion in the past year." }
+    ]
+  },
+  "article": [
+    "Fusion, the process that powers the Sun, has been called the energy source of the future for decades. In 2026 a string of records suggested that future may be edging closer, but the hardest test has still not been passed.",
+    "Fusion works by forcing the nuclei of light atoms to merge. Most machines use two forms, or isotopes, of hydrogen: deuterium, which has one neutron, and tritium, which has two. When they fuse, they form helium and release a neutron carrying a great deal of energy. Because nuclei repel each other, the fuel must be heated into a plasma - a gas so hot that electrons are stripped from their atoms.",
+    "How hot? About 100 million °C is widely regarded as the threshold for a commercially useful machine, roughly seven times the temperature at the centre of the Sun.",
+    "In February, Helion, a US start-up, said its Polaris prototype had reached 150 million °C and had become the first privately built machine to produce measurable fusion with deuterium-tritium fuel. Helion has agreed to supply electricity to Microsoft from a power plant it hopes to switch on by 2028.",
+    "Months later, South Korea's KSTAR reactor held plasma at 100 million °C for 102 seconds, more than double its record of 48 seconds from 2024. Engineers credit a new lining of tungsten, a metal with an exceptionally high melting point, in the part of the machine that handles the plasma's exhaust heat.",
+    "Yet temperature and duration are not the same as useful power. Helion did not say how much fusion Polaris produced, and its 2028 timeline has not been independently confirmed. No fusion machine has yet produced more electricity than it consumes - the milestone any power station would need.",
+    "There are chemical hurdles, too. Tritium is radioactive and extremely rare in nature, so future plants would need to produce their own supply, and the walls of a reactor must survive years of bombardment by fast neutrons.",
+    "Investors are betting anyway: fusion companies raised a record $4.5 billion over the past year, a 69% jump. Whether that money can buy a working power plant this decade remains the field's biggest open question."
+  ],
+  "glossary": [
+    { "word": "nuclei", "zh": "原子核（複數）", "def": "the centres of atoms (singular: nucleus)" },
+    { "word": "isotopes", "zh": "同位素", "def": "forms of the same element with different numbers of neutrons" },
+    { "word": "repel", "zh": "互相排斥", "def": "push away from each other" },
+    { "word": "plasma", "zh": "電漿", "def": "a very hot gas in which electrons have left their atoms" },
+    { "word": "threshold", "zh": "門檻", "def": "the level that must be reached for something to happen" },
+    { "word": "prototype", "zh": "原型機", "def": "an early model built to test a design" },
+    { "word": "measurable", "zh": "可測量的", "def": "large enough to be measured" },
+    { "word": "exceptionally", "zh": "格外地", "def": "unusually; much more than normal" },
+    { "word": "independently", "zh": "獨立地（由外部）", "def": "by someone not involved in the work" },
+    { "word": "consumes", "zh": "消耗", "def": "uses up" },
+    { "word": "hurdles", "zh": "障礙", "def": "problems that must be overcome" },
+    { "word": "radioactive", "zh": "具放射性的", "def": "giving off harmful energy as atoms break down" }
+  ],
+  "tasks": [
+    {
+      "type": "mcq",
+      "skill": "main_idea",
+      "q": "Which headline best sums up the WHOLE article?",
+      "options": [
+        "Fusion set new records in 2026, but no machine yet makes more power than it uses",
+        "Fusion power plants now supply Microsoft with electricity",
+        "Tungsten has an exceptionally high melting point",
+        "Scientists prove that fusion energy is impossible"
+      ],
+      "answer": 0,
+      "explain": "B distorts paragraph 4 (2028 is only a hope). C is one detail from paragraph 5. D contradicts the whole article. A combines the records (paragraphs 4-5) with the catch (paragraph 6)."
+    },
+    {
+      "type": "order",
+      "skill": "structure",
+      "q": "Put the steps of fusion in order (paragraph 2).",
+      "items": [
+        "Hydrogen fuel is heated to extreme temperatures",
+        "Electrons are stripped away, forming a plasma",
+        "Deuterium and tritium nuclei collide and merge",
+        "Helium forms and a fast neutron is released"
+      ],
+      "explain": "Heating comes first because the positively charged nuclei repel each other - only very fast-moving nuclei can get close enough to fuse."
+    },
+    {
+      "type": "match",
+      "skill": "scanning",
+      "q": "Scan the article: what does each figure refer to?",
+      "pairs": [
+        { "left": "150 million °C", "right": "temperature Helion's Polaris reached" },
+        { "left": "100 million °C", "right": "threshold for a commercially useful machine" },
+        { "left": "102 seconds", "right": "KSTAR's new record" },
+        { "left": "48 seconds", "right": "KSTAR's record in 2024" },
+        { "left": "2028", "right": "when Helion hopes to switch on a power plant" },
+        { "left": "$4.5 billion", "right": "raised by fusion companies in the past year" }
+      ],
+      "explain": "Two temperatures and two times appear close together - check which machine and which year each belongs to."
+    },
+    {
+      "type": "tfng",
+      "skill": "detail",
+      "q": "True, False or Not Given?",
+      "statements": [
+        { "text": "Tritium has more neutrons than deuterium.", "answer": "T", "explain": "Paragraph 2: deuterium has one neutron, tritium has two." },
+        { "text": "Helion's Polaris already supplies electricity to Microsoft.", "answer": "F", "explain": "Paragraph 4: Helion only hopes to switch on a power plant by 2028." },
+        { "text": "KSTAR used deuterium-tritium fuel in its record run.", "answer": "NG", "explain": "Paragraph 5 never says what fuel KSTAR used." },
+        { "text": "Some fusion machines already produce more electricity than they consume.", "answer": "F", "explain": "Paragraph 6: \"No fusion machine has yet\" done this." },
+        { "text": "Tungsten is cheaper than other metals used in reactors.", "answer": "NG", "explain": "Paragraph 5 mentions tungsten's melting point, not its price." }
+      ]
+    },
+    {
+      "type": "mcq",
+      "skill": "inference",
+      "q": "Why might readers treat Helion's announcement with some caution?",
+      "options": [
+        "It did not say how much fusion occurred, and its timeline is not independently confirmed",
+        "Its machine only reached 50 million °C",
+        "It used a fuel that cannot fuse",
+        "Microsoft has cancelled the agreement"
+      ],
+      "answer": 0,
+      "explain": "Paragraph 6 gives both reasons. B misreads the numbers (it was 150 million °C); C and D are never said."
+    },
+    {
+      "type": "mcq",
+      "skill": "vocab",
+      "q": "In paragraph 3, \"threshold\" is closest in meaning to:",
+      "options": [
+        "the level that must be reached",
+        "the highest temperature possible",
+        "a dangerous mistake",
+        "the entrance of a building"
+      ],
+      "answer": 0,
+      "explain": "A machine below 100 million °C is not commercially useful; at or above it, it might be. D is the literal meaning (a doorway), which does not fit here."
+    },
+    {
+      "type": "mcq",
+      "skill": "structure",
+      "q": "What does paragraph 7 add to the argument?",
+      "options": [
+        "A different kind of obstacle, beyond reaching high temperatures for long enough",
+        "More evidence that fusion is nearly ready",
+        "A description of how Helion's machine works",
+        "The reasons investors are leaving the field"
+      ],
+      "answer": 0,
+      "explain": "\"There are chemical hurdles, too\" - the word \"too\" signals an additional problem: fuel supply and wall materials."
+    }
+  ],
+  "sentence": {
+    "text": "Because nuclei repel each other, the fuel must be heated into a plasma - a gas so hot that electrons are stripped from their atoms.",
+    "chunks": [
+      { "text": "Because nuclei repel each other,", "role": "原因 Reason" },
+      { "text": "the fuel", "role": "主詞 Subject" },
+      { "text": "must be heated", "role": "動詞（被動）Verb (passive)" },
+      { "text": "into a plasma", "role": "結果 Into what" },
+      { "text": "- a gas so hot that electrons are stripped from their atoms.", "role": "同位語：解釋 plasma Explains 'plasma'" }
+    ],
+    "q": "Tap the part that gives the REASON the fuel must be heated.",
+    "answer": 0,
+    "gist": "因為原子核彼此排斥，燃料必須加熱成電漿——一種熱到電子都被剝離原子的氣體。"
+  },
+  "write": {
+    "prompt": "Should governments spend more on fusion research, or on energy that already works, such as solar power? Write 2-3 sentences in English and give one reason.",
+    "sample": "I think governments should keep funding fusion, but not at the expense of solar power. Fusion has passed an important threshold in temperature, yet no machine has produced more electricity than it consumes, so we still need energy that works today."
+  }
+}

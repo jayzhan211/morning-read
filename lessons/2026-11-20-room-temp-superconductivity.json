@@ -1,0 +1,156 @@
+{
+  "id": "2026-11-20-room-temp-superconductivity",
+  "date": "2026-11-20",
+  "topic": "Physics & Chemistry",
+  "level": "news",
+  "title": "Electron pairs that survive the heat: a step towards room-temperature superconductors",
+  "dek": "A study of a copper-oxide compound suggests one of the two conditions for superconductivity can hold at room temperature.",
+  "sources": [
+    { "name": "EurekAlert (Utrecht University): New research offers hope for room-temperature superconductivity", "url": "https://www.eurekalert.org/news-releases/1150846" },
+    { "name": "TechEnclave: Scientists link a superconductivity puzzle to electron pairs", "url": "https://techenclave.com/news/items/scientists-link-a-superconductivity-puzzle-to-electron-pairs" },
+    { "name": "The Brighter Side: Strong electron pairs offer new hope", "url": "https://www.thebrighterside.news/post/strong-electron-pairs-offer-new-hope-for-room-temperature-superconductivity/" },
+    { "name": "Quantum Zeitgeist: Utrecht study on room-temperature superconductivity", "url": "https://quantumzeitgeist.com/?p=367889" }
+  ],
+  "predict": {
+    "prompt": "Before you read: which of these do you think are TRUE? Tick all you believe.",
+    "statements": [
+      { "text": "Scientists have built a superconductor that works at room temperature.", "truth": false, "why": "No - they found that one of two conditions may hold at room temperature." },
+      { "text": "Ordinary wires lose some energy as heat.", "truth": true, "why": "Electrons bump into the material and lose energy." },
+      { "text": "Today's superconductors need very cold temperatures.", "truth": true, "why": "Some need liquid helium at about -260°C." },
+      { "text": "The study was done on a pure metal like gold.", "truth": false, "why": "It studied a copper-oxide compound called Bi-2212." }
+    ]
+  },
+  "article": [
+    "Scientists have found that one of the two conditions needed for superconductivity - electricity flowing with no resistance at all - may be met even at room temperature. The finding, published in the journal Science on 5 November, does not create a room-temperature superconductor, but it narrows down what is standing in the way.",
+    "Ordinary wires waste energy: as electrons travel, they bump into the material and lose some of their energy as heat. In a superconductor, that loss disappears. The catch is that known superconductors work only when they are cooled to extreme cold; some need liquid helium at about -260°C.",
+    "Superconductivity needs two things. First, electrons must team up into so-called Cooper pairs. Second, the pairs must move in step with one another, a property physicists call phase coherence.",
+    "Researchers from Utrecht, Leiden and Munich studied a copper-oxide compound known as Bi-2212, one of a family of materials that superconduct at relatively high temperatures. They built equipment that could tell apart electric current carried by single electrons from current carried by pairs.",
+    "Their measurements showed that pairs form well above the temperature at which the material actually becomes a superconductor. The team concluded that the \"glue\" binding the electrons together is strong enough to hold them at room temperature.",
+    "That shifts the search. If pairing is not the bottleneck, the real problem may be getting the pairs to move together. One research leader, Ingmar Swart, called the result good news, because without stable pairs, room-temperature superconductivity would be out of reach altogether.",
+    "Important caveats remain. The measurements themselves were made under extreme cooling; the room-temperature claim is an inference about the strength of the binding. And phase coherence, the second condition, is still unexplained at higher temperatures.",
+    "The prize would be enormous: superconductors that work without cooling could transform power grids, magnetic-levitation trains and quantum computers. For now, scientists have found one piece of the puzzle and a clearer picture of the piece still missing."
+  ],
+  "glossary": [
+    { "word": "resistance", "zh": "電阻；阻力", "def": "the way a material slows down the flow of electricity" },
+    { "word": "narrows down", "zh": "縮小範圍", "def": "makes the number of possibilities smaller" },
+    { "word": "catch", "zh": "隱藏的問題；但書", "def": "a hidden problem or difficulty" },
+    { "word": "compound", "zh": "化合物", "def": "a substance made of two or more elements joined chemically" },
+    { "word": "relatively", "zh": "相對地", "def": "when compared with others" },
+    { "word": "tell apart", "zh": "分辨", "def": "see the difference between two things" },
+    { "word": "bottleneck", "zh": "瓶頸", "def": "the part of a process that slows everything down" },
+    { "word": "out of reach", "zh": "遙不可及", "def": "impossible to get or achieve" },
+    { "word": "caveats", "zh": "但書；附帶條件", "def": "warnings that something is only true in a limited way" },
+    { "word": "inference", "zh": "推論", "def": "a conclusion reached from evidence, not observed directly" },
+    { "word": "transform", "zh": "徹底改變", "def": "change something completely" },
+    { "word": "puzzle", "zh": "謎題", "def": "a problem that is difficult to understand" }
+  ],
+  "tasks": [
+    {
+      "type": "mcq",
+      "skill": "main_idea",
+      "q": "Which headline best sums up the WHOLE article?",
+      "options": [
+        "Electron pairs may survive at room temperature, but superconductors still need cold",
+        "Room-temperature superconductors have finally been invented",
+        "Bi-2212 is a copper-oxide compound",
+        "Power grids will stop wasting energy next year"
+      ],
+      "answer": 0,
+      "explain": "B is the classic overclaim - paragraph 1 says the study \"does not create\" one. C is a single detail (paragraph 4). D is never promised (paragraph 8 says \"could\")."
+    },
+    {
+      "type": "order",
+      "skill": "structure",
+      "q": "Follow the article's logic: put these steps in order (paragraphs 2-6).",
+      "items": [
+        "Superconductors only work when they are extremely cold",
+        "Superconductivity needs pairs AND pairs moving in step",
+        "Scientists measure current from single electrons versus pairs",
+        "They find pairs form well above the superconducting temperature",
+        "So the main problem may be making the pairs move together"
+      ],
+      "explain": "Problem → the two conditions → the experiment → the result → what it means. Many science news stories follow this shape."
+    },
+    {
+      "type": "match",
+      "skill": "scanning",
+      "q": "Scan the article: what does each term refer to?",
+      "pairs": [
+        { "left": "Cooper pairs", "right": "electrons teamed up in twos" },
+        { "left": "phase coherence", "right": "pairs moving in step" },
+        { "left": "Bi-2212", "right": "the copper-oxide material studied" },
+        { "left": "-260°C", "right": "temperature some superconductors need" },
+        { "left": "5 November", "right": "when the study was published" }
+      ],
+      "explain": "Writers often define a technical term right after it, using \"so-called\" or a comma: look for those signals."
+    },
+    {
+      "type": "tfng",
+      "skill": "detail",
+      "q": "True, False or Not Given?",
+      "statements": [
+        { "text": "In a superconductor, no energy is lost as heat from resistance.", "answer": "T", "explain": "Paragraph 2: \"In a superconductor, that loss disappears.\"" },
+        { "text": "The team carried out its measurements at room temperature.", "answer": "F", "explain": "Paragraph 7: the measurements were made under extreme cooling." },
+        { "text": "Bi-2212 is cheap to manufacture.", "answer": "NG", "explain": "Cost is never mentioned." },
+        { "text": "Scientists now fully understand phase coherence at high temperatures.", "answer": "F", "explain": "Paragraph 7: it \"is still unexplained at higher temperatures\"." },
+        { "text": "The researchers will test other copper oxides next year.", "answer": "NG", "explain": "No future plans are described." }
+      ]
+    },
+    {
+      "type": "mcq",
+      "skill": "inference",
+      "q": "According to the article, what is now most likely the main obstacle to room-temperature superconductors?",
+      "options": [
+        "Getting electron pairs to move in step",
+        "Getting electrons to form pairs at all",
+        "Finding enough liquid helium",
+        "Building equipment that measures current"
+      ],
+      "answer": 0,
+      "explain": "Paragraph 6: \"If pairing is not the bottleneck, the real problem may be getting the pairs to move together.\" B is the opposite of the finding."
+    },
+    {
+      "type": "mcq",
+      "skill": "vocab",
+      "q": "In paragraph 6, \"bottleneck\" means:",
+      "options": [
+        "the part that limits progress",
+        "the strongest part of a system",
+        "a kind of electrical wire",
+        "a successful experiment"
+      ],
+      "answer": 0,
+      "explain": "Like the narrow neck of a bottle, it is the point that slows everything down. The sentence contrasts it with \"the real problem\"."
+    },
+    {
+      "type": "mcq",
+      "skill": "structure",
+      "q": "What is the main purpose of paragraph 7?",
+      "options": [
+        "To stop readers from overstating the result",
+        "To explain how superconductors save energy",
+        "To introduce the research team",
+        "To argue that the study was badly done"
+      ],
+      "answer": 0,
+      "explain": "\"Important caveats remain\" signals limits. D goes too far - pointing out limits is not saying the work was bad."
+    }
+  ],
+  "sentence": {
+    "text": "Their measurements showed that pairs form well above the temperature at which the material actually becomes a superconductor.",
+    "chunks": [
+      { "text": "Their measurements", "role": "主詞 Subject" },
+      { "text": "showed", "role": "動詞 Verb" },
+      { "text": "that pairs form", "role": "顯示的內容 What was shown" },
+      { "text": "well above the temperature", "role": "地點／程度 Where (on the scale)" },
+      { "text": "at which the material actually becomes a superconductor.", "role": "關係子句：哪個溫度 Which temperature" }
+    ],
+    "q": "Tap the part that tells you WHICH temperature is meant.",
+    "answer": 4,
+    "gist": "測量顯示，電子在遠高於材料真正變成超導體的溫度時，就已經配成對了。"
+  },
+  "write": {
+    "prompt": "Why do scientists care so much about superconductors that work without cooling? Write 2-3 sentences in English, giving one example from the article and one of your own.",
+    "sample": "Superconductors without cooling could transform power grids, because no energy would be lost as heat. I think they could also make MRI machines cheaper, since today these machines need very cold liquid helium."
+  }
+}
