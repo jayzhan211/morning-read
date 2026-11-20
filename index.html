@@ -172,6 +172,7 @@ async function home(){
   cta(null);
   let list = [];
   try{ list = await getJSON("lessons/index.json"); }catch(e){ $app.innerHTML = `<p class="empty">讀不到課程清單 (${esc(e.message)})</p>`; return; }
+  list = list.filter(l => !l.hidden);
   list.sort((a,b)=> b.date.localeCompare(a.date));
   const stats = skillStats();
   const total = Object.values(stats).reduce((a,b)=>a+b.n,0);
