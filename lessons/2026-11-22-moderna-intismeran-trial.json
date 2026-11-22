@@ -276,7 +276,8 @@
     ],
     "q": "Tap the part that tells you WHEN the benefit finally appeared.",
     "answer": 2,
-    "gist": "頭六個月兩組幾乎沒差；要等到整個疫苗療程打完，兩條曲線才分開。事先設定的分析顯示，復發或死亡風險降低了 58%。（only after... 放句首，所以後面倒裝成 did the curves separate）"
+    "gist": "頭六個月兩組幾乎沒差；要等到整個疫苗療程打完，兩條曲線才分開。事先設定的分析顯示，復發或死亡風險降低了 58%。（only after... 放句首，所以後面倒裝成 did the curves separate）",
+    "explain": "\n怎麼拆：\n① 先看分號：這句其實是兩個句子。前半「the two groups fared almost identically」意思是頭六個月兩組差不多。\n② 後半以 Only after… 開頭。only + 時間／條件放在句首時，後面的主句要倒裝，把助動詞提到主詞前面。原本是 the curves separated，倒裝後變成 did the curves separate。所以真正的主詞是 the curves，動詞是 separate（曲線分開＝效果出現差異）。\n③ 題目問「好處什麼時候出現」，答案就是觸發倒裝的那段：only after the immunisation course was complete（療程打完之後）。\n④ 最後的 with the risk … falling by 58%，句型是 with + 名詞 + V-ing，用來補充結果，不是主詞，不用被它干擾。\n考試技巧：看到 Only after／Not until／Never／Rarely 開頭，先把那段括起來，再往後找「助動詞＋主詞」。那就是句子的主幹。"
   },
   "write": {
     "prompt": "If you were a patient, would you accept a therapy that lowers the risk of relapse but has not yet been proven to extend life? Answer in 2-3 sentences and use one glossary word.",

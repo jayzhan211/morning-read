@@ -54,7 +54,7 @@ h2.sec{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--
 .check{display:flex;gap:12px;align-items:flex-start}
 .check .box{flex:none;width:22px;height:22px;border:2px solid var(--muted);border-radius:6px;margin-top:1px;display:grid;place-items:center;font-size:14px}
 .opt.sel .box{background:var(--ink);border-color:var(--ink);color:#fff}
-.explain{margin-top:12px;padding:12px 14px;border-radius:12px;font-size:15px;line-height:1.6;background:#efe8da}
+.explain{white-space:pre-line;margin-top:12px;padding:12px 14px;border-radius:12px;font-size:15px;line-height:1.6;background:#efe8da}
 .explain b{display:block;margin-bottom:2px}
 .explain.good{background:var(--ok-soft)}.explain.bad{background:var(--bad-soft)}
 .cta{position:fixed;left:0;right:0;bottom:0;padding:12px 18px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--paper) 30%)}
@@ -376,7 +376,7 @@ function stepSentence(){
   shell(`<div class="step-label">Step 4 · 長句拆解 · ${SKILLS.structure}</div>
     <h2 class="q">${esc(s.q)}</h2>
     <div class="card chunks">${s.chunks.map((c,i)=>`<span class="chunk ${answered?"r"+(i%7):""} ${!answered&&false?"sel":""}" data-i="${i}">${esc(c.text)}</span>`).join(" ")}</div>
-    ${answered? explainBox(picked===s.answer, "", picked===s.answer?"答對了 ✓":"答案是 until… 那段 ✗")
+    ${answered? explainBox(picked===s.answer, s.explain||"", picked===s.answer?"答對了 ✓":`答案是「${s.chunks[s.answer].text}」✗`)
       + `<div class="legend">${s.chunks.map((c,i)=>`<span class="chunk r${i%7}">${esc(c.role)}</span>`).join("")}</div>
          <div class="explain" style="margin-top:12px"><b>中文大意</b>${esc(s.gist)}</div>` : `<p class="hint">直接點句子裡的那一段。</p>`}`);
   if(!answered) $app.querySelectorAll(".chunk").forEach(c=> c.onclick = ()=>{ st.pick_sentence=+c.dataset.i; record(st,key,"structure",+c.dataset.i===s.answer); stepSentence(); });
