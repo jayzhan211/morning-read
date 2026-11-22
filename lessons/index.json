@@ -22,8 +22,7 @@
     "topic": "Space & Tech",
     "level": "feature",
     "title": "Why catching a rocket matters - and what it does not prove",
-    "teaser": "接住火箭到底有什麼了不起？從機票價格看懂太空的成本",
-    "hidden": true
+    "teaser": "接住火箭到底有什麼了不起？從機票價格看懂太空的成本"
   },
   {
     "id": "2026-11-20-moderna-cancer-vaccine",
@@ -31,8 +30,7 @@
     "topic": "Health & Science",
     "level": "news",
     "title": "A vaccine made from your own tumour cuts melanoma's return",
-    "teaser": "用你自己的腫瘤做疫苗：癌症疫苗百年來第一次在大型試驗成功",
-    "hidden": true
+    "teaser": "用你自己的腫瘤做疫苗：癌症疫苗百年來第一次在大型試驗成功"
   },
   {
     "id": "2026-11-20-fusion-records",
@@ -40,8 +38,7 @@
     "topic": "Energy & Chemistry",
     "level": "news",
     "title": "Hotter than the Sun: fusion's record year - and its biggest catch",
-    "teaser": "比太陽核心還熱好幾倍：核融合今年連破紀錄，但還差最關鍵的一步",
-    "hidden": true
+    "teaser": "比太陽核心還熱好幾倍：核融合今年連破紀錄，但還差最關鍵的一步"
   },
   {
     "id": "2026-11-20-room-temp-superconductivity",
@@ -49,8 +46,7 @@
     "topic": "Physics & Chemistry",
     "level": "news",
     "title": "Electron pairs that survive the heat: a step towards room-temperature superconductors",
-    "teaser": "電子在室溫也能「牽手」：離不用冷卻的超導體又近一步",
-    "hidden": true
+    "teaser": "電子在室溫也能「牽手」：離不用冷卻的超導體又近一步"
   },
   {
     "id": "2026-11-19-autodna",
@@ -58,7 +54,6 @@
     "topic": "Science & Tech",
     "level": "news",
     "title": "AI runs its own biology lab - and stores a sentence in DNA",
-    "teaser": "AI 自己跑生物實驗室，還把一句話存進 DNA 再讀出來",
-    "hidden": true
+    "teaser": "AI 自己跑生物實驗室，還把一句話存進 DNA 再讀出來"
   }
 ]
