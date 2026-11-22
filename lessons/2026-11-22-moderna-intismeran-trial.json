@@ -1,0 +1,285 @@
+{
+  "id": "2026-11-22-moderna-intismeran-trial",
+  "date": "2026-11-22",
+  "topic": "Health & Science",
+  "level": "feature",
+  "title": "Inside the first winning trial of a personalised mRNA cancer therapy",
+  "dek": "A tumour-specific mRNA treatment cut melanoma's return by 42%, but survival, wider use and cost are still open questions.",
+  "sources": [
+    {
+      "name": "Merck press release: INTerpath-001 Phase 3 results at ESMO 2026",
+      "url": "https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/"
+    },
+    {
+      "name": "CNBC: Doctors call Moderna, Merck cancer vaccine data a major advancement - despite Wall Street reaction",
+      "url": "https://www.cnbc.com/2026/10/23/moderna-merck-cancer-vaccine-data.html"
+    },
+    {
+      "name": "Boston Globe: Moderna cancer vaccine results",
+      "url": "https://www.bostonglobe.com/2026/08/19/business/moderna-cancer-vaccine-results/"
+    },
+    {
+      "name": "Motley Fool: Is Moderna's cancer vaccine a game changer for the stock?",
+      "url": "https://www.fool.com/investing/2026/11/16/is-moderna-s-cancer-vaccine-a-game-changer-for-the-stock"
+    }
+  ],
+  "predict": {
+    "prompt": "Before you read: which of these do you think are TRUE? Tick all you believe.",
+    "statements": [
+      {
+        "text": "The therapy is made separately for each patient.",
+        "truth": true,
+        "why": "Paragraph 2: it is built from the mutations in one patient's own tumour."
+      },
+      {
+        "text": "The trial proved that the therapy helps patients live longer.",
+        "truth": false,
+        "why": "Paragraph 6: overall survival data are not yet mature, so a longer life is still unproven."
+      },
+      {
+        "text": "The therapy was tested on its own, without other cancer drugs.",
+        "truth": false,
+        "why": "Paragraph 3: every patient also received Keytruda."
+      },
+      {
+        "text": "Side effects were common in both groups of patients.",
+        "truth": true,
+        "why": "Paragraph 5: 95.8% vs 90.0% reported treatment-related side effects."
+      }
+    ]
+  },
+  "article": [
+    "For decades, therapeutic cancer vaccines were regarded as a promising idea that repeatedly failed to deliver. A large trial reported this autumn suggests that the idea can work, at least in one carefully chosen setting. Researchers working with Moderna and Merck found that adding a personalised mRNA treatment, intismeran autogene, to the standard immunotherapy Keytruda reduced the risk of melanoma returning, or of death, by 42% over roughly two years. The result is the first positive late-stage trial for an mRNA-based cancer therapy, yet the same data also reveal how much remains uncertain.",
+    "Unlike conventional vaccines, which train the body to recognise an outside invader, intismeran is designed to help the immune system recognise the patient's own disease. After a tumour is surgically removed, its DNA is sequenced and compared with the patient's healthy DNA. The mutations found only in the cancer are used to identify neoantigens: abnormal protein fragments that mark a cell as cancerous. A synthetic mRNA molecule encoding up to 34 of these neoantigens is then manufactured for that single patient. Once it is injected, the body's cells read the instructions, produce the fragments and present them to immune cells known as T cells, which can then hunt down any remaining cancer cells.",
+    "The trial, called INTerpath-001, enrolled 1,137 patients with high-risk melanoma (stage IIB to IV) whose tumours had been completely removed. Because such patients often relapse even after successful surgery, they typically receive Keytruda, a drug that releases a brake on the immune system. Participants were randomly assigned in a 2:1 ratio to receive either the personalised treatment or a placebo, in both cases alongside Keytruda. The study was double-blind, meaning that neither the patients nor their doctors knew who was receiving the active treatment. Intismeran was given every three weeks for up to nine doses.",
+    "After a median follow-up of about two years, 82.2% of patients in the combination group were alive and free of recurrence, compared with 70.0% of those given Keytruda alone. The combination also lowered the risk of the cancer spreading to distant organs, or of death, by 38%. Interestingly, the benefit did not appear at once. During the first six months, the two groups fared almost identically; only after the immunisation course was complete did the curves separate, with the risk of recurrence or death falling by 58% in a pre-specified analysis. This delay is consistent with the time the immune system needs to build a targeted response.",
+    "The safety profile was broadly reassuring. Treatment-related side effects were common in both groups, reported by 95.8% of patients receiving the combination and 90.0% of those on Keytruda alone, but serious events occurred at similar rates, about 14% and 13% respectively. The most frequent complaints in the combination group were fever, pain at the injection site and fatigue, and no new safety concerns were identified.",
+    "Several caveats temper the enthusiasm, however. Most importantly, overall survival data are not yet mature: although a favourable trend has been observed, it remains unproven that patients will live longer. Melanoma may also be an unusually favourable test case, since its tumours carry many mutations and therefore offer many potential targets; whether the approach works as well in cancers with fewer mutations is unknown. Furthermore, because every course must be designed and manufactured for one individual, producing the therapy at scale is likely to be costly and logistically demanding. The treatment has not yet been approved by any regulator.",
+    "Such uncertainties help explain why reactions to the data have been mixed. Melanoma specialists described the results as a clinically meaningful advance, whereas investors responded more coolly when the detailed figures were released, even though Moderna's shares had already multiplied in value over the year on hopes for the programme. Even the vocabulary has become sensitive: Moderna now generally avoids calling the product a \"vaccine\", a word that has become politically charged, and describes it instead as an individualised neoantigen therapy.",
+    "The companies are now running nine mid- and late-stage trials across several tumour types, including three late-stage studies in lung cancer. If those trials succeed, personalised mRNA therapy could become a new pillar of cancer care. If they do not, INTerpath-001 may be remembered as proof that the concept works, but only where the biological conditions happen to be unusually favourable."
+  ],
+  "glossary": [
+    {
+      "word": "failed to deliver",
+      "zh": "未能兌現（期望）",
+      "def": "did not produce the results that were hoped for"
+    },
+    {
+      "word": "neoantigens",
+      "zh": "新抗原",
+      "def": "abnormal protein pieces that appear only on cancer cells"
+    },
+    {
+      "word": "relapse",
+      "zh": "復發",
+      "def": "become ill again after a period of improvement"
+    },
+    {
+      "word": "double-blind",
+      "zh": "雙盲（的）",
+      "def": "a test in which neither patients nor researchers know who gets the real treatment"
+    },
+    {
+      "word": "median",
+      "zh": "中位數",
+      "def": "the middle value when numbers are put in order"
+    },
+    {
+      "word": "fared",
+      "zh": "（境況）表現",
+      "def": "got on; did well or badly in a situation"
+    },
+    {
+      "word": "pre-specified",
+      "zh": "事先設定的",
+      "def": "decided before the results were known"
+    },
+    {
+      "word": "broadly reassuring",
+      "zh": "大致令人放心",
+      "def": "mostly calming worries, though not completely"
+    },
+    {
+      "word": "caveats",
+      "zh": "但書；需注意的限制",
+      "def": "warnings that limit how far a claim can be trusted"
+    },
+    {
+      "word": "temper",
+      "zh": "緩和、沖淡",
+      "def": "make something less strong or extreme"
+    },
+    {
+      "word": "logistically demanding",
+      "zh": "後勤（安排）上很吃力",
+      "def": "hard to organise because of many practical steps"
+    },
+    {
+      "word": "politically charged",
+      "zh": "帶有政治敏感性的",
+      "def": "likely to cause strong political feelings"
+    }
+  ],
+  "tasks": [
+    {
+      "type": "mcq",
+      "skill": "main_idea",
+      "q": "Which of the following best expresses the main idea of the passage?",
+      "options": [
+        "A personalised mRNA therapy has achieved the first late-stage success of its kind in melanoma, but questions about survival, wider use and production remain.",
+        "Personalised mRNA therapy has now been shown to cure most types of cancer when it is combined with Keytruda.",
+        "Most patients given intismeran suffered fever, injection-site pain and fatigue during the trial.",
+        "Doctors and investors agreed that the detailed trial results were a disappointment for Moderna."
+      ],
+      "answer": 0,
+      "explain": "Paragraph 1 gives the success and says much 'remains uncertain'; paragraphs 6-8 develop those limits. B overclaims (only melanoma was tested), C is a single detail from paragraph 5, D distorts paragraph 7 (doctors were positive)."
+    },
+    {
+      "type": "mcq",
+      "skill": "vocab",
+      "q": "In paragraph 2, \"neoantigens\" most nearly refers to ____.",
+      "options": [
+        "abnormal protein fragments found only on cancer cells",
+        "a drug that releases a brake on the immune system",
+        "immune cells that hunt down remaining cancer cells",
+        "the healthy DNA used for comparison with the tumour"
+      ],
+      "answer": 0,
+      "explain": "Paragraph 2 defines them right after the colon: 'abnormal protein fragments that mark a cell as cancerous'. B is Keytruda (paragraph 3), C is T cells, D is the patient's healthy DNA."
+    },
+    {
+      "type": "mcq",
+      "skill": "structure",
+      "q": "In paragraph 7, \"Such uncertainties\" most accurately refers to which of the following?",
+      "options": [
+        "The unproven survival benefit, the untested use in other cancers, and the difficulty of producing each course",
+        "The lack of any benefit during the first six months of treatment",
+        "The high rate of side effects reported in both groups",
+        "The random assignment of patients in a 2:1 ratio"
+      ],
+      "answer": 0,
+      "explain": "'Such' points back to the previous paragraph. Paragraph 6 lists exactly these caveats: survival not mature, cancers with fewer mutations unknown, production costly. The other options come from paragraphs 3-5."
+    },
+    {
+      "type": "tfng",
+      "skill": "detail",
+      "q": "True, False or Not Given?",
+      "statements": [
+        {
+          "text": "Neither the patients nor their doctors knew who received intismeran.",
+          "answer": "T",
+          "explain": "Paragraph 3: the study was double-blind, so neither group knew."
+        },
+        {
+          "text": "Patients in the combination group had fewer side effects than those on Keytruda alone.",
+          "answer": "F",
+          "explain": "Paragraph 5: side effects were slightly MORE common with the combination (95.8% vs 90.0%)."
+        },
+        {
+          "text": "Intismeran has already been approved by regulators in the United States.",
+          "answer": "F",
+          "explain": "Paragraph 6: it 'has not yet been approved by any regulator'."
+        },
+        {
+          "text": "Each personalised course takes about six weeks to manufacture.",
+          "answer": "NG",
+          "explain": "Paragraph 6 says production is costly and demanding, but no manufacturing time is given anywhere."
+        },
+        {
+          "text": "Lung tumours carry fewer mutations than melanoma tumours.",
+          "answer": "NG",
+          "explain": "Paragraph 6 mentions 'cancers with fewer mutations' and paragraph 8 mentions lung cancer, but the passage never links the two. Don't combine separate facts into a new claim."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "skill": "detail",
+      "q": "Which of the following is NOT mentioned in the passage?",
+      "options": [
+        "The price a patient would pay for one course of the therapy",
+        "The maximum number of intismeran doses each patient could receive",
+        "The share of patients in each group who had serious side effects",
+        "The number of late-stage trials being run in lung cancer"
+      ],
+      "answer": 0,
+      "explain": "Paragraph 6 only says production is 'likely to be costly'. No price is given. The others appear in paragraph 3 (nine doses), paragraph 5 (about 14% and 13%) and paragraph 8 (three lung-cancer studies)."
+    },
+    {
+      "type": "mcq",
+      "skill": "inference",
+      "q": "What can be inferred from the finding that the two groups fared almost identically during the first six months?",
+      "options": [
+        "The added therapy probably needs time to train the immune system before it protects patients.",
+        "Keytruda stops working after six months of treatment.",
+        "The trial was poorly designed during its early stage.",
+        "Patients whose cancer returned early benefited most from intismeran."
+      ],
+      "answer": 0,
+      "explain": "Paragraph 4: the curves separated only after the immunisation course, which fits 'the time the immune system needs to build a targeted response'. Nothing supports B, C or D."
+    },
+    {
+      "type": "mcq",
+      "skill": "structure",
+      "q": "Why does the author mention that Moderna avoids the word \"vaccine\" (paragraph 7)?",
+      "options": [
+        "To show that the therapy's reception is shaped by factors beyond the clinical data",
+        "To argue that intismeran is not scientifically a vaccine",
+        "To explain why regulators have delayed approval",
+        "To criticise Moderna for misleading patients"
+      ],
+      "answer": 0,
+      "explain": "Paragraph 7 is about reactions: doctors, investors and even 'the vocabulary'. The detail shows that politics, not only data, affects how the product is received. The author makes no scientific, regulatory or moral claim about it."
+    },
+    {
+      "type": "order",
+      "skill": "structure",
+      "q": "Put the steps of making and using the therapy in order (paragraph 2).",
+      "items": [
+        "The tumour is surgically removed",
+        "Its DNA is sequenced and compared with healthy DNA",
+        "Neoantigens unique to the cancer are identified",
+        "An mRNA molecule encoding up to 34 neoantigens is made for that patient",
+        "The patient's cells produce the fragments after injection",
+        "T cells learn to hunt down remaining cancer cells"
+      ],
+      "explain": "Paragraph 2 follows a time sequence: 'After a tumour is surgically removed... then manufactured... Once it is injected... which can then hunt down'. Signal words like after, then and once mark each step."
+    }
+  ],
+  "sentence": {
+    "text": "During the first six months, the two groups fared almost identically; only after the immunisation course was complete did the curves separate, with the risk of recurrence or death falling by 58% in a pre-specified analysis.",
+    "chunks": [
+      {
+        "text": "During the first six months,",
+        "role": "時間 Time"
+      },
+      {
+        "text": "the two groups fared almost identically;",
+        "role": "子句一 Clause 1"
+      },
+      {
+        "text": "only after the immunisation course was complete",
+        "role": "時間條件（觸發倒裝）Time condition"
+      },
+      {
+        "text": "did the curves separate,",
+        "role": "倒裝主句 Inverted main clause"
+      },
+      {
+        "text": "with the risk of recurrence or death falling by 58%",
+        "role": "附帶結果 with + 分詞"
+      },
+      {
+        "text": "in a pre-specified analysis.",
+        "role": "出處 Source"
+      }
+    ],
+    "q": "Tap the part that tells you WHEN the benefit finally appeared.",
+    "answer": 2,
+    "gist": "頭六個月兩組幾乎沒差；要等到整個疫苗療程打完，兩條曲線才分開。事先設定的分析顯示，復發或死亡風險降低了 58%。（only after... 放句首，所以後面倒裝成 did the curves separate）"
+  },
+  "write": {
+    "prompt": "If you were a patient, would you accept a therapy that lowers the risk of relapse but has not yet been proven to extend life? Answer in 2-3 sentences and use one glossary word.",
+    "sample": "I would probably accept it, because a lower chance of relapse is already valuable. Still, the caveats about survival would temper my expectations, so I would ask my doctor to explain the risks clearly."
+  }
+}
