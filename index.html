@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Morning Read · 讀報練習</title>
+<title>Between the Lines · 讀出言外之意</title>
 <style>
 :root{
   --paper:#f6f1e7; --card:#fffdf8; --ink:#1f1b16; --muted:#6f665a; --line:#e3dacb;
@@ -187,7 +187,7 @@ async function home(){
   }).join("");
 
   $app.innerHTML = `
-    <div class="mast"><h1>Morning Read</h1><small>讀報練習</small></div>
+    <div class="mast"><h1>Between the Lines</h1><small>讀出言外之意</small></div>
     <p class="hint" style="margin:-8px 0 16px">挑一篇有興趣的讀就好，讀過的都會留著。</p>
     ${list.map(l=>{
       const st = DB.lessons[l.id];
