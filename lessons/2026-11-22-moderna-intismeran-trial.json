@@ -29,22 +29,22 @@
       {
         "text": "The therapy is made separately for each patient.",
         "truth": true,
-        "why": "Paragraph 2: it is built from the mutations in one patient's own tumour."
+        "why": "第 2 段：它是用「這位病人自己腫瘤」的突變設計的（manufactured for that single patient）。"
       },
       {
         "text": "The trial proved that the therapy helps patients live longer.",
         "truth": false,
-        "why": "Paragraph 6: overall survival data are not yet mature, so a longer life is still unproven."
+        "why": "第 6 段：overall survival data are not yet mature。能不能活更久還沒被證明，這是常見的過度推論陷阱。"
       },
       {
         "text": "The therapy was tested on its own, without other cancer drugs.",
         "truth": false,
-        "why": "Paragraph 3: every patient also received Keytruda."
+        "why": "第 3 段：所有病人都有打 Keytruda（in both cases alongside Keytruda）。"
       },
       {
         "text": "Side effects were common in both groups of patients.",
         "truth": true,
-        "why": "Paragraph 5: 95.8% vs 90.0% reported treatment-related side effects."
+        "why": "第 5 段：兩組都很常見（95.8% vs 90.0%）。"
       }
     ]
   },
@@ -127,12 +127,12 @@
       "q": "Which of the following best expresses the main idea of the passage?",
       "options": [
         "A personalised mRNA therapy has achieved the first late-stage success of its kind in melanoma, but questions about survival, wider use and production remain.",
-        "Personalised mRNA therapy has now been shown to cure most types of cancer when it is combined with Keytruda.",
-        "Most patients given intismeran suffered fever, injection-site pain and fatigue during the trial.",
-        "Doctors and investors agreed that the detailed trial results were a disappointment for Moderna."
+        "A personalised mRNA therapy has been shown to reduce melanoma recurrence and extend patients' lives, although producing it remains costly.",
+        "A personalised mRNA therapy lowered melanoma recurrence from the first months of treatment, though its value in other cancers is still unknown.",
+        "A personalised mRNA therapy reduced melanoma recurrence while causing fewer side effects than Keytruda alone, but it has yet to be approved."
       ],
       "answer": 0,
-      "explain": "Paragraph 1 gives the success and says much 'remains uncertain'; paragraphs 6-8 develop those limits. B overclaims (only melanoma was tested), C is a single detail from paragraph 5, D distorts paragraph 7 (doctors were positive)."
+      "explain": "四個選項前半都對，關鍵在後半的細節。\nB 錯在 extend patients' lives。第 6 段說 overall survival data are not yet mature，活更久還沒被證明。\nC 錯在 from the first months。第 4 段說頭六個月兩組 fared almost identically。\nD 錯在 fewer side effects。第 5 段寫的是 95.8% vs 90.0%，合併組反而略多。\n只有 A 同時涵蓋第 1 段的成果和第 6～8 段的但書。"
     },
     {
       "type": "mcq",
@@ -145,7 +145,7 @@
         "the healthy DNA used for comparison with the tumour"
       ],
       "answer": 0,
-      "explain": "Paragraph 2 defines them right after the colon: 'abnormal protein fragments that mark a cell as cancerous'. B is Keytruda (paragraph 3), C is T cells, D is the patient's healthy DNA."
+      "explain": "第 2 段冒號後面直接給了定義：abnormal protein fragments that mark a cell as cancerous（標記癌細胞的異常蛋白片段）。\nB 是 Keytruda（第 3 段），C 是 T cells，D 是病人的健康 DNA。\n技巧：遇到生字，先往後找冒號、破折號或 which，作者常在那裡下定義。"
     },
     {
       "type": "mcq",
@@ -158,7 +158,7 @@
         "The random assignment of patients in a 2:1 ratio"
       ],
       "answer": 0,
-      "explain": "'Such' points back to the previous paragraph. Paragraph 6 lists exactly these caveats: survival not mature, cancers with fewer mutations unknown, production costly. The other options come from paragraphs 3-5."
+      "explain": "Such 指的是「前面剛講過的那些」，所以答案要回到上一段（第 6 段）找。第 6 段正好列出三個不確定：存活資料還不成熟、突變少的癌症效果未知、量產又貴又難。\n其他選項來自第 3～5 段，不是緊接在前的內容。\n這跟考卷 Q43 的 Such contrasts 是同一種題型。"
     },
     {
       "type": "tfng",
@@ -168,29 +168,42 @@
         {
           "text": "Neither the patients nor their doctors knew who received intismeran.",
           "answer": "T",
-          "explain": "Paragraph 3: the study was double-blind, so neither group knew."
+          "explain": "第 3 段：double-blind，病人和醫生都不知道誰拿到真的藥。"
         },
         {
           "text": "Patients in the combination group had fewer side effects than those on Keytruda alone.",
           "answer": "F",
-          "explain": "Paragraph 5: side effects were slightly MORE common with the combination (95.8% vs 90.0%)."
+          "explain": "第 5 段：合併組的副作用反而略多（95.8% vs 90.0%），和敘述相反，所以是 F。"
         },
         {
           "text": "Intismeran has already been approved by regulators in the United States.",
           "answer": "F",
-          "explain": "Paragraph 6: it 'has not yet been approved by any regulator'."
+          "explain": "第 6 段：has not yet been approved by any regulator，和敘述相反。"
         },
         {
           "text": "Each personalised course takes about six weeks to manufacture.",
           "answer": "NG",
-          "explain": "Paragraph 6 says production is costly and demanding, but no manufacturing time is given anywhere."
+          "explain": "第 6 段只說量產 costly and logistically demanding，全文沒有提到製作要多久，所以是 NG，不是 F。"
         },
         {
           "text": "Lung tumours carry fewer mutations than melanoma tumours.",
           "answer": "NG",
-          "explain": "Paragraph 6 mentions 'cancers with fewer mutations' and paragraph 8 mentions lung cancer, but the passage never links the two. Don't combine separate facts into a new claim."
+          "explain": "第 6 段提到 cancers with fewer mutations，第 8 段提到肺癌，但文章從沒把兩者連在一起。不要自己把兩個分開的資訊拼成新結論。"
         }
       ]
+    },
+    {
+      "type": "mcq",
+      "skill": "detail",
+      "q": "Which of the following statements is NOT correct according to the passage?",
+      "options": [
+        "Patients in the trial were divided equally between the combination group and the group given Keytruda with a placebo.",
+        "Every participant in the trial received Keytruda, whether or not they were also given intismeran.",
+        "Serious side effects occurred at broadly similar rates in the combination group and the Keytruda-only group.",
+        "Each course of intismeran encodes up to 34 neoantigens selected from mutations found only in the patient's cancer."
+      ],
+      "answer": 0,
+      "explain": "這題要找「錯的」那一個。\nA 錯：第 3 段寫的是 randomly assigned in a 2:1 ratio，兩組人數是 2 比 1，不是平分（equally）。\nB 對：第 3 段 in both cases alongside Keytruda。\nC 對：第 5 段 about 14% and 13%。\nD 對：第 2 段 up to 34 of these neoantigens。\n跟考卷 Q50 一樣，選項都很長，只有一個數字或詞被偷換。"
     },
     {
       "type": "mcq",
@@ -203,7 +216,7 @@
         "The number of late-stage trials being run in lung cancer"
       ],
       "answer": 0,
-      "explain": "Paragraph 6 only says production is 'likely to be costly'. No price is given. The others appear in paragraph 3 (nine doses), paragraph 5 (about 14% and 13%) and paragraph 8 (three lung-cancer studies)."
+      "explain": "第 6 段只說量產 likely to be costly，沒有給任何價格。\n其他選項都有提到：最多九劑（第 3 段）、嚴重副作用約 14% 和 13%（第 5 段）、肺癌有三個後期試驗（第 8 段）。\n注意 NOT mentioned（沒提到）和 NOT correct（寫錯）是不同題型。"
     },
     {
       "type": "mcq",
@@ -211,12 +224,12 @@
       "q": "What can be inferred from the finding that the two groups fared almost identically during the first six months?",
       "options": [
         "The added therapy probably needs time to train the immune system before it protects patients.",
-        "Keytruda stops working after six months of treatment.",
-        "The trial was poorly designed during its early stage.",
-        "Patients whose cancer returned early benefited most from intismeran."
+        "Keytruda alone was slightly more effective than the combination during the first six months.",
+        "The 58% reduction in risk applied to all patients from the start of treatment.",
+        "The therapy benefited only those patients who went on to receive all nine doses."
       ],
       "answer": 0,
-      "explain": "Paragraph 4: the curves separated only after the immunisation course, which fits 'the time the immune system needs to build a targeted response'. Nothing supports B, C or D."
+      "explain": "第 4 段：曲線要等療程結束後才分開，作者說這 consistent with the time the immune system needs，所以 A 是合理推論。\nB 錯：almost identically 是「幾乎一樣」，不是 Keytruda 比較好。\nC 錯：58% 是 after the immunisation course 之後才出現的。\nD 過度推論：文章沒有比較打滿九劑和沒打滿的人。"
     },
     {
       "type": "mcq",
@@ -229,7 +242,7 @@
         "To criticise Moderna for misleading patients"
       ],
       "answer": 0,
-      "explain": "Paragraph 7 is about reactions: doctors, investors and even 'the vocabulary'. The detail shows that politics, not only data, affects how the product is received. The author makes no scientific, regulatory or moral claim about it."
+      "explain": "第 7 段講的是各方的「反應」：醫生、投資人，連用詞都變得敏感。提到 vaccine 這個字是為了說明，大家怎麼看這個療法，不只取決於數據，也受政治氣氛影響。\n作者沒有做科學判斷（B）、沒提到審查延遲（C）、也沒有批評 Moderna（D）。"
     },
     {
       "type": "order",
@@ -243,7 +256,7 @@
         "The patient's cells produce the fragments after injection",
         "T cells learn to hunt down remaining cancer cells"
       ],
-      "explain": "Paragraph 2 follows a time sequence: 'After a tumour is surgically removed... then manufactured... Once it is injected... which can then hunt down'. Signal words like after, then and once mark each step."
+      "explain": "第 2 段照時間順序寫：After a tumour is surgically removed → then manufactured → Once it is injected → which can then hunt down。\n抓 after、then、once 這些順序訊號字就能排出來。"
     }
   ],
   "sentence": {
