@@ -43,6 +43,7 @@ h2.sec{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--
 .topbar .back{border:none;background:none;font-size:22px;padding:0 6px 0 0}
 .prog{flex:1;height:6px;background:#ece4d6;border-radius:6px;overflow:hidden}
 .prog i{display:block;height:100%;background:var(--accent);transition:width .3s}
+.topbar .jump{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:5px 8px;font-size:13px;color:inherit;max-width:96px}
 .topbar .peek{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:5px 11px;font-size:13px}
 .step-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
 .q{font-family:var(--serif);font-size:21px;line-height:1.35;margin:0 0 16px}
@@ -214,11 +215,20 @@ async function openLesson(id){
 }
 function go(delta){ const st = L(LES.id); st.step = Math.max(0, Math.min(LES.steps.length-1, st.step+delta)); if(st.step===LES.steps.length-1) st.done = true; save(); window.scrollTo(0,0); renderStep(); }
 
+function stepName(s){
+  if(s==="predict") return "先猜";
+  if(s==="read") return "閱讀";
+  if(s==="summary") return "總結";
+  if(s[0]==="t") return "第 "+(+s.slice(1)+1)+" 題";
+  return s;
+}
+function jumpTo(i){ const st = L(LES.id); st.step = Math.max(0, Math.min(LES.steps.length-1, i)); if(st.step===LES.steps.length-1) st.done = true; save(); window.scrollTo(0,0); renderStep(); }
 function shell(inner, showPeek=true){
   const st = L(LES.id);
   const pct = (st.step)/(LES.steps.length-1)*100;
   $app.innerHTML = `<div class="topbar"><button class="back" onclick="location.hash='#/'" aria-label="back">←</button>
     <div class="prog"><i style="width:${pct}%"></i></div>
+    <select class="jump" aria-label="跳到" onchange="jumpTo(+this.value)">${LES.steps.map((s,i)=>`<option value="${i}" ${i===st.step?"selected":""}>${stepName(s)}</option>`).join("")}</select>
     ${showPeek? `<button class="peek" onclick="peek()">📄 回看文章</button>`:""}</div>${inner}`;
 }
 
