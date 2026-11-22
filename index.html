@@ -208,8 +208,8 @@ let LES = null;
 async function openLesson(id){
   try{ LES = await getJSON("lessons/"+id+".json"); }catch(e){ $app.innerHTML = `<p class="empty">找不到這篇 (${esc(e.message)})</p>`; cta(null); return; }
   const st = L(id);
-  LES.steps = ["predict","read", ...LES.tasks.map((_,i)=>"t"+i), "sentence","write","summary"];
-  if(st.done) st.step = LES.steps.length-1;
+  LES.steps = ["predict","read", ...LES.tasks.map((_,i)=>"t"+i), "summary"];
+  if(st.done || (st.step||0) > LES.steps.length-1) st.step = LES.steps.length-1;
   renderStep();
 }
 function go(delta){ const st = L(LES.id); st.step = Math.max(0, Math.min(LES.steps.length-1, st.step+delta)); if(st.step===LES.steps.length-1) st.done = true; save(); window.scrollTo(0,0); renderStep(); }
