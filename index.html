@@ -422,13 +422,26 @@ function stepSummary(){
     <p class="hint">${st.readSec? `閱讀時間 ${Math.floor(st.readSec/60)} 分 ${st.readSec%60} 秒 · `:""}第一次作答才計分</p>
     <h2 class="sec">這篇的題型表現</h2>
     <div class="card">${Object.entries(by).map(([k,s])=>{ const r=s.ok/s.n; return `<div class="skill-row"><span>${SKILLS[k]}</span><div class="bar"><i class="${r>=.75?"":r>=.5?"mid":"low"}" style="width:${Math.max(4,r*100)}%"></i></div><span>${s.ok}/${s.n}</span></div>`; }).join("")}</div>
+    ${LES.talk? `<h2 class="sec">💬 想聊聊</h2>
+    <div class="card"><p style="margin:0 0 10px;line-height:1.6">${esc(LES.talk.q)}</p>
+      <p class="hint" style="margin:0 0 8px">不計分、中文就好，想回再回。</p>
+      <textarea id="talk" placeholder="寫下你的想法…">${esc(st.talk||"")}</textarea>
+      <button class="small-btn" id="talkCopy">📋 複製傳給 Jay</button></div>` : ""}
     <h2 class="sec">讀前的猜測 · ${predOk}/${LES.predict.statements.length}</h2>
     <div class="card"><ul class="predict-review" style="padding-left:18px;margin:0">${LES.predict.statements.map((s,i)=>`<li>${pred.has(i)===s.truth?"✓":"✗"} <b>${esc(s.text)}</b> — ${s.truth?"True":"False"}. <span class="hint">${esc(s.why)}</span></li>`).join("")}</ul></div>
     <h2 class="sec">生字 · 你點開過 ${words.length} 個</h2>
     <div class="card">${(LES.glossary||[]).map(g=>`<div style="margin:6px 0;line-height:1.5"><b style="font-family:var(--serif)">${esc(g.word)}</b> <span style="color:var(--accent)">${esc(g.zh)}</span> ${st.seen.includes(g.word)?"":"<span class='hint'>(沒點過)</span>"}<br><span class="hint">${esc(g.def)}</span></div>`).join("")}</div>
     <div class="src"><b>Sources</b> · 文章依以下報導改寫為練習用版本：<br>${(LES.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("<br>")}</div>
     <button class="small-btn" id="redo" style="margin-top:18px">↺ 重做這篇（不影響第一次的分數）</button>`, false);
-  document.getElementById("redo").onclick = ()=>{ const keep = {results:st.results, seen:st.seen, readSec:st.readSec}; DB.lessons[LES.id] = {step:0, predict:null, write:"", done:false, ...keep}; save(); renderStep(); };
+  const $talk = document.getElementById("talk");
+  if($talk){
+    $talk.oninput = ()=>{ st.talk = $talk.value; save(); };
+    document.getElementById("talkCopy").onclick = async (e)=>{
+      const msg = `【${LES.title}】\n${LES.talk.q}\n\n${$talk.value}`;
+      try{ await navigator.clipboard.writeText(msg); e.target.textContent="✓ 已複製，貼到 LINE 就好"; }catch(_){ $talk.select(); }
+    };
+  }
+  document.getElementById("redo").onclick = ()=>{ const keep = {results:st.results, seen:st.seen, readSec:st.readSec, talk:st.talk}; DB.lessons[LES.id] = {step:0, predict:null, write:"", done:false, ...keep}; save(); renderStep(); };
   cta("回到首頁", ()=>location.hash="#/");
 }
 </script>

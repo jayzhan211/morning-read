@@ -282,5 +282,8 @@
   "write": {
     "prompt": "If you were a patient, would you accept a therapy that lowers the risk of relapse but has not yet been proven to extend life? Answer in 2-3 sentences and use one glossary word.",
     "sample": "I would probably accept it, because a lower chance of relapse is already valuable. Still, the caveats about survival would temper my expectations, so I would ask my doctor to explain the risks clearly."
+  },
+  "talk": {
+    "q": "如果你是醫生，病人問你：「這個療法還沒證明能讓我活更久，我該不該打？」你會怎麼回答他？"
   }
 }
