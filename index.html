@@ -426,7 +426,7 @@ function stepSummary(){
     <div class="card"><p style="margin:0 0 10px;line-height:1.6">${esc(LES.talk.q)}</p>
       <p class="hint" style="margin:0 0 8px">不計分、中文就好，想回再回。</p>
       <textarea id="talk" placeholder="寫下你的想法…">${esc(st.talk||"")}</textarea>
-      <button class="small-btn" id="talkCopy">📋 複製傳給 Jay</button></div>` : ""}
+      <button class="small-btn" id="talkCopy">📋 複製下來分享</button></div>` : ""}
     <h2 class="sec">讀前的猜測 · ${predOk}/${LES.predict.statements.length}</h2>
     <div class="card"><ul class="predict-review" style="padding-left:18px;margin:0">${LES.predict.statements.map((s,i)=>`<li>${pred.has(i)===s.truth?"✓":"✗"} <b>${esc(s.text)}</b> — ${s.truth?"True":"False"}. <span class="hint">${esc(s.why)}</span></li>`).join("")}</ul></div>
     <h2 class="sec">生字 · 你點開過 ${words.length} 個</h2>
@@ -438,7 +438,7 @@ function stepSummary(){
     $talk.oninput = ()=>{ st.talk = $talk.value; save(); };
     document.getElementById("talkCopy").onclick = async (e)=>{
       const msg = `【${LES.title}】\n${LES.talk.q}\n\n${$talk.value}`;
-      try{ await navigator.clipboard.writeText(msg); e.target.textContent="✓ 已複製，貼到 LINE 就好"; }catch(_){ $talk.select(); }
+      try{ await navigator.clipboard.writeText(msg); e.target.textContent="✓ 已複製"; }catch(_){ $talk.select(); }
     };
   }
   document.getElementById("redo").onclick = ()=>{ const keep = {results:st.results, seen:st.seen, readSec:st.readSec, talk:st.talk}; DB.lessons[LES.id] = {step:0, predict:null, write:"", done:false, ...keep}; save(); renderStep(); };
