@@ -112,6 +112,25 @@ textarea{width:100%;min-height:130px;font:inherit;font-size:16px;line-height:1.5
 .overlay .close{position:sticky;top:0;display:block;margin-left:auto;border:none;background:var(--ink);color:#fff;border-radius:99px;padding:7px 14px;font-size:14px}
 .score-big{font-family:var(--serif);font-size:54px;font-weight:700;margin:0}
 .predict-review li{margin:8px 0;line-height:1.5}
+.article p .pn{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:1px 7px;cursor:pointer}
+.article p .pn em{font-style:normal;color:var(--accent);margin-left:3px}
+.article p .pn.on{background:var(--accent);border-color:var(--accent);color:#fff}.article p .pn.on em{color:#fff}
+.zhp{font-family:var(--sans);font-size:15px;line-height:1.75;color:#4d453b;background:#efe8da;border-left:3px solid var(--accent);border-radius:8px;padding:8px 12px;margin:-8px 0 18px}
+.zh-title{font-family:var(--sans);font-size:15px;color:#4d453b;margin:-4px 0 8px}
+.zhbar{display:flex;align-items:center;gap:8px;margin:0 0 14px}
+.zhbar button{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:5px 12px;font-size:13px}
+.zhbar button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+details.cmp{margin-top:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+details.cmp summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--accent)}
+.cmp .qz{font-size:15px;line-height:1.6;margin:8px 0}
+.cmp .oz{font-size:14px;line-height:1.5;margin:6px 0;padding:6px 8px;border-radius:8px;background:#f6f1e7}
+.cmp .oz.r{background:var(--ok-soft)}.cmp .oz.w{background:var(--bad-soft)}
+.cmp .oz small{display:block;color:var(--muted);margin-top:2px}
+.cmp .bi{margin:10px 0 0;border-top:1px dashed var(--line);padding-top:8px}
+.cmp .bi .en{font-family:var(--serif);font-size:16px;line-height:1.6}
+.cmp .bi .zh{font-size:14px;line-height:1.7;color:#4d453b;margin-top:4px}
+.cmp .bi .pl{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.08em}
+.tf details.cmp{margin-top:8px;padding:8px 12px}
 .src{font-size:13px;color:var(--muted);line-height:1.6;margin-top:24px;border-top:1px solid var(--line);padding-top:12px}
 .empty{color:var(--muted);text-align:center;padding:40px 0}
 </style>
@@ -266,10 +285,58 @@ function markGlossary(text, used){
   }
   return html;
 }
+let ZH_ALL = false;
+const hasZh = ()=> Array.isArray(LES.article_zh) && LES.article_zh.length === LES.article.length;
 function articleHTML(){
-  const used = new Set();
-  return `<div class="article"><h1>${esc(LES.title)}</h1><p class="dek">${esc(LES.dek||"")}</p>
-    ${LES.article.map((p,i)=>`<p><span class="pn">${i+1}</span>${markGlossary(p, used)}</p>`).join("")}</div>`;
+  const used = new Set(), zh = hasZh();
+  return `<div class="article">
+    ${zh? `<div class="zhbar"><button class="zh-all ${ZH_ALL?"on":""}">${ZH_ALL?"隱藏中文":"中英對照"}</button><span class="hint">卡住時點段落號碼旁的「中」看那一段</span></div>`:""}
+    <h1>${esc(LES.title)}</h1>${zh&&LES.title_zh?`<p class="zh-title" ${ZH_ALL?"":"hidden"}>${esc(LES.title_zh)}</p>`:""}
+    <p class="dek">${esc(LES.dek||"")}</p>${zh&&LES.dek_zh?`<p class="zh-title" ${ZH_ALL?"":"hidden"}>${esc(LES.dek_zh)}</p>`:""}
+    ${LES.article.map((p,i)=> zh
+      ? `<p><button class="pn ${ZH_ALL?"on":""}" data-p="${i}">${i+1}<em>中</em></button>${markGlossary(p, used)}</p><div class="zhp" ${ZH_ALL?"":"hidden"}>${esc(LES.article_zh[i])}</div>`
+      : `<p><span class="pn">${i+1}</span>${markGlossary(p, used)}</p>`).join("")}</div>`;
+}
+function wireZh(root){
+  root.querySelectorAll(".article p .pn[data-p]").forEach(b=> b.onclick = e=>{
+    e.stopPropagation(); const z = b.parentElement.nextElementSibling; z.hidden = !z.hidden; b.classList.toggle("on", !z.hidden);
+  });
+  const all = root.querySelector(".zh-all");
+  if(all) all.onclick = ()=>{
+    ZH_ALL = !ZH_ALL; all.classList.toggle("on", ZH_ALL); all.textContent = ZH_ALL?"隱藏中文":"中英對照";
+    root.querySelectorAll(".zhp,.zh-title").forEach(z=> z.hidden = !ZH_ALL);
+    root.querySelectorAll(".article p .pn[data-p]").forEach(b=> b.classList.toggle("on", ZH_ALL));
+  };
+}
+/* paragraph numbers cited in a question / explanation */
+function paraRefs(...texts){
+  const out = new Set(), n = LES.article.length;
+  const add = (a,b)=>{ a=+a; b=b?+b:a; for(let k=Math.min(a,b);k<=Math.max(a,b);k++) if(k>=1&&k<=n) out.add(k); };
+  for(const t of texts){ if(!t) continue;
+    for(const m of String(t).matchAll(/paragraphs?\s+(\d+(?:\s*(?:-|–|,|and|&)\s*\d+)*)/gi)){
+      const parts = m[1].split(/\s*(,|and|&)\s*/i).filter(x=>/\d/.test(x));
+      for(const p of parts){ const r = p.split(/\s*[-–]\s*/); add(r[0], r[1]); } }
+    for(const m of String(t).matchAll(/第\s*(\d+)\s*(?:[-–至到、,，]\s*(\d+)\s*)?段/g)) m[0].match(/[-–至到]/) ? add(m[1],m[2]) : (add(m[1]), m[2]&&add(m[2]));
+  }
+  return [...out].sort((a,b)=>a-b);
+}
+function biParas(refs){
+  if(!hasZh()) return refs.map(k=>`<div class="bi"><div class="pl">PARAGRAPH ${k}</div><div class="en">${esc(LES.article[k-1])}</div></div>`).join("");
+  return refs.map(k=>`<div class="bi"><div class="pl">第 ${k} 段</div><div class="en">${esc(LES.article[k-1])}</div><div class="zh">${esc(LES.article_zh[k-1])}</div></div>`).join("");
+}
+/* bilingual review block shown after answering */
+function compareBox(t, opts={}){
+  const refs = paraRefs(t.q, t.explain, ...(opts.texts||[]));
+  let body = "";
+  if(t.q_zh) body += `<div class="qz"><b>題目：</b>${esc(t.q_zh)}</div>`;
+  if(opts.order && t.options){
+    body += opts.order.map(i=>{ const c = i===t.answer ? "r" : i===opts.picked ? "w" : "";
+      return `<div class="oz ${c}">${c==="r"?"✓ ":c==="w"?"✗ ":""}${esc(t.options[i])}${t.options_zh?`<small>${esc(t.options_zh[i])}</small>`:""}</div>`; }).join("");
+  }
+  if(t.items && t.items_zh) body += `<div class="qz"><b>正確順序：</b></div>` + t.items.map((x,i)=>`<div class="oz">${i+1}. ${esc(x)}<small>${esc(t.items_zh[i])}</small></div>`).join("");
+  body += biParas(refs);
+  if(!body) return "";
+  return `<details class="cmp" ${opts.open?"open":""}><summary>🔍 中文對照${refs.length?` · 回原文第 ${refs.join("、")} 段`:""}</summary>${body}</details>`;
 }
 function wireGlossary(root){
   const st = L(LES.id);
@@ -288,16 +355,16 @@ let readStart = 0;
 function stepRead(){
   readStart = Date.now();
   shell(`<div class="step-label">Step 2 · 閱讀</div>
-    <p class="timer">虛線字可以點開看意思。先別查，試著從上下文猜，再點開確認。</p>
+    <p class="timer">虛線字可以點開看意思。先別查，試著從上下文猜，再點開確認。中文對照建議先自己讀過一遍再開。</p>
     ${articleHTML()}
     <div class="src"><b>原始新聞</b> · 讀完可以點開看原文：<br>${(LES.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("<br>")}</div>`, false);
-  wireGlossary($app);
+  wireGlossary($app); wireZh($app);
   cta("讀完了，開始作答 →", ()=>{ const st=L(LES.id); st.readSec = Math.round((Date.now()-readStart)/1000); save(); go(1); });
 }
 function peek(){
   const o = document.createElement("div"); o.className="overlay";
   o.innerHTML = `<button class="close">關閉 ✕</button>${articleHTML()}`;
-  document.body.appendChild(o); wireGlossary(o);
+  document.body.appendChild(o); wireGlossary(o); wireZh(o);
   o.querySelector(".close").onclick = ()=>o.remove();
 }
 
@@ -313,7 +380,7 @@ function taskMCQ(t, key){
   shell(qHeader(t) + order.map(i=>{
     let cls = ""; if(answered){ if(i===t.answer) cls="right"; else if(i===picked) cls="wrong"; }
     return `<button class="opt ${cls}" data-i="${i}" ${answered?"disabled":""}>${esc(t.options[i])}</button>`;
-  }).join("") + (answered? explainBox(picked===t.answer, t.explain):""));
+  }).join("") + (answered? explainBox(picked===t.answer, t.explain) + compareBox(t, {order, picked, open: picked!==t.answer}) :""));
   if(!answered) $app.querySelectorAll(".opt").forEach(b=> b.onclick = ()=>{ const i=+b.dataset.i; st["pick_"+key]=i; record(st,key,t.skill,i===t.answer); taskMCQ(t,key); });
   cta(answered? "下一題 →" : "選一個答案", ()=>go(1), !answered);
 }
@@ -328,7 +395,7 @@ function taskOrder(t, key){
     shell(qHeader(t) + cur.map((idx,pos)=>`<div class="order-item ${checked?(idx===pos?"right":"wrong"):""}">
       <span class="n">${pos+1}</span><span>${esc(t.items[idx])}</span>
       ${checked?"":`<span class="mv"><button data-p="${pos}" data-d="-1" aria-label="up">↑</button><button data-p="${pos}" data-d="1" aria-label="down">↓</button></span>`}</div>`).join("")
-      + (checked? explainBox(cur.every((v,i)=>v===i), t.explain) + (cur.every((v,i)=>v===i)?"":`<p class="hint">正確順序：<br>${t.items.map((x,i)=>`${i+1}. ${esc(x)}`).join("<br>")}</p>`) : `<p class="hint">用 ↑ ↓ 調整順序。</p>`));
+      + (checked? explainBox(cur.every((v,i)=>v===i), t.explain) + (cur.every((v,i)=>v===i)||t.items_zh?"":`<p class="hint">正確順序：<br>${t.items.map((x,i)=>`${i+1}. ${esc(x)}`).join("<br>")}</p>`) + compareBox(t, {open: !cur.every((v,i)=>v===i)}) : `<p class="hint">用 ↑ ↓ 調整順序。</p>`));
     $app.querySelectorAll(".mv button").forEach(b=> b.onclick = ()=>{
       const p=+b.dataset.p, q=p+(+b.dataset.d); if(q<0||q>=cur.length) return;
       [cur[p],cur[q]]=[cur[q],cur[p]]; st["ord_"+key]=cur; save(); render();
@@ -352,7 +419,7 @@ function taskMatch(t, key){
     return `<div class="match-row ${checked?(ok?"right":"wrong"):""}"><span class="num">${esc(p.left)}</span>
       <select data-i="${i}" ${checked?"disabled":""}><option value="">— 選擇 —</option>${opts.map(o=>`<option ${picks[i]===o?"selected":""}>${esc(o)}</option>`).join("")}</select></div>
       ${checked&&!ok?`<div class="match-fix">→ ${esc(p.right)}</div>`:""}`;
-  }).join("") + (checked? explainBox(null, t.explain, "小技巧"):""));
+  }).join("") + (checked? explainBox(null, t.explain, "小技巧") + compareBox(t, {open: t.pairs.some((p,i)=>picks[i]!==p.right)}):""));
   $app.querySelectorAll("select").forEach(s=> s.onchange = ()=>{ picks[s.dataset.i]=s.value; st["m_"+key]=picks; save(); cta("確認", submit, Object.keys(picks).filter(k=>picks[k]).length<t.pairs.length); });
   const submit = ()=>{ st["mDone_"+key]=true; t.pairs.forEach((p,i)=>record(st,key+"_"+i,t.skill,picks[i]===p.right)); taskMatch(t,key); };
   checked ? cta("下一題 →", ()=>go(1)) : cta("確認", submit, Object.keys(picks).filter(k=>picks[k]).length<t.pairs.length);
@@ -369,7 +436,7 @@ function taskTFNG(t, key){
     return `<div class="tf"><p>${i+1}. ${esc(s.text)}</p><div class="btns">${["T","F","NG"].map(v=>{
       let cls=""; if(p){ if(v===s.answer) cls="right"; else if(v===p) cls="wrong"; }
       return `<button data-i="${i}" data-v="${v}" class="${cls}" ${p?"disabled":""}>${lab[v]}</button>`; }).join("")}</div>
-      ${p? `<div class="ex">${p===s.answer?"✓ ":"✗ "}${esc(s.explain)}</div>`:""}</div>`;
+      ${p? `<div class="ex">${p===s.answer?"✓ ":"✗ "}${esc(s.explain)}</div>${tfCompare(s, p!==s.answer)}`:""}</div>`;
   }).join(""));
   $app.querySelectorAll(".btns button").forEach(b=> b.onclick = ()=>{
     const i=+b.dataset.i, v=b.dataset.v; picks[i]=v; st["tf_"+key]=picks;
@@ -377,6 +444,12 @@ function taskTFNG(t, key){
     const y = window.scrollY; taskTFNG(t,key); window.scrollTo(0,y);
   });
   cta(allDone? "下一題 →":"每題都要作答", ()=>go(1), !allDone);
+}
+
+function tfCompare(s, open){
+  const refs = paraRefs(s.explain);
+  const body = (s.zh?`<div class="qz"><b>題目：</b>${esc(s.zh)}</div>`:"") + biParas(refs);
+  return `<details class="cmp" ${open?"open":""}><summary>🔍 中文對照${refs.length?` · 第 ${refs.join("、")} 段`:""}</summary>${body}</details>`;
 }
 
 /* sentence */
@@ -425,7 +498,7 @@ function stepSummary(){
     ${LES.talk? `<h2 class="sec">💬 想聊聊</h2>
     <div class="card"><p style="margin:0;line-height:1.6">${esc(LES.talk.q)}</p></div>` : ""}
     <h2 class="sec">讀前的猜測 · ${predOk}/${LES.predict.statements.length}</h2>
-    <div class="card"><ul class="predict-review" style="padding-left:18px;margin:0">${LES.predict.statements.map((s,i)=>`<li>${pred.has(i)===s.truth?"✓":"✗"} <b>${esc(s.text)}</b> — ${s.truth?"True":"False"}. <span class="hint">${esc(s.why)}</span></li>`).join("")}</ul></div>
+    <div class="card"><ul class="predict-review" style="padding-left:18px;margin:0">${LES.predict.statements.map((s,i)=>`<li>${pred.has(i)===s.truth?"✓":"✗"} <b>${esc(s.text)}</b> — ${s.truth?"True":"False"}.${s.zh?`<br><span style="font-size:14px">${esc(s.zh)}</span>`:""} <span class="hint">${esc(s.why)}</span></li>`).join("")}</ul></div>
     <h2 class="sec">生字 · 你點開過 ${words.length} 個</h2>
     <div class="card">${(LES.glossary||[]).map(g=>`<div style="margin:6px 0;line-height:1.5"><b style="font-family:var(--serif)">${esc(g.word)}</b> <span style="color:var(--accent)">${esc(g.zh)}</span> ${st.seen.includes(g.word)?"":"<span class='hint'>(沒點過)</span>"}<br><span class="hint">${esc(g.def)}</span></div>`).join("")}</div>
     <div class="src"><b>Sources</b> · 文章依以下報導改寫為練習用版本：<br>${(LES.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("<br>")}</div>

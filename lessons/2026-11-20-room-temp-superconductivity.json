@@ -6,18 +6,50 @@
   "title": "Electron pairs that survive the heat: a step towards room-temperature superconductors",
   "dek": "A study of a copper-oxide compound suggests one of the two conditions for superconductivity can hold at room temperature.",
   "sources": [
-    { "name": "EurekAlert (Utrecht University): New research offers hope for room-temperature superconductivity", "url": "https://www.eurekalert.org/news-releases/1150846" },
-    { "name": "TechEnclave: Scientists link a superconductivity puzzle to electron pairs", "url": "https://techenclave.com/news/items/scientists-link-a-superconductivity-puzzle-to-electron-pairs" },
-    { "name": "The Brighter Side: Strong electron pairs offer new hope", "url": "https://www.thebrighterside.news/post/strong-electron-pairs-offer-new-hope-for-room-temperature-superconductivity/" },
-    { "name": "Quantum Zeitgeist: Utrecht study on room-temperature superconductivity", "url": "https://quantumzeitgeist.com/?p=367889" }
+    {
+      "name": "EurekAlert (Utrecht University): New research offers hope for room-temperature superconductivity",
+      "url": "https://www.eurekalert.org/news-releases/1150846"
+    },
+    {
+      "name": "TechEnclave: Scientists link a superconductivity puzzle to electron pairs",
+      "url": "https://techenclave.com/news/items/scientists-link-a-superconductivity-puzzle-to-electron-pairs"
+    },
+    {
+      "name": "The Brighter Side: Strong electron pairs offer new hope",
+      "url": "https://www.thebrighterside.news/post/strong-electron-pairs-offer-new-hope-for-room-temperature-superconductivity/"
+    },
+    {
+      "name": "Quantum Zeitgeist: Utrecht study on room-temperature superconductivity",
+      "url": "https://quantumzeitgeist.com/?p=367889"
+    }
   ],
   "predict": {
     "prompt": "Before you read: which of these do you think are TRUE? Tick all you believe.",
     "statements": [
-      { "text": "Scientists have built a superconductor that works at room temperature.", "truth": false, "why": "No - they found that one of two conditions may hold at room temperature." },
-      { "text": "Ordinary wires lose some energy as heat.", "truth": true, "why": "Electrons bump into the material and lose energy." },
-      { "text": "Today's superconductors need very cold temperatures.", "truth": true, "why": "Some need liquid helium at about -260°C." },
-      { "text": "The study was done on a pure metal like gold.", "truth": false, "why": "It studied a copper-oxide compound called Bi-2212." }
+      {
+        "text": "Scientists have built a superconductor that works at room temperature.",
+        "truth": false,
+        "why": "No - they found that one of two conditions may hold at room temperature.",
+        "zh": "科學家已經做出能在室溫運作的超導體。"
+      },
+      {
+        "text": "Ordinary wires lose some energy as heat.",
+        "truth": true,
+        "why": "Electrons bump into the material and lose energy.",
+        "zh": "一般電線會有部分能量以熱的形式損失。"
+      },
+      {
+        "text": "Today's superconductors need very cold temperatures.",
+        "truth": true,
+        "why": "Some need liquid helium at about -260°C.",
+        "zh": "現今的超導體需要非常低的溫度。"
+      },
+      {
+        "text": "The study was done on a pure metal like gold.",
+        "truth": false,
+        "why": "It studied a copper-oxide compound called Bi-2212.",
+        "zh": "這項研究是用像金這樣的純金屬做的。"
+      }
     ]
   },
   "article": [
@@ -31,18 +63,66 @@
     "The prize would be enormous: superconductors that work without cooling could transform power grids, magnetic-levitation trains and quantum computers. For now, scientists have found one piece of the puzzle and a clearer picture of the piece still missing."
   ],
   "glossary": [
-    { "word": "resistance", "zh": "電阻；阻力", "def": "the way a material slows down the flow of electricity" },
-    { "word": "narrows down", "zh": "縮小範圍", "def": "makes the number of possibilities smaller" },
-    { "word": "catch", "zh": "隱藏的問題；但書", "def": "a hidden problem or difficulty" },
-    { "word": "compound", "zh": "化合物", "def": "a substance made of two or more elements joined chemically" },
-    { "word": "relatively", "zh": "相對地", "def": "when compared with others" },
-    { "word": "tell apart", "zh": "分辨", "def": "see the difference between two things" },
-    { "word": "bottleneck", "zh": "瓶頸", "def": "the part of a process that slows everything down" },
-    { "word": "out of reach", "zh": "遙不可及", "def": "impossible to get or achieve" },
-    { "word": "caveats", "zh": "但書；附帶條件", "def": "warnings that something is only true in a limited way" },
-    { "word": "inference", "zh": "推論", "def": "a conclusion reached from evidence, not observed directly" },
-    { "word": "transform", "zh": "徹底改變", "def": "change something completely" },
-    { "word": "puzzle", "zh": "謎題", "def": "a problem that is difficult to understand" }
+    {
+      "word": "resistance",
+      "zh": "電阻；阻力",
+      "def": "the way a material slows down the flow of electricity"
+    },
+    {
+      "word": "narrows down",
+      "zh": "縮小範圍",
+      "def": "makes the number of possibilities smaller"
+    },
+    {
+      "word": "catch",
+      "zh": "隱藏的問題；但書",
+      "def": "a hidden problem or difficulty"
+    },
+    {
+      "word": "compound",
+      "zh": "化合物",
+      "def": "a substance made of two or more elements joined chemically"
+    },
+    {
+      "word": "relatively",
+      "zh": "相對地",
+      "def": "when compared with others"
+    },
+    {
+      "word": "tell apart",
+      "zh": "分辨",
+      "def": "see the difference between two things"
+    },
+    {
+      "word": "bottleneck",
+      "zh": "瓶頸",
+      "def": "the part of a process that slows everything down"
+    },
+    {
+      "word": "out of reach",
+      "zh": "遙不可及",
+      "def": "impossible to get or achieve"
+    },
+    {
+      "word": "caveats",
+      "zh": "但書；附帶條件",
+      "def": "warnings that something is only true in a limited way"
+    },
+    {
+      "word": "inference",
+      "zh": "推論",
+      "def": "a conclusion reached from evidence, not observed directly"
+    },
+    {
+      "word": "transform",
+      "zh": "徹底改變",
+      "def": "change something completely"
+    },
+    {
+      "word": "puzzle",
+      "zh": "謎題",
+      "def": "a problem that is difficult to understand"
+    }
   ],
   "tasks": [
     {
@@ -56,7 +136,14 @@
         "Power grids will stop wasting energy next year"
       ],
       "answer": 0,
-      "explain": "B is the classic overclaim - paragraph 1 says the study \"does not create\" one. C is a single detail (paragraph 4). D is never promised (paragraph 8 says \"could\")."
+      "explain": "B is the classic overclaim - paragraph 1 says the study \"does not create\" one. C is a single detail (paragraph 4). D is never promised (paragraph 8 says \"could\").",
+      "q_zh": "哪個標題最能概括「整篇」文章？",
+      "options_zh": [
+        "電子對可能在室溫下存在，但超導體仍需要低溫",
+        "室溫超導體終於被發明出來了",
+        "Bi-2212 是一種銅氧化物",
+        "電網明年就不會再浪費能量"
+      ]
     },
     {
       "type": "order",
@@ -69,32 +156,82 @@
         "They find pairs form well above the superconducting temperature",
         "So the main problem may be making the pairs move together"
       ],
-      "explain": "Problem → the two conditions → the experiment → the result → what it means. Many science news stories follow this shape."
+      "explain": "Problem → the two conditions → the experiment → the result → what it means. Many science news stories follow this shape.",
+      "q_zh": "跟著文章的邏輯：把這些步驟排出順序（第 2–6 段）。",
+      "items_zh": [
+        "超導體只有在極低溫時才能運作",
+        "超導需要電子對，「而且」電子對要步調一致地移動",
+        "科學家量測單一電子和電子對各自帶來的電流",
+        "他們發現電子對在遠高於超導溫度時就形成了",
+        "所以主要問題可能是讓電子對一起移動"
+      ]
     },
     {
       "type": "match",
       "skill": "scanning",
       "q": "Scan the article: what does each term refer to?",
       "pairs": [
-        { "left": "Cooper pairs", "right": "electrons teamed up in twos" },
-        { "left": "phase coherence", "right": "pairs moving in step" },
-        { "left": "Bi-2212", "right": "the copper-oxide material studied" },
-        { "left": "-260°C", "right": "temperature some superconductors need" },
-        { "left": "5 November", "right": "when the study was published" }
+        {
+          "left": "Cooper pairs",
+          "right": "electrons teamed up in twos"
+        },
+        {
+          "left": "phase coherence",
+          "right": "pairs moving in step"
+        },
+        {
+          "left": "Bi-2212",
+          "right": "the copper-oxide material studied"
+        },
+        {
+          "left": "-260°C",
+          "right": "temperature some superconductors need"
+        },
+        {
+          "left": "5 November",
+          "right": "when the study was published"
+        }
       ],
-      "explain": "Writers often define a technical term right after it, using \"so-called\" or a comma: look for those signals."
+      "explain": "Writers often define a technical term right after it, using \"so-called\" or a comma: look for those signals.",
+      "q_zh": "掃讀文章：每個詞指的是什麼？"
     },
     {
       "type": "tfng",
       "skill": "detail",
       "q": "True, False or Not Given?",
       "statements": [
-        { "text": "In a superconductor, no energy is lost as heat from resistance.", "answer": "T", "explain": "Paragraph 2: \"In a superconductor, that loss disappears.\"" },
-        { "text": "The team carried out its measurements at room temperature.", "answer": "F", "explain": "Paragraph 7: the measurements were made under extreme cooling." },
-        { "text": "Bi-2212 is cheap to manufacture.", "answer": "NG", "explain": "Cost is never mentioned." },
-        { "text": "Scientists now fully understand phase coherence at high temperatures.", "answer": "F", "explain": "Paragraph 7: it \"is still unexplained at higher temperatures\"." },
-        { "text": "The researchers will test other copper oxides next year.", "answer": "NG", "explain": "No future plans are described." }
-      ]
+        {
+          "text": "In a superconductor, no energy is lost as heat from resistance.",
+          "answer": "T",
+          "explain": "Paragraph 2: \"In a superconductor, that loss disappears.\"",
+          "zh": "在超導體中，不會因電阻而以熱的形式損失能量。"
+        },
+        {
+          "text": "The team carried out its measurements at room temperature.",
+          "answer": "F",
+          "explain": "Paragraph 7: the measurements were made under extreme cooling.",
+          "zh": "團隊是在室溫下進行量測的。"
+        },
+        {
+          "text": "Bi-2212 is cheap to manufacture.",
+          "answer": "NG",
+          "explain": "Cost is never mentioned.",
+          "zh": "Bi-2212 製造成本很低。"
+        },
+        {
+          "text": "Scientists now fully understand phase coherence at high temperatures.",
+          "answer": "F",
+          "explain": "Paragraph 7: it \"is still unexplained at higher temperatures\".",
+          "zh": "科學家現在已經完全理解高溫下的相位同調。"
+        },
+        {
+          "text": "The researchers will test other copper oxides next year.",
+          "answer": "NG",
+          "explain": "No future plans are described.",
+          "zh": "研究人員明年會測試其他銅氧化物。"
+        }
+      ],
+      "q_zh": "True（對）、False（錯）還是 Not Given（沒提到）？"
     },
     {
       "type": "mcq",
@@ -107,7 +244,14 @@
         "Building equipment that measures current"
       ],
       "answer": 0,
-      "explain": "Paragraph 6: \"If pairing is not the bottleneck, the real problem may be getting the pairs to move together.\" B is the opposite of the finding."
+      "explain": "Paragraph 6: \"If pairing is not the bottleneck, the real problem may be getting the pairs to move together.\" B is the opposite of the finding.",
+      "q_zh": "根據文章，室溫超導體現在最可能的主要障礙是什麼？",
+      "options_zh": [
+        "讓電子對步調一致地移動",
+        "讓電子能夠配對",
+        "找到足夠的液態氦",
+        "打造量測電流的設備"
+      ]
     },
     {
       "type": "mcq",
@@ -120,7 +264,14 @@
         "a successful experiment"
       ],
       "answer": 0,
-      "explain": "Like the narrow neck of a bottle, it is the point that slows everything down. The sentence contrasts it with \"the real problem\"."
+      "explain": "Like the narrow neck of a bottle, it is the point that slows everything down. The sentence contrasts it with \"the real problem\".",
+      "q_zh": "第 6 段的「bottleneck」意思是：",
+      "options_zh": [
+        "限制進展的那個環節（瓶頸）",
+        "系統中最強的部分",
+        "一種電線",
+        "一次成功的實驗"
+      ]
     },
     {
       "type": "mcq",
@@ -133,17 +284,39 @@
         "To argue that the study was badly done"
       ],
       "answer": 0,
-      "explain": "\"Important caveats remain\" signals limits. D goes too far - pointing out limits is not saying the work was bad."
+      "explain": "\"Important caveats remain\" signals limits. D goes too far - pointing out limits is not saying the work was bad.",
+      "q_zh": "第 7 段的主要目的是什麼？",
+      "options_zh": [
+        "避免讀者誇大這項結果",
+        "解釋超導體如何節省能源",
+        "介紹研究團隊",
+        "主張這項研究做得很差"
+      ]
     }
   ],
   "sentence": {
     "text": "Their measurements showed that pairs form well above the temperature at which the material actually becomes a superconductor.",
     "chunks": [
-      { "text": "Their measurements", "role": "主詞 Subject" },
-      { "text": "showed", "role": "動詞 Verb" },
-      { "text": "that pairs form", "role": "顯示的內容 What was shown" },
-      { "text": "well above the temperature", "role": "地點／程度 Where (on the scale)" },
-      { "text": "at which the material actually becomes a superconductor.", "role": "關係子句：哪個溫度 Which temperature" }
+      {
+        "text": "Their measurements",
+        "role": "主詞 Subject"
+      },
+      {
+        "text": "showed",
+        "role": "動詞 Verb"
+      },
+      {
+        "text": "that pairs form",
+        "role": "顯示的內容 What was shown"
+      },
+      {
+        "text": "well above the temperature",
+        "role": "地點／程度 Where (on the scale)"
+      },
+      {
+        "text": "at which the material actually becomes a superconductor.",
+        "role": "關係子句：哪個溫度 Which temperature"
+      }
     ],
     "q": "Tap the part that tells you WHICH temperature is meant.",
     "answer": 4,
@@ -152,5 +325,17 @@
   "write": {
     "prompt": "Why do scientists care so much about superconductors that work without cooling? Write 2-3 sentences in English, giving one example from the article and one of your own.",
     "sample": "Superconductors without cooling could transform power grids, because no energy would be lost as heat. I think they could also make MRI machines cheaper, since today these machines need very cold liquid helium."
-  }
+  },
+  "title_zh": "耐得住高溫的電子對：朝室溫超導體邁進一步",
+  "dek_zh": "一項針對銅氧化物的研究顯示，超導的兩個條件之一可能在室溫下成立。",
+  "article_zh": [
+    "科學家發現，超導——電流完全沒有電阻地流動——所需的兩個條件之一，可能在室溫下就能成立。這項 11 月 5 日發表在《科學》（Science）期刊的發現，並沒有做出室溫超導體，但它縮小了「到底是什麼在擋路」的範圍。",
+    "一般的電線會浪費能量：電子在移動時會撞上材料，把一部分能量變成熱散失。在超導體裡，這種損耗消失了。問題在於，已知的超導體只有在冷卻到極低溫時才能運作；有些需要約攝氏零下 260 度的液態氦。",
+    "超導需要兩件事。第一，電子必須兩兩結成所謂的庫柏對（Cooper pairs）。第二，這些電子對必須彼此步調一致地移動，物理學家稱這種性質為相位同調（phase coherence）。",
+    "來自烏特勒支、萊登和慕尼黑的研究人員研究了一種名為 Bi-2212 的銅氧化物；它屬於一類能在相對高溫下超導的材料。他們打造了一套設備，能分辨電流是由單一電子還是由電子對所攜帶。",
+    "他們的量測顯示，電子對在遠高於材料真正變成超導體的溫度時就已經形成。團隊的結論是：把電子綁在一起的「膠水」強到足以在室溫下維持住它們。",
+    "這改變了研究的方向。如果配對不是瓶頸，真正的問題可能在於讓電子對一起移動。研究負責人之一 Ingmar Swart 稱這個結果是好消息，因為如果沒有穩定的電子對，室溫超導就根本不可能達成。",
+    "重要的但書仍在。量測本身是在極低溫下進行的；「室溫」的說法是根據結合強度所做的推論。而第二個條件——相位同調——在較高溫度下仍無法解釋。",
+    "回報將非常巨大：不需冷卻就能運作的超導體，可能徹底改變電網、磁浮列車和量子電腦。目前，科學家找到了拼圖的一塊，也對仍缺少的那一塊有了更清楚的認識。"
+  ]
 }

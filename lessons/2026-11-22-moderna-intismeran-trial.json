@@ -29,22 +29,26 @@
       {
         "text": "The therapy is made separately for each patient.",
         "truth": true,
-        "why": "第 2 段：它是用「這位病人自己腫瘤」的突變設計的（manufactured for that single patient）。"
+        "why": "第 2 段：它是用「這位病人自己腫瘤」的突變設計的（manufactured for that single patient）。",
+        "zh": "這項療法是為每位病人分別製作的。"
       },
       {
         "text": "The trial proved that the therapy helps patients live longer.",
         "truth": false,
-        "why": "第 6 段：overall survival data are not yet mature。能不能活更久還沒被證明，這是常見的過度推論陷阱。"
+        "why": "第 6 段：overall survival data are not yet mature。能不能活更久還沒被證明，這是常見的過度推論陷阱。",
+        "zh": "試驗證明這項療法能讓病人活得更久。"
       },
       {
         "text": "The therapy was tested on its own, without other cancer drugs.",
         "truth": false,
-        "why": "第 3 段：所有病人都有打 Keytruda（in both cases alongside Keytruda）。"
+        "why": "第 3 段：所有病人都有打 Keytruda（in both cases alongside Keytruda）。",
+        "zh": "這項療法是單獨測試的，沒有搭配其他癌症藥物。"
       },
       {
         "text": "Side effects were common in both groups of patients.",
         "truth": true,
-        "why": "第 5 段：兩組都很常見（95.8% vs 90.0%）。"
+        "why": "第 5 段：兩組都很常見（95.8% vs 90.0%）。",
+        "zh": "兩組病人的副作用都很常見。"
       }
     ]
   },
@@ -132,7 +136,14 @@
         "A personalised mRNA therapy reduced melanoma recurrence while causing fewer side effects than Keytruda alone, but it has yet to be approved."
       ],
       "answer": 0,
-      "explain": "四個選項前半都對，關鍵在後半的細節。\nB 錯在 extend patients' lives。第 6 段說 overall survival data are not yet mature，活更久還沒被證明。\nC 錯在 from the first months。第 4 段說頭六個月兩組 fared almost identically。\nD 錯在 fewer side effects。第 5 段寫的是 95.8% vs 90.0%，合併組反而略多。\n只有 A 同時涵蓋第 1 段的成果和第 6～8 段的但書。"
+      "explain": "四個選項前半都對，關鍵在後半的細節。\nB 錯在 extend patients' lives。第 6 段說 overall survival data are not yet mature，活更久還沒被證明。\nC 錯在 from the first months。第 4 段說頭六個月兩組 fared almost identically。\nD 錯在 fewer side effects。第 5 段寫的是 95.8% vs 90.0%，合併組反而略多。\n只有 A 同時涵蓋第 1 段的成果和第 6～8 段的但書。",
+      "q_zh": "下列哪一項最能表達本文的主旨？",
+      "options_zh": [
+        "一種個人化 mRNA 療法在黑色素瘤上首次取得同類型的後期試驗成功，但存活、更廣泛應用和生產方面的問題仍在。",
+        "一種個人化 mRNA 療法已被證明能降低黑色素瘤復發並延長病人壽命，雖然生產成本仍高。",
+        "一種個人化 mRNA 療法從治療最初幾個月就降低了黑色素瘤復發，但它在其他癌症的價值仍未知。",
+        "一種個人化 mRNA 療法降低了黑色素瘤復發，且副作用比單用 Keytruda 少，但尚未獲准。"
+      ]
     },
     {
       "type": "mcq",
@@ -145,7 +156,14 @@
         "the healthy DNA used for comparison with the tumour"
       ],
       "answer": 0,
-      "explain": "第 2 段冒號後面直接給了定義：abnormal protein fragments that mark a cell as cancerous（標記癌細胞的異常蛋白片段）。\nB 是 Keytruda（第 3 段），C 是 T cells，D 是病人的健康 DNA。\n技巧：遇到生字，先往後找冒號、破折號或 which，作者常在那裡下定義。"
+      "explain": "第 2 段冒號後面直接給了定義：abnormal protein fragments that mark a cell as cancerous（標記癌細胞的異常蛋白片段）。\nB 是 Keytruda（第 3 段），C 是 T cells，D 是病人的健康 DNA。\n技巧：遇到生字，先往後找冒號、破折號或 which，作者常在那裡下定義。",
+      "q_zh": "第 2 段的「neoantigens」最接近指的是 ____。",
+      "options_zh": [
+        "只出現在癌細胞上的異常蛋白質片段",
+        "一種鬆開免疫系統煞車的藥物",
+        "追殺殘存癌細胞的免疫細胞",
+        "用來和腫瘤比對的健康 DNA"
+      ]
     },
     {
       "type": "mcq",
@@ -158,7 +176,14 @@
         "The random assignment of patients in a 2:1 ratio"
       ],
       "answer": 0,
-      "explain": "Such 指的是「前面剛講過的那些」，所以答案要回到上一段（第 6 段）找。第 6 段正好列出三個不確定：存活資料還不成熟、突變少的癌症效果未知、量產又貴又難。\n其他選項來自第 3～5 段，不是緊接在前的內容。\n這跟考卷 Q43 的 Such contrasts 是同一種題型。"
+      "explain": "Such 指的是「前面剛講過的那些」，所以答案要回到上一段（第 6 段）找。第 6 段正好列出三個不確定：存活資料還不成熟、突變少的癌症效果未知、量產又貴又難。\n其他選項來自第 3～5 段，不是緊接在前的內容。\n這跟考卷 Q43 的 Such contrasts 是同一種題型。",
+      "q_zh": "第 7 段的「Such uncertainties」最準確地指下列哪一項？",
+      "options_zh": [
+        "尚未證實的存活效益、尚未在其他癌症測試，以及每個療程生產上的困難",
+        "治療前六個月完全沒有效益",
+        "兩組都回報很高的副作用比例",
+        "病人以 2:1 比例隨機分配"
+      ]
     },
     {
       "type": "tfng",
@@ -168,29 +193,35 @@
         {
           "text": "Neither the patients nor their doctors knew who received intismeran.",
           "answer": "T",
-          "explain": "第 3 段：double-blind，病人和醫生都不知道誰拿到真的藥。"
+          "explain": "第 3 段：double-blind，病人和醫生都不知道誰拿到真的藥。",
+          "zh": "病人和醫師都不知道誰接受了 intismeran。"
         },
         {
           "text": "Patients in the combination group had fewer side effects than those on Keytruda alone.",
           "answer": "F",
-          "explain": "第 5 段：合併組的副作用反而略多（95.8% vs 90.0%），和敘述相反，所以是 F。"
+          "explain": "第 5 段：合併組的副作用反而略多（95.8% vs 90.0%），和敘述相反，所以是 F。",
+          "zh": "合併治療組的副作用比只用 Keytruda 的組別少。"
         },
         {
           "text": "Intismeran has already been approved by regulators in the United States.",
           "answer": "F",
-          "explain": "第 6 段：has not yet been approved by any regulator，和敘述相反。"
+          "explain": "第 6 段：has not yet been approved by any regulator，和敘述相反。",
+          "zh": "Intismeran 已經獲得美國監管機關核准。"
         },
         {
           "text": "Each personalised course takes about six weeks to manufacture.",
           "answer": "NG",
-          "explain": "第 6 段只說量產 costly and logistically demanding，全文沒有提到製作要多久，所以是 NG，不是 F。"
+          "explain": "第 6 段只說量產 costly and logistically demanding，全文沒有提到製作要多久，所以是 NG，不是 F。",
+          "zh": "每個個人化療程大約需要六週來製造。"
         },
         {
           "text": "Lung tumours carry fewer mutations than melanoma tumours.",
           "answer": "NG",
-          "explain": "第 6 段提到 cancers with fewer mutations，第 8 段提到肺癌，但文章從沒把兩者連在一起。不要自己把兩個分開的資訊拼成新結論。"
+          "explain": "第 6 段提到 cancers with fewer mutations，第 8 段提到肺癌，但文章從沒把兩者連在一起。不要自己把兩個分開的資訊拼成新結論。",
+          "zh": "肺部腫瘤的突變比黑色素瘤腫瘤少。"
         }
-      ]
+      ],
+      "q_zh": "True（對）、False（錯）還是 Not Given（沒提到）？"
     },
     {
       "type": "mcq",
@@ -203,7 +234,14 @@
         "Each course of intismeran encodes up to 34 neoantigens selected from mutations found only in the patient's cancer."
       ],
       "answer": 0,
-      "explain": "這題要找「錯的」那一個。\nA 錯：第 3 段寫的是 randomly assigned in a 2:1 ratio，兩組人數是 2 比 1，不是平分（equally）。\nB 對：第 3 段 in both cases alongside Keytruda。\nC 對：第 5 段 about 14% and 13%。\nD 對：第 2 段 up to 34 of these neoantigens。\n跟考卷 Q50 一樣，選項都很長，只有一個數字或詞被偷換。"
+      "explain": "這題要找「錯的」那一個。\nA 錯：第 3 段寫的是 randomly assigned in a 2:1 ratio，兩組人數是 2 比 1，不是平分（equally）。\nB 對：第 3 段 in both cases alongside Keytruda。\nC 對：第 5 段 about 14% and 13%。\nD 對：第 2 段 up to 34 of these neoantigens。\n跟考卷 Q50 一樣，選項都很長，只有一個數字或詞被偷換。",
+      "q_zh": "根據本文，下列哪一項敘述「不」正確？",
+      "options_zh": [
+        "試驗中的病人被平均分配到合併治療組和「Keytruda 加安慰劑」組。",
+        "試驗中每位受試者都接受了 Keytruda，不論是否也接受 intismeran。",
+        "合併治療組和只用 Keytruda 組的嚴重副作用發生率大致相近。",
+        "每個 intismeran 療程編碼多達 34 個新抗原，選自只在病人癌細胞中發現的突變。"
+      ]
     },
     {
       "type": "mcq",
@@ -216,7 +254,14 @@
         "The number of late-stage trials being run in lung cancer"
       ],
       "answer": 0,
-      "explain": "第 6 段只說量產 likely to be costly，沒有給任何價格。\n其他選項都有提到：最多九劑（第 3 段）、嚴重副作用約 14% 和 13%（第 5 段）、肺癌有三個後期試驗（第 8 段）。\n注意 NOT mentioned（沒提到）和 NOT correct（寫錯）是不同題型。"
+      "explain": "第 6 段只說量產 likely to be costly，沒有給任何價格。\n其他選項都有提到：最多九劑（第 3 段）、嚴重副作用約 14% 和 13%（第 5 段）、肺癌有三個後期試驗（第 8 段）。\n注意 NOT mentioned（沒提到）和 NOT correct（寫錯）是不同題型。",
+      "q_zh": "下列哪一項本文「沒有」提到？",
+      "options_zh": [
+        "病人接受一個療程要付的價格",
+        "每位病人最多可接受幾劑 intismeran",
+        "各組出現嚴重副作用的病人比例",
+        "肺癌正在進行的後期試驗數量"
+      ]
     },
     {
       "type": "mcq",
@@ -229,7 +274,14 @@
         "The therapy benefited only those patients who went on to receive all nine doses."
       ],
       "answer": 0,
-      "explain": "第 4 段：曲線要等療程結束後才分開，作者說這 consistent with the time the immune system needs，所以 A 是合理推論。\nB 錯：almost identically 是「幾乎一樣」，不是 Keytruda 比較好。\nC 錯：58% 是 after the immunisation course 之後才出現的。\nD 過度推論：文章沒有比較打滿九劑和沒打滿的人。"
+      "explain": "第 4 段：曲線要等療程結束後才分開，作者說這 consistent with the time the immune system needs，所以 A 是合理推論。\nB 錯：almost identically 是「幾乎一樣」，不是 Keytruda 比較好。\nC 錯：58% 是 after the immunisation course 之後才出現的。\nD 過度推論：文章沒有比較打滿九劑和沒打滿的人。",
+      "q_zh": "從「兩組在前六個月狀況幾乎一模一樣」這項發現，可以推論出什麼？",
+      "options_zh": [
+        "追加的療法可能需要時間訓練免疫系統，之後才能保護病人。",
+        "在前六個月，單用 Keytruda 比合併治療稍微有效。",
+        "58% 的風險下降從治療一開始就適用於所有病人。",
+        "這項療法只對完成全部九劑的病人有幫助。"
+      ]
     },
     {
       "type": "mcq",
@@ -242,7 +294,14 @@
         "To criticise Moderna for misleading patients"
       ],
       "answer": 0,
-      "explain": "第 7 段講的是各方的「反應」：醫生、投資人，連用詞都變得敏感。提到 vaccine 這個字是為了說明，大家怎麼看這個療法，不只取決於數據，也受政治氣氛影響。\n作者沒有做科學判斷（B）、沒提到審查延遲（C）、也沒有批評 Moderna（D）。"
+      "explain": "第 7 段講的是各方的「反應」：醫生、投資人，連用詞都變得敏感。提到 vaccine 這個字是為了說明，大家怎麼看這個療法，不只取決於數據，也受政治氣氛影響。\n作者沒有做科學判斷（B）、沒提到審查延遲（C）、也沒有批評 Moderna（D）。",
+      "q_zh": "作者為什麼提到 Moderna 避免使用「疫苗」一詞（第 7 段）？",
+      "options_zh": [
+        "為了顯示這項療法受到的評價，受臨床數據以外的因素影響",
+        "為了主張 intismeran 在科學上不算疫苗",
+        "為了解釋監管機關為何延後核准",
+        "為了批評 Moderna 誤導病人"
+      ]
     },
     {
       "type": "order",
@@ -256,7 +315,16 @@
         "The patient's cells produce the fragments after injection",
         "T cells learn to hunt down remaining cancer cells"
       ],
-      "explain": "第 2 段照時間順序寫：After a tumour is surgically removed → then manufactured → Once it is injected → which can then hunt down。\n抓 after、then、once 這些順序訊號字就能排出來。"
+      "explain": "第 2 段照時間順序寫：After a tumour is surgically removed → then manufactured → Once it is injected → which can then hunt down。\n抓 after、then、once 這些順序訊號字就能排出來。",
+      "q_zh": "把製作和使用這項療法的步驟排出順序（第 2 段）。",
+      "items_zh": [
+        "手術切除腫瘤",
+        "對腫瘤 DNA 定序並和健康 DNA 比對",
+        "找出癌細胞獨有的新抗原",
+        "為這位病人製造一個編碼多達 34 個新抗原的 mRNA 分子",
+        "注射後，病人的細胞製造出這些片段",
+        "T 細胞學會追殺殘存的癌細胞"
+      ]
     }
   ],
   "sentence": {
@@ -298,5 +366,17 @@
   },
   "talk": {
     "q": "如果你是醫生，病人問你：「這個療法還沒證明能讓我活更久，我該不該打？」你會怎麼回答他？"
-  }
+  },
+  "title_zh": "深入第一個成功的個人化 mRNA 癌症療法試驗",
+  "dek_zh": "一款針對個別腫瘤的 mRNA 療法讓黑色素瘤復發降低 42%，但存活、更廣泛的應用和成本仍是未解的問題。",
+  "article_zh": [
+    "幾十年來，治療型癌症疫苗一直被視為一個很有前景、卻屢屢無法兌現的想法。今年秋天公布的一項大型試驗顯示，這個想法是可行的——至少在一個經過仔細挑選的情境中。與 Moderna 和默克合作的研究人員發現，在標準免疫療法 Keytruda 之外，再加上一種個人化 mRNA 療法 intismeran autogene，能在大約兩年內把黑色素瘤復發或死亡的風險降低 42%。這是 mRNA 癌症療法第一個正面的後期試驗結果，但同樣的數據也揭露了還有多少不確定之處。",
+    "傳統疫苗訓練身體辨認外來入侵者；intismeran 則不同，它的設計目的是幫助免疫系統辨認病人「自己的」疾病。腫瘤經手術切除後，會對它的 DNA 定序，並和病人健康的 DNA 比對。只出現在癌細胞中的突變，會被用來找出新抗原（neoantigens）：把細胞標記為癌細胞的異常蛋白質片段。接著為這位病人單獨製造一個人工合成的 mRNA 分子，編碼多達 34 個新抗原。注射後，身體的細胞讀取這些指令、製造出這些片段，並把它們呈現給稱為 T 細胞的免疫細胞，T 細胞接著就能追殺任何殘存的癌細胞。",
+    "這項名為 INTerpath-001 的試驗，納入了 1,137 名腫瘤已完全切除的高風險黑色素瘤患者（第 IIB 到 IV 期）。由於這類病人即使手術成功也常會復發，他們通常會接受 Keytruda——一種鬆開免疫系統煞車的藥物。受試者以 2:1 的比例被隨機分配，接受個人化療法或安慰劑，兩組都同時使用 Keytruda。這項研究是雙盲的，也就是病人和醫師都不知道誰接受的是真正的療法。Intismeran 每三週施打一次，最多九劑。",
+    "在中位數約兩年的追蹤後，合併治療組有 82.2% 的病人存活且未復發，只用 Keytruda 的組別則是 70.0%。合併治療也讓癌症擴散到遠端器官或死亡的風險降低 38%。有意思的是，效益並不是一開始就出現。在前六個月，兩組的狀況幾乎一模一樣；直到整個免疫療程完成後，兩條曲線才分開，在一項事先設定的分析中，復發或死亡風險下降了 58%。這種延遲和免疫系統建立針對性反應所需的時間相符。",
+    "安全性整體而言令人放心。與治療相關的副作用在兩組都很常見，合併治療組有 95.8% 的病人回報，只用 Keytruda 的組別則是 90.0%；但嚴重事件的發生率相近，分別約為 14% 和 13%。合併治療組最常見的不適是發燒、注射部位疼痛和疲倦，沒有發現新的安全疑慮。",
+    "不過，有幾項但書讓熱情降溫。最重要的是，整體存活數據還不成熟：雖然觀察到有利的趨勢，但病人是否會活得更久仍未被證實。黑色素瘤也可能是一個特別有利的測試案例，因為它的腫瘤帶有很多突變，因此提供許多潛在目標；這個方法在突變較少的癌症中是否同樣有效，目前未知。此外，由於每個療程都必須為單一個人設計和製造，大規模生產這種療法很可能既昂貴、在後勤上又很吃力。這項療法目前尚未獲得任何監管機關核准。",
+    "這些不確定性有助於解釋為什麼外界對數據的反應不一。黑色素瘤專科醫師形容這些結果是具有臨床意義的進展；投資人在詳細數字公布時反應則較為冷淡——儘管 Moderna 的股價在這一年已因對這項計畫的期待而翻了好幾倍。連用詞都變得敏感：Moderna 現在通常避免把這個產品稱為「疫苗」，因為這個字已經帶有政治色彩，而改稱它為個人化新抗原療法。",
+    "兩家公司目前正在多種腫瘤類型中進行九項中期和後期試驗，包括三項肺癌的後期研究。如果這些試驗成功，個人化 mRNA 療法可能成為癌症治療的新支柱。如果不成功，INTerpath-001 可能會被記為一個證明——證明這個概念可行，但只限於生物條件剛好特別有利的情況。"
+  ]
 }

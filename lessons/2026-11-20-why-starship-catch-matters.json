@@ -6,19 +6,54 @@
   "title": "Why catching a rocket matters - and what it does not prove",
   "dek": "SpaceX's tower caught a Starship returning from orbit. To see why that is a big deal, start with an aeroplane ticket.",
   "sources": [
-    { "name": "SpaceQ: Starship Flight 15", "url": "https://spaceq.ca/?p=53437" },
-    { "name": "Nature World News: Half the double catch worked", "url": "https://www.natureworldnews.com/articles/73881/20261117/half-double-catch-worked-starship-flight-15-brings-ship-home-orbit-first-time.htm" },
-    { "name": "Metavert: Reusable launch vehicles (cost per kilogram)", "url": "https://metavert.io/reusable-launch-vehicles" },
-    { "name": "NewSpace Economy: Falcon 9 and Starship cost claims", "url": "https://newspaceeconomy.ca/?p=198590" },
-    { "name": "Basenor: Starship HLS and the road to the Moon", "url": "https://www.basenor.com/blogs/news/spacex-starship-hls-what-the-road-to-the-moon-looks-like-now" }
+    {
+      "name": "SpaceQ: Starship Flight 15",
+      "url": "https://spaceq.ca/?p=53437"
+    },
+    {
+      "name": "Nature World News: Half the double catch worked",
+      "url": "https://www.natureworldnews.com/articles/73881/20261117/half-double-catch-worked-starship-flight-15-brings-ship-home-orbit-first-time.htm"
+    },
+    {
+      "name": "Metavert: Reusable launch vehicles (cost per kilogram)",
+      "url": "https://metavert.io/reusable-launch-vehicles"
+    },
+    {
+      "name": "NewSpace Economy: Falcon 9 and Starship cost claims",
+      "url": "https://newspaceeconomy.ca/?p=198590"
+    },
+    {
+      "name": "Basenor: Starship HLS and the road to the Moon",
+      "url": "https://www.basenor.com/blogs/news/spacex-starship-hls-what-the-road-to-the-moon-looks-like-now"
+    }
   ],
   "predict": {
     "prompt": "Before you read: which of these do you think are TRUE? Tick all you believe.",
     "statements": [
-      { "text": "Falcon 9 already reuses the whole rocket.", "truth": false, "why": "Only its first stage is reused; the upper stage is thrown away every time." },
-      { "text": "Reusing rockets is meant to make launches cheaper.", "truth": true, "why": "Like aeroplanes, hardware that flies again does not have to be rebuilt each time." },
-      { "text": "Customers can already buy Starship launches at $10 a kilogram.", "truth": false, "why": "$10-$50 is a target, not an established price." },
-      { "text": "Starship matters for NASA's plans to go back to the Moon.", "truth": true, "why": "NASA plans to use a version of Starship as its Moon lander." }
+      {
+        "text": "Falcon 9 already reuses the whole rocket.",
+        "truth": false,
+        "why": "Only its first stage is reused; the upper stage is thrown away every time.",
+        "zh": "獵鷹九號已經重複使用整枚火箭。"
+      },
+      {
+        "text": "Reusing rockets is meant to make launches cheaper.",
+        "truth": true,
+        "why": "Like aeroplanes, hardware that flies again does not have to be rebuilt each time.",
+        "zh": "重複使用火箭是為了讓發射更便宜。"
+      },
+      {
+        "text": "Customers can already buy Starship launches at $10 a kilogram.",
+        "truth": false,
+        "why": "$10-$50 is a target, not an established price.",
+        "zh": "客戶已經可以用每公斤 10 美元買到星艦的發射。"
+      },
+      {
+        "text": "Starship matters for NASA's plans to go back to the Moon.",
+        "truth": true,
+        "why": "NASA plans to use a version of Starship as its Moon lander.",
+        "zh": "星艦對 NASA 重返月球的計畫很重要。"
+      }
     ]
   },
   "article": [
@@ -32,18 +67,66 @@
     "In short, the catch shows that the hardest piece of the puzzle can come home intact. Whether it can turn into cheap, airline-style spaceflight is a question the next few years will answer."
   ],
   "glossary": [
-    { "word": "milestone", "zh": "里程碑", "def": "an important event that marks progress" },
-    { "word": "scrapped", "zh": "報廢", "def": "thrown away because it is no longer wanted" },
-    { "word": "unaffordable", "zh": "負擔不起的", "def": "too expensive for people to pay for" },
-    { "word": "Analysts", "zh": "分析師", "def": "experts who study information and explain it" },
-    { "word": "discarded", "zh": "丟棄", "def": "thrown away" },
-    { "word": "fiercest", "zh": "最猛烈的", "def": "the most intense or violent" },
-    { "word": "essential", "zh": "必要的；不可或缺的", "def": "absolutely necessary" },
-    { "word": "ripple outwards", "zh": "像漣漪般擴散", "def": "spread its effects more and more widely" },
-    { "word": "retire", "zh": "使退役", "def": "stop using something because it is old or replaced" },
-    { "word": "routine", "zh": "例行的；常態的", "def": "ordinary and done regularly" },
-    { "word": "warranted", "zh": "有正當理由的；合理的", "def": "reasonable or justified in the situation" },
-    { "word": "intact", "zh": "完整無缺的", "def": "not damaged or broken" }
+    {
+      "word": "milestone",
+      "zh": "里程碑",
+      "def": "an important event that marks progress"
+    },
+    {
+      "word": "scrapped",
+      "zh": "報廢",
+      "def": "thrown away because it is no longer wanted"
+    },
+    {
+      "word": "unaffordable",
+      "zh": "負擔不起的",
+      "def": "too expensive for people to pay for"
+    },
+    {
+      "word": "Analysts",
+      "zh": "分析師",
+      "def": "experts who study information and explain it"
+    },
+    {
+      "word": "discarded",
+      "zh": "丟棄",
+      "def": "thrown away"
+    },
+    {
+      "word": "fiercest",
+      "zh": "最猛烈的",
+      "def": "the most intense or violent"
+    },
+    {
+      "word": "essential",
+      "zh": "必要的；不可或缺的",
+      "def": "absolutely necessary"
+    },
+    {
+      "word": "ripple outwards",
+      "zh": "像漣漪般擴散",
+      "def": "spread its effects more and more widely"
+    },
+    {
+      "word": "retire",
+      "zh": "使退役",
+      "def": "stop using something because it is old or replaced"
+    },
+    {
+      "word": "routine",
+      "zh": "例行的；常態的",
+      "def": "ordinary and done regularly"
+    },
+    {
+      "word": "warranted",
+      "zh": "有正當理由的；合理的",
+      "def": "reasonable or justified in the situation"
+    },
+    {
+      "word": "intact",
+      "zh": "完整無缺的",
+      "def": "not damaged or broken"
+    }
   ],
   "tasks": [
     {
@@ -57,7 +140,14 @@
         "SpaceX's newest Starlink satellites carry ten times more traffic"
       ],
       "answer": 0,
-      "explain": "A matches the question in paragraph 1 and the answer in paragraph 8. B is an overclaim (paragraph 7 says the costs are only targets). C twists paragraph 5: Falcon 9 retires only once Starship flies weekly. D is one detail from paragraph 5."
+      "explain": "A matches the question in paragraph 1 and the answer in paragraph 8. B is an overclaim (paragraph 7 says the costs are only targets). C twists paragraph 5: Falcon 9 retires only once Starship flies weekly. D is one detail from paragraph 5.",
+      "q_zh": "哪個句子最能概括「整篇」文章？",
+      "options_zh": [
+        "接住星艦是邁向便宜、可重複使用太空飛行的關鍵一步，但還無法證明這一點",
+        "SpaceX 已經讓太空飛行跟搭飛機一樣便宜",
+        "SpaceX 明年將停用獵鷹九號",
+        "SpaceX 最新的星鏈衛星流量是十倍"
+      ]
     },
     {
       "type": "order",
@@ -69,32 +159,81 @@
         "A Starship upper stage is caught by the tower",
         "Both stages return and fly again quickly (the goal)"
       ],
-      "explain": "Signal words help: \"For most of the space age\" (past), \"about a decade ago\" (Falcon 9), \"on 14 November\" (the catch), and \"is designed to\" / \"goal\" (the future)."
+      "explain": "Signal words help: \"For most of the space age\" (past), \"about a decade ago\" (Falcon 9), \"on 14 November\" (the catch), and \"is designed to\" / \"goal\" (the future).",
+      "q_zh": "把火箭重複使用的發展史排出順序（第 2–4 段）。",
+      "items_zh": [
+        "火箭每次發射後就被丟掉",
+        "獵鷹九號回收並重複使用第一節",
+        "星艦上節被發射塔接住",
+        "兩節都返回並快速再次飛行（目標）"
+      ]
     },
     {
       "type": "match",
       "skill": "scanning",
       "q": "Scan the article: what does each figure refer to?",
       "pairs": [
-        { "left": "$10,000+", "right": "cost per kilogram in the throwaway-rocket era" },
-        { "left": "$2,700", "right": "cost per kilogram with Falcon 9" },
-        { "left": "$10-$50", "right": "hoped-for cost per kilogram with Starship" },
-        { "left": "14 November", "right": "the day the Ship was caught" },
-        { "left": "a decade ago", "right": "when Falcon 9 reuse began" }
+        {
+          "left": "$10,000+",
+          "right": "cost per kilogram in the throwaway-rocket era"
+        },
+        {
+          "left": "$2,700",
+          "right": "cost per kilogram with Falcon 9"
+        },
+        {
+          "left": "$10-$50",
+          "right": "hoped-for cost per kilogram with Starship"
+        },
+        {
+          "left": "14 November",
+          "right": "the day the Ship was caught"
+        },
+        {
+          "left": "a decade ago",
+          "right": "when Falcon 9 reuse began"
+        }
       ],
-      "explain": "The three money figures tell a story of falling costs. Notice the last one is a hope, not a fact (paragraph 7)."
+      "explain": "The three money figures tell a story of falling costs. Notice the last one is a hope, not a fact (paragraph 7).",
+      "q_zh": "掃讀文章：每個數字指的是什麼？"
     },
     {
       "type": "tfng",
       "skill": "detail",
       "q": "True, False or Not Given?",
       "statements": [
-        { "text": "Falcon 9's upper stage is reused on every flight.", "answer": "F", "explain": "Paragraph 3: it \"is still discarded on every flight\"." },
-        { "text": "The upper stage faces extreme heat when it comes back through the atmosphere.", "answer": "T", "explain": "Paragraph 4: it \"faces the fiercest heat as it plunges back through the atmosphere\"." },
-        { "text": "Starship will take passengers to Mars within five years.", "answer": "NG", "explain": "Mars is never mentioned in the article." },
-        { "text": "Some analysts say Musk's figures describe SpaceX's own costs, not customer prices.", "answer": "T", "explain": "Paragraph 7 says exactly this, in slightly different words." },
-        { "text": "NASA has fixed a date for the Starship Moon landing.", "answer": "NG", "explain": "Paragraph 6 explains NASA's plan but gives no date at all." }
-      ]
+        {
+          "text": "Falcon 9's upper stage is reused on every flight.",
+          "answer": "F",
+          "explain": "Paragraph 3: it \"is still discarded on every flight\".",
+          "zh": "獵鷹九號的上節每次飛行都會被重複使用。"
+        },
+        {
+          "text": "The upper stage faces extreme heat when it comes back through the atmosphere.",
+          "answer": "T",
+          "explain": "Paragraph 4: it \"faces the fiercest heat as it plunges back through the atmosphere\".",
+          "zh": "上節在穿越大氣層返回時會承受極端高溫。"
+        },
+        {
+          "text": "Starship will take passengers to Mars within five years.",
+          "answer": "NG",
+          "explain": "Mars is never mentioned in the article.",
+          "zh": "星艦將在五年內載乘客去火星。"
+        },
+        {
+          "text": "Some analysts say Musk's figures describe SpaceX's own costs, not customer prices.",
+          "answer": "T",
+          "explain": "Paragraph 7 says exactly this, in slightly different words.",
+          "zh": "有些分析師說，馬斯克的數字描述的是 SpaceX 自己的成本，而非客戶價格。"
+        },
+        {
+          "text": "NASA has fixed a date for the Starship Moon landing.",
+          "answer": "NG",
+          "explain": "Paragraph 6 explains NASA's plan but gives no date at all.",
+          "zh": "NASA 已經敲定星艦登月的日期。"
+        }
+      ],
+      "q_zh": "True（對）、False（錯）還是 Not Given（沒提到）？"
     },
     {
       "type": "mcq",
@@ -107,7 +246,14 @@
         "It will be done by Falcon 9 rockets"
       ],
       "answer": 0,
-      "explain": "\"That plan only makes sense if launches become routine and affordable\" - so without cheap, frequent launches, ten tanker flights would be impractical. B, C and D are not supported."
+      "explain": "\"That plan only makes sense if launches become routine and affordable\" - so without cheap, frequent launches, ten tanker flights would be impractical. B, C and D are not supported.",
+      "q_zh": "從第 6 段可以推論出，用多趟加油船替登月艇加油這件事：",
+      "options_zh": [
+        "除非發射變得便宜又頻繁，否則成本會高得離譜",
+        "已經成功測試過很多次",
+        "已經不在 NASA 的計畫中",
+        "將由獵鷹九號火箭執行"
+      ]
     },
     {
       "type": "mcq",
@@ -120,7 +266,14 @@
         "the law guarantees safety"
       ],
       "answer": 0,
-      "explain": "\"Nevertheless\" signals a turn, and the rest of the paragraph lists reasons to be careful. So caution is justified - \"warranted\"."
+      "explain": "\"Nevertheless\" signals a turn, and the rest of the paragraph lists reasons to be careful. So caution is justified - \"warranted\".",
+      "q_zh": "第 7 段的「caution is warranted」意思最接近：",
+      "options_zh": [
+        "保持謹慎是合理的",
+        "不允許保持謹慎",
+        "沒什麼好擔心的",
+        "法律保證安全"
+      ]
     },
     {
       "type": "mcq",
@@ -133,19 +286,47 @@
         "To show that aeroplane tickets are becoming more expensive"
       ],
       "answer": 0,
-      "explain": "The analogy makes an unfamiliar idea familiar: scrapping a jet after one flight would make tickets unaffordable, and that is how rockets used to work."
+      "explain": "The analogy makes an unfamiliar idea familiar: scrapping a jet after one flight would make tickets unaffordable, and that is how rockets used to work.",
+      "q_zh": "作者為什麼在第 2 段把火箭比作客機？",
+      "options_zh": [
+        "為了解釋丟掉火箭為什麼讓發射如此昂貴",
+        "為了主張火箭比飛機安全",
+        "為了建議 SpaceX 開一家航空公司",
+        "為了說明機票越來越貴"
+      ]
     }
   ],
   "sentence": {
     "text": "The $10-to-$50 figure is a target, not an established price, and some analysts point out that Musk's numbers describe SpaceX's own costs rather than what customers will pay.",
     "chunks": [
-      { "text": "The $10-to-$50 figure", "role": "主詞 Subject" },
-      { "text": "is", "role": "動詞 Verb" },
-      { "text": "a target, not an established price,", "role": "補語 What it is (and is not)" },
-      { "text": "and", "role": "連接 And" },
-      { "text": "some analysts point out", "role": "第二個主詞＋動詞 Subject + verb 2" },
-      { "text": "that Musk's numbers describe SpaceX's own costs", "role": "他們指出的內容 What they point out" },
-      { "text": "rather than what customers will pay.", "role": "對比：不是什麼 Rather than (contrast)" }
+      {
+        "text": "The $10-to-$50 figure",
+        "role": "主詞 Subject"
+      },
+      {
+        "text": "is",
+        "role": "動詞 Verb"
+      },
+      {
+        "text": "a target, not an established price,",
+        "role": "補語 What it is (and is not)"
+      },
+      {
+        "text": "and",
+        "role": "連接 And"
+      },
+      {
+        "text": "some analysts point out",
+        "role": "第二個主詞＋動詞 Subject + verb 2"
+      },
+      {
+        "text": "that Musk's numbers describe SpaceX's own costs",
+        "role": "他們指出的內容 What they point out"
+      },
+      {
+        "text": "rather than what customers will pay.",
+        "role": "對比：不是什麼 Rather than (contrast)"
+      }
     ],
     "q": "Tap the part that tells you what Musk's numbers do NOT describe.",
     "answer": 6,
@@ -154,5 +335,17 @@
   "write": {
     "prompt": "Do you think reusable rockets will make space travel common in your lifetime? Write 2-3 sentences in English, using one word from today's list.",
     "sample": "I think reusable rockets could make space travel more routine, but I am not sure it will happen soon. The catch was an important milestone, yet caution is warranted until a Ship actually flies again."
-  }
+  },
+  "title_zh": "接住火箭為什麼重要——以及它還證明不了什麼",
+  "dek_zh": "SpaceX 的發射塔接住了一艘從軌道返回的星艦。要理解這有多重要，先從一張機票說起。",
+  "article_zh": [
+    "11 月 14 日，SpaceX 巨大的發射塔機械臂夾住了一艘返回的星艦（Starship），公司慶祝了這項首次成就。但這個里程碑實際上代表什麼——又不代表什麼？",
+    "要理解「接住」為什麼重要，想想搭飛機。想像每架客機飛一趟就報廢：機票會貴到買不起。在太空時代的大部分時間裡，火箭正是這樣運作的，每次發射都丟掉價值數千萬美元的硬體。",
+    "大約十年前，SpaceX 開始透過回收並重複使用獵鷹九號（Falcon 9）的第一節來改變這一點。分析師估計，這幫助把送一公斤進入軌道的成本降到大約 2,700 美元，而在用完即丟的火箭時代要 1 萬美元以上。不過，獵鷹九號的上節每次飛行仍會被丟棄。",
+    "星艦的設計目標更進一步：兩節都要能返回並快速再次飛行。如果成功，支持者相信發射成本可能降到每公斤 10 到 50 美元之間。接住上節——它在衝回大氣層時承受最猛烈的高溫——是邁向這個目標不可或缺的一步。",
+    "更便宜、更頻繁的發射會產生連鎖效應。星艦能載運更多 SpaceX 最新的星鏈（Starlink）網路衛星，每顆的流量約是上一代的十倍。馬斯克曾表示，一旦星艦能可靠地每週飛行，SpaceX 就會讓獵鷹九號退役。",
+    "這個里程碑對登月也很重要。NASA 計畫用一款星艦把太空人送上月球，但這艘登陸艇必須在軌道上加油，有估計認為需要大約十趟加油船飛行。只有在發射變得例行且負擔得起時，這個計畫才說得通。",
+    "儘管如此，仍應保持謹慎。每公斤 10 到 50 美元是目標，不是既定價格；一些分析師也指出，馬斯克的數字描述的是 SpaceX 自己的成本，而不是客戶要付的價錢。在同一次飛行中，助推器損毀了；而且還沒有任何一艘星艦經過檢查、加油並迅速再次發射——那才是重複使用的真正考驗。",
+    "簡而言之，這次接住顯示：拼圖中最難的那一塊可以完好無缺地回家。至於它能否變成便宜、像航空公司一樣的太空飛行，要由接下來幾年來回答。"
+  ]
 }

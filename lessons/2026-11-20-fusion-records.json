@@ -6,19 +6,54 @@
   "title": "Hotter than the Sun: fusion's record year - and its biggest catch",
   "dek": "Machines in the US and South Korea broke temperature and time records in 2026. None has yet made more power than it uses.",
   "sources": [
-    { "name": "American Nuclear Society: Helion sets temperature record", "url": "https://www.ans.org/news/2026-02-18/article-7765/fusion-roundup-helion-sets-temperature-record-inertia-raises-450m/" },
-    { "name": "Fortune: Helion hits 150 million degree plasma temperature", "url": "https://dc.fortune.com/2026/02/13/sam-altman-fusion-helion-energy-milestone-doubters-grid-power-2028/" },
-    { "name": "My Modern Met: KSTAR ran for 102 seconds", "url": "https://mymodernmet.com/kfe-kstar-102-seconds/" },
-    { "name": "GadgetReview: KSTAR tungsten divertors", "url": "https://www.gadgetreview.com/?p=383648" },
-    { "name": "E&E News: Fusion investments surge 69 percent", "url": "https://www.eenews.net/articles/fusion-investments-surge-69-percent-as-first-company-goes-public/" }
+    {
+      "name": "American Nuclear Society: Helion sets temperature record",
+      "url": "https://www.ans.org/news/2026-02-18/article-7765/fusion-roundup-helion-sets-temperature-record-inertia-raises-450m/"
+    },
+    {
+      "name": "Fortune: Helion hits 150 million degree plasma temperature",
+      "url": "https://dc.fortune.com/2026/02/13/sam-altman-fusion-helion-energy-milestone-doubters-grid-power-2028/"
+    },
+    {
+      "name": "My Modern Met: KSTAR ran for 102 seconds",
+      "url": "https://mymodernmet.com/kfe-kstar-102-seconds/"
+    },
+    {
+      "name": "GadgetReview: KSTAR tungsten divertors",
+      "url": "https://www.gadgetreview.com/?p=383648"
+    },
+    {
+      "name": "E&E News: Fusion investments surge 69 percent",
+      "url": "https://www.eenews.net/articles/fusion-investments-surge-69-percent-as-first-company-goes-public/"
+    }
   ],
   "predict": {
     "prompt": "Before you read: which of these do you think are TRUE? Tick all you believe.",
     "statements": [
-      { "text": "Fusion machines can now be hotter than the centre of the Sun.", "truth": true, "why": "100 million °C is about seven times the Sun's core temperature." },
-      { "text": "A fusion power plant already sends electricity to homes.", "truth": false, "why": "No machine has yet made more electricity than it consumes; Helion only hopes to switch on a plant by 2028." },
-      { "text": "Fusion fuel is made from forms of hydrogen.", "truth": true, "why": "Deuterium and tritium are isotopes of hydrogen." },
-      { "text": "Investors are losing interest in fusion.", "truth": false, "why": "Fusion companies raised a record $4.5 billion in the past year." }
+      {
+        "text": "Fusion machines can now be hotter than the centre of the Sun.",
+        "truth": true,
+        "why": "100 million °C is about seven times the Sun's core temperature.",
+        "zh": "核融合機器現在可以比太陽核心還熱。"
+      },
+      {
+        "text": "A fusion power plant already sends electricity to homes.",
+        "truth": false,
+        "why": "No machine has yet made more electricity than it consumes; Helion only hopes to switch on a plant by 2028.",
+        "zh": "已經有核融合發電廠在供電給家庭。"
+      },
+      {
+        "text": "Fusion fuel is made from forms of hydrogen.",
+        "truth": true,
+        "why": "Deuterium and tritium are isotopes of hydrogen.",
+        "zh": "核融合燃料是由氫的不同形式構成的。"
+      },
+      {
+        "text": "Investors are losing interest in fusion.",
+        "truth": false,
+        "why": "Fusion companies raised a record $4.5 billion in the past year.",
+        "zh": "投資人對核融合越來越沒興趣。"
+      }
     ]
   },
   "article": [
@@ -32,18 +67,66 @@
     "Investors are betting anyway: fusion companies raised a record $4.5 billion over the past year, a 69% jump. Whether that money can buy a working power plant this decade remains the field's biggest open question."
   ],
   "glossary": [
-    { "word": "nuclei", "zh": "原子核（複數）", "def": "the centres of atoms (singular: nucleus)" },
-    { "word": "isotopes", "zh": "同位素", "def": "forms of the same element with different numbers of neutrons" },
-    { "word": "repel", "zh": "互相排斥", "def": "push away from each other" },
-    { "word": "plasma", "zh": "電漿", "def": "a very hot gas in which electrons have left their atoms" },
-    { "word": "threshold", "zh": "門檻", "def": "the level that must be reached for something to happen" },
-    { "word": "prototype", "zh": "原型機", "def": "an early model built to test a design" },
-    { "word": "measurable", "zh": "可測量的", "def": "large enough to be measured" },
-    { "word": "exceptionally", "zh": "格外地", "def": "unusually; much more than normal" },
-    { "word": "independently", "zh": "獨立地（由外部）", "def": "by someone not involved in the work" },
-    { "word": "consumes", "zh": "消耗", "def": "uses up" },
-    { "word": "hurdles", "zh": "障礙", "def": "problems that must be overcome" },
-    { "word": "radioactive", "zh": "具放射性的", "def": "giving off harmful energy as atoms break down" }
+    {
+      "word": "nuclei",
+      "zh": "原子核（複數）",
+      "def": "the centres of atoms (singular: nucleus)"
+    },
+    {
+      "word": "isotopes",
+      "zh": "同位素",
+      "def": "forms of the same element with different numbers of neutrons"
+    },
+    {
+      "word": "repel",
+      "zh": "互相排斥",
+      "def": "push away from each other"
+    },
+    {
+      "word": "plasma",
+      "zh": "電漿",
+      "def": "a very hot gas in which electrons have left their atoms"
+    },
+    {
+      "word": "threshold",
+      "zh": "門檻",
+      "def": "the level that must be reached for something to happen"
+    },
+    {
+      "word": "prototype",
+      "zh": "原型機",
+      "def": "an early model built to test a design"
+    },
+    {
+      "word": "measurable",
+      "zh": "可測量的",
+      "def": "large enough to be measured"
+    },
+    {
+      "word": "exceptionally",
+      "zh": "格外地",
+      "def": "unusually; much more than normal"
+    },
+    {
+      "word": "independently",
+      "zh": "獨立地（由外部）",
+      "def": "by someone not involved in the work"
+    },
+    {
+      "word": "consumes",
+      "zh": "消耗",
+      "def": "uses up"
+    },
+    {
+      "word": "hurdles",
+      "zh": "障礙",
+      "def": "problems that must be overcome"
+    },
+    {
+      "word": "radioactive",
+      "zh": "具放射性的",
+      "def": "giving off harmful energy as atoms break down"
+    }
   ],
   "tasks": [
     {
@@ -57,7 +140,14 @@
         "Scientists prove that fusion energy is impossible"
       ],
       "answer": 0,
-      "explain": "B distorts paragraph 4 (2028 is only a hope). C is one detail from paragraph 5. D contradicts the whole article. A combines the records (paragraphs 4-5) with the catch (paragraph 6)."
+      "explain": "B distorts paragraph 4 (2028 is only a hope). C is one detail from paragraph 5. D contradicts the whole article. A combines the records (paragraphs 4-5) with the catch (paragraph 6).",
+      "q_zh": "哪個標題最能概括「整篇」文章？",
+      "options_zh": [
+        "核融合在 2026 年創下新紀錄，但還沒有機器產出的能量比消耗的多",
+        "核融合發電廠現在供電給微軟",
+        "鎢的熔點極高",
+        "科學家證明核融合能源不可能實現"
+      ]
     },
     {
       "type": "order",
@@ -69,33 +159,85 @@
         "Deuterium and tritium nuclei collide and merge",
         "Helium forms and a fast neutron is released"
       ],
-      "explain": "Heating comes first because the positively charged nuclei repel each other - only very fast-moving nuclei can get close enough to fuse."
+      "explain": "Heating comes first because the positively charged nuclei repel each other - only very fast-moving nuclei can get close enough to fuse.",
+      "q_zh": "把核融合的步驟排出正確順序（第 2 段）。",
+      "items_zh": [
+        "氫燃料被加熱到極高溫",
+        "電子被剝離，形成電漿",
+        "氘和氚的原子核碰撞並融合",
+        "形成氦，並釋放出一個高速中子"
+      ]
     },
     {
       "type": "match",
       "skill": "scanning",
       "q": "Scan the article: what does each figure refer to?",
       "pairs": [
-        { "left": "150 million °C", "right": "temperature Helion's Polaris reached" },
-        { "left": "100 million °C", "right": "threshold for a commercially useful machine" },
-        { "left": "102 seconds", "right": "KSTAR's new record" },
-        { "left": "48 seconds", "right": "KSTAR's record in 2024" },
-        { "left": "2028", "right": "when Helion hopes to switch on a power plant" },
-        { "left": "$4.5 billion", "right": "raised by fusion companies in the past year" }
+        {
+          "left": "150 million °C",
+          "right": "temperature Helion's Polaris reached"
+        },
+        {
+          "left": "100 million °C",
+          "right": "threshold for a commercially useful machine"
+        },
+        {
+          "left": "102 seconds",
+          "right": "KSTAR's new record"
+        },
+        {
+          "left": "48 seconds",
+          "right": "KSTAR's record in 2024"
+        },
+        {
+          "left": "2028",
+          "right": "when Helion hopes to switch on a power plant"
+        },
+        {
+          "left": "$4.5 billion",
+          "right": "raised by fusion companies in the past year"
+        }
       ],
-      "explain": "Two temperatures and two times appear close together - check which machine and which year each belongs to."
+      "explain": "Two temperatures and two times appear close together - check which machine and which year each belongs to.",
+      "q_zh": "掃讀文章：每個數字指的是什麼？"
     },
     {
       "type": "tfng",
       "skill": "detail",
       "q": "True, False or Not Given?",
       "statements": [
-        { "text": "Tritium has more neutrons than deuterium.", "answer": "T", "explain": "Paragraph 2: deuterium has one neutron, tritium has two." },
-        { "text": "Helion's Polaris already supplies electricity to Microsoft.", "answer": "F", "explain": "Paragraph 4: Helion only hopes to switch on a power plant by 2028." },
-        { "text": "KSTAR used deuterium-tritium fuel in its record run.", "answer": "NG", "explain": "Paragraph 5 never says what fuel KSTAR used." },
-        { "text": "Some fusion machines already produce more electricity than they consume.", "answer": "F", "explain": "Paragraph 6: \"No fusion machine has yet\" done this." },
-        { "text": "Tungsten is cheaper than other metals used in reactors.", "answer": "NG", "explain": "Paragraph 5 mentions tungsten's melting point, not its price." }
-      ]
+        {
+          "text": "Tritium has more neutrons than deuterium.",
+          "answer": "T",
+          "explain": "Paragraph 2: deuterium has one neutron, tritium has two.",
+          "zh": "氚的中子比氘多。"
+        },
+        {
+          "text": "Helion's Polaris already supplies electricity to Microsoft.",
+          "answer": "F",
+          "explain": "Paragraph 4: Helion only hopes to switch on a power plant by 2028.",
+          "zh": "Helion 的 Polaris 已經在供電給微軟。"
+        },
+        {
+          "text": "KSTAR used deuterium-tritium fuel in its record run.",
+          "answer": "NG",
+          "explain": "Paragraph 5 never says what fuel KSTAR used.",
+          "zh": "KSTAR 在創紀錄那次運轉中使用了氘-氚燃料。"
+        },
+        {
+          "text": "Some fusion machines already produce more electricity than they consume.",
+          "answer": "F",
+          "explain": "Paragraph 6: \"No fusion machine has yet\" done this.",
+          "zh": "有些核融合機器產出的電已經比消耗的多。"
+        },
+        {
+          "text": "Tungsten is cheaper than other metals used in reactors.",
+          "answer": "NG",
+          "explain": "Paragraph 5 mentions tungsten's melting point, not its price.",
+          "zh": "鎢比反應爐使用的其他金屬便宜。"
+        }
+      ],
+      "q_zh": "True（對）、False（錯）還是 Not Given（沒提到）？"
     },
     {
       "type": "mcq",
@@ -108,7 +250,14 @@
         "Microsoft has cancelled the agreement"
       ],
       "answer": 0,
-      "explain": "Paragraph 6 gives both reasons. B misreads the numbers (it was 150 million °C); C and D are never said."
+      "explain": "Paragraph 6 gives both reasons. B misreads the numbers (it was 150 million °C); C and D are never said.",
+      "q_zh": "讀者為什麼應該對 Helion 的宣布保持一些謹慎？",
+      "options_zh": [
+        "它沒說產生了多少核融合，時程也沒有獲得獨立證實",
+        "它的機器只達到攝氏 5000 萬度",
+        "它用的燃料無法融合",
+        "微軟已經取消了合約"
+      ]
     },
     {
       "type": "mcq",
@@ -121,7 +270,14 @@
         "the entrance of a building"
       ],
       "answer": 0,
-      "explain": "A machine below 100 million °C is not commercially useful; at or above it, it might be. D is the literal meaning (a doorway), which does not fit here."
+      "explain": "A machine below 100 million °C is not commercially useful; at or above it, it might be. D is the literal meaning (a doorway), which does not fit here.",
+      "q_zh": "第 3 段的「threshold」意思最接近：",
+      "options_zh": [
+        "必須達到的程度（門檻）",
+        "可能的最高溫度",
+        "一個危險的錯誤",
+        "建築物的入口"
+      ]
     },
     {
       "type": "mcq",
@@ -134,17 +290,39 @@
         "The reasons investors are leaving the field"
       ],
       "answer": 0,
-      "explain": "\"There are chemical hurdles, too\" - the word \"too\" signals an additional problem: fuel supply and wall materials."
+      "explain": "\"There are chemical hurdles, too\" - the word \"too\" signals an additional problem: fuel supply and wall materials.",
+      "q_zh": "第 7 段在論述上補充了什麼？",
+      "options_zh": [
+        "一種不同類型的障礙，不只是把溫度拉高、維持夠久而已",
+        "更多證據顯示核融合快要成熟了",
+        "說明 Helion 的機器如何運作",
+        "投資人離開這個領域的原因"
+      ]
     }
   ],
   "sentence": {
     "text": "Because nuclei repel each other, the fuel must be heated into a plasma - a gas so hot that electrons are stripped from their atoms.",
     "chunks": [
-      { "text": "Because nuclei repel each other,", "role": "原因 Reason" },
-      { "text": "the fuel", "role": "主詞 Subject" },
-      { "text": "must be heated", "role": "動詞（被動）Verb (passive)" },
-      { "text": "into a plasma", "role": "結果 Into what" },
-      { "text": "- a gas so hot that electrons are stripped from their atoms.", "role": "同位語：解釋 plasma Explains 'plasma'" }
+      {
+        "text": "Because nuclei repel each other,",
+        "role": "原因 Reason"
+      },
+      {
+        "text": "the fuel",
+        "role": "主詞 Subject"
+      },
+      {
+        "text": "must be heated",
+        "role": "動詞（被動）Verb (passive)"
+      },
+      {
+        "text": "into a plasma",
+        "role": "結果 Into what"
+      },
+      {
+        "text": "- a gas so hot that electrons are stripped from their atoms.",
+        "role": "同位語：解釋 plasma Explains 'plasma'"
+      }
     ],
     "q": "Tap the part that gives the REASON the fuel must be heated.",
     "answer": 0,
@@ -153,5 +331,17 @@
   "write": {
     "prompt": "Should governments spend more on fusion research, or on energy that already works, such as solar power? Write 2-3 sentences in English and give one reason.",
     "sample": "I think governments should keep funding fusion, but not at the expense of solar power. Fusion has passed an important threshold in temperature, yet no machine has produced more electricity than it consumes, so we still need energy that works today."
-  }
+  },
+  "title_zh": "比太陽還熱：核融合的破紀錄之年——以及它最大的難關",
+  "dek_zh": "美國和南韓的機器在 2026 年打破了溫度與時間紀錄，但還沒有任何一台產出的能量比消耗的多。",
+  "article_zh": [
+    "核融合是驅動太陽的過程，幾十年來一直被稱為「未來的能源」。2026 年一連串的紀錄顯示，那個未來可能正一點一點靠近，但最難的那一關仍然還沒通過。",
+    "核融合的原理是迫使輕原子的原子核合而為一。大多數機器使用氫的兩種形式，也就是同位素：有一個中子的氘，以及有兩個中子的氚。它們融合時會形成氦，並釋放出一個帶有大量能量的中子。由於原子核會互相排斥，燃料必須被加熱成電漿——一種熱到電子會從原子上被剝離的氣體。",
+    "要多熱？一般認為大約攝氏 1 億度是商業上有用機器的門檻，約是太陽核心溫度的七倍。",
+    "2 月，美國新創公司 Helion 表示，它的 Polaris 原型機達到了攝氏 1.5 億度，並成為第一台用氘-氚燃料產生可量測核融合的民間打造機器。Helion 已同意由一座它希望在 2028 年前啟動的發電廠供電給微軟。",
+    "幾個月後，南韓的 KSTAR 反應爐把電漿維持在攝氏 1 億度長達 102 秒，是它 2024 年 48 秒紀錄的兩倍多。工程師把功勞歸給一層新的鎢內襯——鎢是一種熔點極高的金屬——裝在機器處理電漿廢熱的部位。",
+    "然而，溫度和持續時間並不等於有用的電力。Helion 沒有說 Polaris 產生了多少核融合，它的 2028 時程也還沒有獲得獨立證實。至今還沒有任何核融合機器產出的電比它消耗的多——而這正是任何發電廠都需要達到的里程碑。",
+    "化學上也有障礙。氚具有放射性，在自然界中極為稀少，所以未來的電廠必須自己生產燃料；而反應爐的爐壁也必須承受多年的高速中子轟擊。",
+    "投資人還是押注了：核融合公司在過去一年募得創紀錄的 45 億美元，增加了 69%。這些錢能不能在這十年內換來一座真正運作的發電廠，仍是這個領域最大的懸而未決問題。"
+  ]
 }

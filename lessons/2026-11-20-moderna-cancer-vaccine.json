@@ -6,18 +6,50 @@
   "title": "A vaccine made from your own tumour cuts melanoma's return",
   "dek": "After more than a century of failures, a personalised mRNA cancer vaccine has succeeded in a large trial. Big questions remain.",
   "sources": [
-    { "name": "Reuters (via ARY News): Success after a century of failures - inside Moderna and Merck's cancer vaccine breakthrough", "url": "https://arynews.tv/success-after-a-century-of-failures-inside-moderna-and-mercks-cancer-vaccine-breakthrough" },
-    { "name": "TNND: Personalized mRNA melanoma vaccine cuts relapse risk in late-stage trial", "url": "https://foxbaltimore.com/news/nation-world/moderna-merck-personalized-mrna-melanoma-vaccine-cuts-relapse-risk-in-late-stage-trial" },
-    { "name": "pharmaphorum: MSD, Moderna skin cancer vaccine scores historic phase 3 win", "url": "https://pharmaphorum.com/news/msd-moderna-skin-cancer-vaccine-scores-historic-phase-3-win" },
-    { "name": "Nordic Life Science: Merck, Moderna report positive melanoma trial results", "url": "https://nordiclifescience.org/?p=99954" }
+    {
+      "name": "Reuters (via ARY News): Success after a century of failures - inside Moderna and Merck's cancer vaccine breakthrough",
+      "url": "https://arynews.tv/success-after-a-century-of-failures-inside-moderna-and-mercks-cancer-vaccine-breakthrough"
+    },
+    {
+      "name": "TNND: Personalized mRNA melanoma vaccine cuts relapse risk in late-stage trial",
+      "url": "https://foxbaltimore.com/news/nation-world/moderna-merck-personalized-mrna-melanoma-vaccine-cuts-relapse-risk-in-late-stage-trial"
+    },
+    {
+      "name": "pharmaphorum: MSD, Moderna skin cancer vaccine scores historic phase 3 win",
+      "url": "https://pharmaphorum.com/news/msd-moderna-skin-cancer-vaccine-scores-historic-phase-3-win"
+    },
+    {
+      "name": "Nordic Life Science: Merck, Moderna report positive melanoma trial results",
+      "url": "https://nordiclifescience.org/?p=99954"
+    }
   ],
   "predict": {
     "prompt": "Before you read: which of these do you think are TRUE? Tick all you believe.",
     "statements": [
-      { "text": "Each patient's vaccine is made for them personally.", "truth": true, "why": "It is built from the mutations in that patient's own tumour." },
-      { "text": "The vaccine cures all types of cancer.", "truth": false, "why": "It was tested in melanoma only, and is untested in cancers with fewer mutations." },
-      { "text": "It uses the same mRNA technology as a Covid-19 vaccine.", "truth": true, "why": "Moderna's Covid-19 vaccine also uses mRNA." },
-      { "text": "It has been proven to help patients live longer.", "truth": false, "why": "Researchers do not yet know whether it improves survival." }
+      {
+        "text": "Each patient's vaccine is made for them personally.",
+        "truth": true,
+        "why": "It is built from the mutations in that patient's own tumour.",
+        "zh": "每位病人的疫苗都是為他個人量身打造的。"
+      },
+      {
+        "text": "The vaccine cures all types of cancer.",
+        "truth": false,
+        "why": "It was tested in melanoma only, and is untested in cancers with fewer mutations.",
+        "zh": "這款疫苗能治癒所有類型的癌症。"
+      },
+      {
+        "text": "It uses the same mRNA technology as a Covid-19 vaccine.",
+        "truth": true,
+        "why": "Moderna's Covid-19 vaccine also uses mRNA.",
+        "zh": "它使用和新冠疫苗相同的 mRNA 技術。"
+      },
+      {
+        "text": "It has been proven to help patients live longer.",
+        "truth": false,
+        "why": "Researchers do not yet know whether it improves survival.",
+        "zh": "已經證明它能讓病人活得更久。"
+      }
     ]
   },
   "article": [
@@ -31,18 +63,66 @@
     "For a field long defined by disappointment, a vaccine that teaches the body to recognise its own disease may finally be moving from promise to practice."
   ],
   "glossary": [
-    { "word": "personalised", "zh": "個人化的", "def": "made for one particular person" },
-    { "word": "recognise", "zh": "辨認出", "def": "know what something is because you have learned it before" },
-    { "word": "sequence", "zh": "定序", "def": "work out the order of the letters in DNA" },
-    { "word": "mutations", "zh": "突變", "def": "changes in the DNA of a cell" },
-    { "word": "manufactures", "zh": "製造", "def": "makes something, often in large amounts" },
-    { "word": "deadliest", "zh": "最致命的", "def": "causing the most deaths" },
-    { "word": "placebo", "zh": "安慰劑", "def": "a fake treatment with no medicine in it, used for comparison" },
-    { "word": "deliberate", "zh": "刻意的；經過考慮的", "def": "done on purpose, after careful thought" },
-    { "word": "untested", "zh": "未經測試的", "def": "not yet tried or checked" },
-    { "word": "peer-reviewed", "zh": "經同儕審查的", "def": "checked by other experts before being published" },
-    { "word": "regulators", "zh": "監管機關", "def": "official bodies that make sure rules are followed" },
-    { "word": "disappointment", "zh": "失望", "def": "the feeling when something is not as good as you hoped" }
+    {
+      "word": "personalised",
+      "zh": "個人化的",
+      "def": "made for one particular person"
+    },
+    {
+      "word": "recognise",
+      "zh": "辨認出",
+      "def": "know what something is because you have learned it before"
+    },
+    {
+      "word": "sequence",
+      "zh": "定序",
+      "def": "work out the order of the letters in DNA"
+    },
+    {
+      "word": "mutations",
+      "zh": "突變",
+      "def": "changes in the DNA of a cell"
+    },
+    {
+      "word": "manufactures",
+      "zh": "製造",
+      "def": "makes something, often in large amounts"
+    },
+    {
+      "word": "deadliest",
+      "zh": "最致命的",
+      "def": "causing the most deaths"
+    },
+    {
+      "word": "placebo",
+      "zh": "安慰劑",
+      "def": "a fake treatment with no medicine in it, used for comparison"
+    },
+    {
+      "word": "deliberate",
+      "zh": "刻意的；經過考慮的",
+      "def": "done on purpose, after careful thought"
+    },
+    {
+      "word": "untested",
+      "zh": "未經測試的",
+      "def": "not yet tried or checked"
+    },
+    {
+      "word": "peer-reviewed",
+      "zh": "經同儕審查的",
+      "def": "checked by other experts before being published"
+    },
+    {
+      "word": "regulators",
+      "zh": "監管機關",
+      "def": "official bodies that make sure rules are followed"
+    },
+    {
+      "word": "disappointment",
+      "zh": "失望",
+      "def": "the feeling when something is not as good as you hoped"
+    }
   ],
   "tasks": [
     {
@@ -56,7 +136,14 @@
         "Covid-19 vaccines can now prevent skin cancer"
       ],
       "answer": 0,
-      "explain": "B is an overclaim (paragraph 6: untested in other cancers). C is a single detail from paragraph 7. D distorts paragraph 2: the vaccine only shares the mRNA technology with the Covid-19 vaccine."
+      "explain": "B is an overclaim (paragraph 6: untested in other cancers). C is a single detail from paragraph 7. D distorts paragraph 2: the vaccine only shares the mRNA technology with the Covid-19 vaccine.",
+      "q_zh": "哪個標題最能概括「整篇」文章？",
+      "options_zh": [
+        "個人化 mRNA 疫苗在大型試驗中降低黑色素瘤復發，但關鍵問題仍在",
+        "科學家找到治癒所有癌症的方法",
+        "Moderna 股價漲了一倍多",
+        "新冠疫苗現在能預防皮膚癌"
+      ]
     },
     {
       "type": "order",
@@ -69,33 +156,86 @@
         "The patient receives the vaccine together with Keytruda",
         "The immune system learns to recognise the cancer cells"
       ],
-      "explain": "\"The process starts after surgery\" (paragraph 3) gives you the first step; the purpose - teaching the immune system - is explained in paragraph 2."
+      "explain": "\"The process starts after surgery\" (paragraph 3) gives you the first step; the purpose - teaching the immune system - is explained in paragraph 2.",
+      "q_zh": "把治療步驟排出正確順序（第 2–4 段）。",
+      "items_zh": [
+        "外科醫師切除腫瘤",
+        "醫師對腫瘤定序，找出它獨有的突變",
+        "Moderna 製作針對其中 34 個突變的疫苗",
+        "病人同時接受疫苗和 Keytruda",
+        "免疫系統學會辨認癌細胞"
+      ]
     },
     {
       "type": "match",
       "skill": "scanning",
       "q": "Scan the article: what does each number refer to?",
       "pairs": [
-        { "left": "1,137", "right": "people in the trial" },
-        { "left": "757", "right": "people who got the vaccine" },
-        { "left": "380", "right": "people who got a placebo" },
-        { "left": "42%", "right": "lower risk of the cancer returning or death" },
-        { "left": "38%", "right": "lower risk of the cancer spreading" },
-        { "left": "34", "right": "mutations each vaccine targets" }
+        {
+          "left": "1,137",
+          "right": "people in the trial"
+        },
+        {
+          "left": "757",
+          "right": "people who got the vaccine"
+        },
+        {
+          "left": "380",
+          "right": "people who got a placebo"
+        },
+        {
+          "left": "42%",
+          "right": "lower risk of the cancer returning or death"
+        },
+        {
+          "left": "38%",
+          "right": "lower risk of the cancer spreading"
+        },
+        {
+          "left": "34",
+          "right": "mutations each vaccine targets"
+        }
       ],
-      "explain": "757 + 380 = 1,137 - a quick check that you matched the trial numbers correctly."
+      "explain": "757 + 380 = 1,137 - a quick check that you matched the trial numbers correctly.",
+      "q_zh": "掃讀文章：每個數字指的是什麼？"
     },
     {
       "type": "tfng",
       "skill": "detail",
       "q": "True, False or Not Given?",
       "statements": [
-        { "text": "Every patient in the trial received Keytruda.", "answer": "T", "explain": "Paragraph 4: \"All received Keytruda\"." },
-        { "text": "The vaccine has been shown to help patients live longer.", "answer": "F", "explain": "Paragraph 6: researchers \"do not yet know\" whether it helps patients live longer." },
-        { "text": "The vaccine costs less than Keytruda.", "answer": "NG", "explain": "Price is never mentioned." },
-        { "text": "The approach has already worked in pancreatic cancer.", "answer": "F", "explain": "Paragraph 6: it is untested in cancers such as pancreatic cancer." },
-        { "text": "Most patients in the trial were over 60.", "answer": "NG", "explain": "Patients' ages are not given anywhere." }
-      ]
+        {
+          "text": "Every patient in the trial received Keytruda.",
+          "answer": "T",
+          "explain": "Paragraph 4: \"All received Keytruda\".",
+          "zh": "試驗中每位病人都接受了 Keytruda。"
+        },
+        {
+          "text": "The vaccine has been shown to help patients live longer.",
+          "answer": "F",
+          "explain": "Paragraph 6: researchers \"do not yet know\" whether it helps patients live longer.",
+          "zh": "已經證明這款疫苗能讓病人活得更久。"
+        },
+        {
+          "text": "The vaccine costs less than Keytruda.",
+          "answer": "NG",
+          "explain": "Price is never mentioned.",
+          "zh": "這款疫苗比 Keytruda 便宜。"
+        },
+        {
+          "text": "The approach has already worked in pancreatic cancer.",
+          "answer": "F",
+          "explain": "Paragraph 6: it is untested in cancers such as pancreatic cancer.",
+          "zh": "這個方法已經在胰臟癌中奏效。"
+        },
+        {
+          "text": "Most patients in the trial were over 60.",
+          "answer": "NG",
+          "explain": "Patients' ages are not given anywhere.",
+          "zh": "試驗中大多數病人超過 60 歲。"
+        }
+      ],
+      "q_zh": "True（對）、False（錯）還是 Not Given（沒提到）？"
     },
     {
       "type": "mcq",
@@ -108,7 +248,14 @@
         "mRNA cannot enter those cells"
       ],
       "answer": 0,
-      "explain": "Paragraph 5 says melanoma's many mutations give \"plenty of targets\". Fewer mutations means fewer targets. B, C and D are never said."
+      "explain": "Paragraph 5 says melanoma's many mutations give \"plenty of targets\". Fewer mutations means fewer targets. B, C and D are never said.",
+      "q_zh": "為什麼這款疫苗在突變較少的癌症中可能效果較差？",
+      "options_zh": [
+        "免疫系統能學習的獨特目標會比較少",
+        "那些癌症無法用手術切除",
+        "那些癌症沒有 Keytruda 可用",
+        "mRNA 無法進入那些細胞"
+      ]
     },
     {
       "type": "mcq",
@@ -121,7 +268,14 @@
         "chosen because it is the most common cancer"
       ],
       "answer": 0,
-      "explain": "The next sentence gives the reasons for the choice (many mutations, time to make the vaccine), so it was planned - deliberate."
+      "explain": "The next sentence gives the reasons for the choice (many mutations, time to make the vaccine), so it was planned - deliberate.",
+      "q_zh": "第 5 段的「Melanoma was a deliberate choice」意思是黑色素瘤是：",
+      "options_zh": [
+        "有充分理由、刻意被選中的",
+        "意外被選中的",
+        "病人自己選的",
+        "因為它是最常見的癌症而被選中"
+      ]
     },
     {
       "type": "mcq",
@@ -134,20 +288,51 @@
         "To show that the trial was a failure"
       ],
       "answer": 0,
-      "explain": "Its first sentence says it: \"That choice also marks the limits of the result.\" D goes too far - the trial succeeded, it just did not answer every question."
+      "explain": "Its first sentence says it: \"That choice also marks the limits of the result.\" D goes too far - the trial succeeded, it just did not answer every question.",
+      "q_zh": "第 6 段的主要作用是什麼？",
+      "options_zh": [
+        "指出這項結果的限制",
+        "描述疫苗的副作用",
+        "解釋 mRNA 如何運作",
+        "顯示試驗失敗了"
+      ]
     }
   ],
   "sentence": {
     "text": "Its tumours carry an unusually high number of mutations, giving the vaccine plenty of targets, and treating patients at an early stage left time to make each custom vaccine.",
     "chunks": [
-      { "text": "Its tumours", "role": "主詞 1 Subject 1" },
-      { "text": "carry", "role": "動詞 1 Verb 1" },
-      { "text": "an unusually high number of mutations,", "role": "受詞 Object" },
-      { "text": "giving the vaccine plenty of targets,", "role": "結果 Result (-ing)" },
-      { "text": "and", "role": "連接 And" },
-      { "text": "treating patients at an early stage", "role": "主詞 2（動名詞）Subject 2 (-ing noun)" },
-      { "text": "left", "role": "動詞 2 Verb 2" },
-      { "text": "time to make each custom vaccine.", "role": "受詞 Object" }
+      {
+        "text": "Its tumours",
+        "role": "主詞 1 Subject 1"
+      },
+      {
+        "text": "carry",
+        "role": "動詞 1 Verb 1"
+      },
+      {
+        "text": "an unusually high number of mutations,",
+        "role": "受詞 Object"
+      },
+      {
+        "text": "giving the vaccine plenty of targets,",
+        "role": "結果 Result (-ing)"
+      },
+      {
+        "text": "and",
+        "role": "連接 And"
+      },
+      {
+        "text": "treating patients at an early stage",
+        "role": "主詞 2（動名詞）Subject 2 (-ing noun)"
+      },
+      {
+        "text": "left",
+        "role": "動詞 2 Verb 2"
+      },
+      {
+        "text": "time to make each custom vaccine.",
+        "role": "受詞 Object"
+      }
     ],
     "q": "Tap the part that is the SUBJECT of the verb \"left\".",
     "answer": 5,
@@ -156,5 +341,17 @@
   "write": {
     "prompt": "If you were a doctor, would you recommend this vaccine to a patient now, or wait for more results? Write 2-3 sentences in English and give one reason.",
     "sample": "I would recommend it to high-risk melanoma patients once it is approved, because it lowered the risk of the cancer returning. However, I would explain that it is still untested in other cancers and that we do not yet know if it helps people live longer."
-  }
+  },
+  "title_zh": "用你自己的腫瘤做的疫苗，降低了黑色素瘤復發",
+  "dek_zh": "經過一個多世紀的失敗，一款個人化 mRNA 癌症疫苗在大型試驗中成功了。但重大問題仍在。",
+  "article_zh": [
+    "一款用病人自己的腫瘤打造的個人化疫苗，降低了皮膚癌復發的風險。專家稱這是一百多年來屢屢失敗之後，治療型癌症疫苗第一次在後期試驗中成功。",
+    "這款名為 intismeran 的療法由 Moderna 和默克（Merck）開發，使用 mRNA——也就是 Moderna 新冠疫苗背後的同一種技術。mRNA 就像一套指令，告訴細胞要製造哪些蛋白質。在這裡，指令描述的是只出現在病人癌細胞上的蛋白質，好讓免疫系統學會辨認並攻擊它們。",
+    "流程從手術之後開始。醫師對切除的腫瘤進行定序，找出它獨有的突變，Moderna 再製造一支針對其中 34 個突變的疫苗。因為是量身訂做，它能一次瞄準幾十個突變；相較之下，早期只瞄準一兩個目標的疫苗都失敗了。",
+    "這項試驗納入 1,137 名黑色素瘤已經手術切除的患者；黑色素瘤是最致命的皮膚癌。所有人都接受 Keytruda——一種幫助免疫細胞對抗癌症的標準藥物；其中 757 人另外接種疫苗，380 人則接受安慰劑。與只用 Keytruda 相比，加上疫苗讓癌症復發或死亡的風險降低了 42%，擴散的風險降低了 38%。回報的副作用包括注射部位痠痛。",
+    "選黑色素瘤是刻意的。它的腫瘤帶有異常多的突變，讓疫苗有大量目標可打；而在早期階段治療病人，也留下了製作每一支客製疫苗的時間。",
+    "這個選擇同時也標出了這項結果的極限。這個方法還沒在突變較少的癌症中測試過，例如肺癌、腎臟癌和胰臟癌。完整結果尚未刊登在同儕審查期刊上，研究人員也還不知道疫苗能否讓病人活得更久。",
+    "即便如此，這些發現引發的期待遠遠超出醫學界。結果公布後，Moderna 股價漲了一倍多；美國監管機關正在審查這項療法，最快明年可能獲准。兩家公司已經在其他癌症中測試它。",
+    "對一個長期被失望定義的領域來說，一款能教身體辨認自身疾病的疫苗，也許終於要從「前景」走向「實踐」。"
+  ]
 }

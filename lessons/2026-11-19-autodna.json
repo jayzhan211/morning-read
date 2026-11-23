@@ -6,17 +6,46 @@
   "title": "AI runs its own biology lab - and stores a sentence in DNA",
   "dek": "A lab in China plans and carries out experiments with almost no human input, but people are still needed behind the scenes.",
   "sources": [
-    { "name": "Research paper (arXiv preprint of the Nature study)", "url": "https://www.arxiv.org/pdf/2507.02379" },
-    { "name": "TechEnclave: AI-controlled biology lab completes a DNA data-storage round trip", "url": "https://techenclave.com/news/items/ai-controlled-biology-lab-completes-a-dna-data-storage-round-trip" },
-    { "name": "Pebblous: AutoDNA summary", "url": "https://blog.pebblous.ai/blog/autodna-ai-native-autonomous-lab/en/" }
+    {
+      "name": "Research paper (arXiv preprint of the Nature study)",
+      "url": "https://www.arxiv.org/pdf/2507.02379"
+    },
+    {
+      "name": "TechEnclave: AI-controlled biology lab completes a DNA data-storage round trip",
+      "url": "https://techenclave.com/news/items/ai-controlled-biology-lab-completes-a-dna-data-storage-round-trip"
+    },
+    {
+      "name": "Pebblous: AutoDNA summary",
+      "url": "https://blog.pebblous.ai/blog/autodna-ai-native-autonomous-lab/en/"
+    }
   ],
   "predict": {
     "prompt": "Before you read: which of these do you think are TRUE? Tick all you believe.",
     "statements": [
-      { "text": "The AI lab needed no humans at all.", "truth": false, "why": "People still chose tasks, prepared reagents, refilled supplies and fixed 6 of the 14 hardware errors." },
-      { "text": "It stored information inside DNA and read it back.", "truth": true, "why": "The original sentence came back intact after the round trip." },
-      { "text": "It made some hardware errors it could not fix by itself.", "truth": true, "why": "Humans dealt with 6 of the 14 errors." },
-      { "text": "It is already being used in hospitals.", "truth": false, "why": "The article never says this. It is best suited to standardised tests for now." }
+      {
+        "text": "The AI lab needed no humans at all.",
+        "truth": false,
+        "why": "People still chose tasks, prepared reagents, refilled supplies and fixed 6 of the 14 hardware errors.",
+        "zh": "這間 AI 實驗室完全不需要任何人類。"
+      },
+      {
+        "text": "It stored information inside DNA and read it back.",
+        "truth": true,
+        "why": "The original sentence came back intact after the round trip.",
+        "zh": "它把資訊存進 DNA，再讀了回來。"
+      },
+      {
+        "text": "It made some hardware errors it could not fix by itself.",
+        "truth": true,
+        "why": "Humans dealt with 6 of the 14 errors.",
+        "zh": "它出了一些自己修不好的硬體錯誤。"
+      },
+      {
+        "text": "It is already being used in hospitals.",
+        "truth": false,
+        "why": "The article never says this. It is best suited to standardised tests for now.",
+        "zh": "它已經在醫院裡使用了。"
+      }
     ]
   },
   "article": [
@@ -31,18 +60,66 @@
     "The researchers also acknowledge a further weakness. Because AI language models contain an element of randomness, the same request may not always produce the same procedure - a potential problem in science, where results must be reproducible. For now, the system is best suited to standardised tests rather than complex work such as experiments on animals."
   ],
   "glossary": [
-    { "word": "reagents", "zh": "試劑", "def": "substances used to cause or test a chemical reaction" },
-    { "word": "ambitious", "zh": "有野心的；難度高的", "def": "needing a lot of effort or skill to succeed" },
-    { "word": "synthetic", "zh": "人工合成的", "def": "made artificially, not found in nature" },
-    { "word": "sequencing", "zh": "定序", "def": "working out the order of the letters (bases) in DNA" },
-    { "word": "decoded", "zh": "解碼", "def": "turned a coded message back into its normal form" },
-    { "word": "intact", "zh": "完整無缺的", "def": "not damaged or changed" },
-    { "word": "statistically indistinguishable", "zh": "統計上無法區分", "def": "so similar that numbers show no real difference" },
-    { "word": "caveats", "zh": "但書；附帶條件", "def": "warnings that something is only true in a limited way" },
-    { "word": "candidate", "zh": "候選的", "def": "possible, but not yet chosen or proven" },
-    { "word": "at the bench", "zh": "在實驗台上（實際做實驗）", "def": "doing real experiments in a lab" },
-    { "word": "custom builds", "zh": "客製打造", "def": "things made specially for one user, not mass-produced" },
-    { "word": "reproducible", "zh": "可再現的", "def": "able to be repeated with the same result" }
+    {
+      "word": "reagents",
+      "zh": "試劑",
+      "def": "substances used to cause or test a chemical reaction"
+    },
+    {
+      "word": "ambitious",
+      "zh": "有野心的；難度高的",
+      "def": "needing a lot of effort or skill to succeed"
+    },
+    {
+      "word": "synthetic",
+      "zh": "人工合成的",
+      "def": "made artificially, not found in nature"
+    },
+    {
+      "word": "sequencing",
+      "zh": "定序",
+      "def": "working out the order of the letters (bases) in DNA"
+    },
+    {
+      "word": "decoded",
+      "zh": "解碼",
+      "def": "turned a coded message back into its normal form"
+    },
+    {
+      "word": "intact",
+      "zh": "完整無缺的",
+      "def": "not damaged or changed"
+    },
+    {
+      "word": "statistically indistinguishable",
+      "zh": "統計上無法區分",
+      "def": "so similar that numbers show no real difference"
+    },
+    {
+      "word": "caveats",
+      "zh": "但書；附帶條件",
+      "def": "warnings that something is only true in a limited way"
+    },
+    {
+      "word": "candidate",
+      "zh": "候選的",
+      "def": "possible, but not yet chosen or proven"
+    },
+    {
+      "word": "at the bench",
+      "zh": "在實驗台上（實際做實驗）",
+      "def": "doing real experiments in a lab"
+    },
+    {
+      "word": "custom builds",
+      "zh": "客製打造",
+      "def": "things made specially for one user, not mass-produced"
+    },
+    {
+      "word": "reproducible",
+      "zh": "可再現的",
+      "def": "able to be repeated with the same result"
+    }
   ],
   "tasks": [
     {
@@ -56,7 +133,14 @@
         "Stanford warns that AI labs are too dangerous"
       ],
       "answer": 0,
-      "explain": "B goes too far (humans are still needed). C takes one detail and exaggerates it. D twists Zou's view: he only said labs are expensive custom builds."
+      "explain": "B goes too far (humans are still needed). C takes one detail and exaggerates it. D twists Zou's view: he only said labs are expensive custom builds.",
+      "q_zh": "哪個標題最能概括「整篇」文章？",
+      "options_zh": [
+        "AI 實驗室幾乎獨力執行生物實驗",
+        "中國科學家用機器人取代所有實驗室人員",
+        "DNA 成為全球主要的資料儲存方式",
+        "史丹佛警告 AI 實驗室太危險"
+      ]
     },
     {
       "type": "order",
@@ -69,32 +153,82 @@
         "Read the strands back by sequencing",
         "Decode the letters into the original sentence"
       ],
-      "explain": "Encode → synthesise → store → sequence → decode. Words like \"then\" and \"read back\" signal the order."
+      "explain": "Encode → synthesise → store → sequence → decode. Words like \"then\" and \"read back\" signal the order.",
+      "q_zh": "把 DNA 資料儲存「來回」的步驟排出正確順序（第 5 段）。",
+      "items_zh": [
+        "把數位資訊轉成一串 DNA 字母序列",
+        "把序列寫進人工合成的 DNA 鏈",
+        "把 DNA 鏈存放起來",
+        "透過定序把 DNA 鏈讀回",
+        "把字母解碼回原本的句子"
+      ]
     },
     {
       "type": "match",
       "skill": "scanning",
       "q": "Scan the article: what does each number refer to?",
       "pairs": [
-        { "left": "11,382", "right": "hardware steps in the storage test" },
-        { "left": "78", "right": "synthetic DNA strands" },
-        { "left": "14", "right": "hardware errors recorded" },
-        { "left": "6", "right": "errors that humans had to fix" },
-        { "left": "20+", "right": "types of instrument" }
+        {
+          "left": "11,382",
+          "right": "hardware steps in the storage test"
+        },
+        {
+          "left": "78",
+          "right": "synthetic DNA strands"
+        },
+        {
+          "left": "14",
+          "right": "hardware errors recorded"
+        },
+        {
+          "left": "6",
+          "right": "errors that humans had to fix"
+        },
+        {
+          "left": "20+",
+          "right": "types of instrument"
+        }
       ],
-      "explain": "For numbers, don't reread everything - let your eyes jump to the digits, then read only the words around them."
+      "explain": "For numbers, don't reread everything - let your eyes jump to the digits, then read only the words around them.",
+      "q_zh": "掃讀文章：每個數字指的是什麼？"
     },
     {
       "type": "tfng",
       "skill": "detail",
       "q": "True, False or Not Given?",
       "statements": [
-        { "text": "AutoDNA tests its code in a virtual lab before handling real samples.", "answer": "T", "explain": "Paragraph 4: the code is tested in a virtual copy of the lab before any real liquid is moved." },
-        { "text": "The DNA storage test finished in less than a week.", "answer": "F", "explain": "Paragraph 5: it took more than eight days." },
-        { "text": "AutoDNA detected the pig virus faster than human technicians.", "answer": "NG", "explain": "Paragraph 6 compares the RESULTS (indistinguishable), not the speed. Speed is never mentioned." },
-        { "text": "Most of the recorded hardware errors were fixed without human help.", "answer": "T", "explain": "Paragraph 7: 8 of the 14 were fixed by the system." },
-        { "text": "The researchers plan to sell AutoDNA to hospitals.", "answer": "NG", "explain": "Nothing in the article mentions selling it or hospitals." }
-      ]
+        {
+          "text": "AutoDNA tests its code in a virtual lab before handling real samples.",
+          "answer": "T",
+          "explain": "Paragraph 4: the code is tested in a virtual copy of the lab before any real liquid is moved.",
+          "zh": "AutoDNA 在處理真實樣本前，會先在虛擬實驗室測試程式碼。"
+        },
+        {
+          "text": "The DNA storage test finished in less than a week.",
+          "answer": "F",
+          "explain": "Paragraph 5: it took more than eight days.",
+          "zh": "DNA 儲存測試在一週內就完成了。"
+        },
+        {
+          "text": "AutoDNA detected the pig virus faster than human technicians.",
+          "answer": "NG",
+          "explain": "Paragraph 6 compares the RESULTS (indistinguishable), not the speed. Speed is never mentioned.",
+          "zh": "AutoDNA 偵測豬病毒的速度比人類技術員快。"
+        },
+        {
+          "text": "Most of the recorded hardware errors were fixed without human help.",
+          "answer": "T",
+          "explain": "Paragraph 7: 8 of the 14 were fixed by the system.",
+          "zh": "記錄到的硬體錯誤大多不需要人類幫忙就修好了。"
+        },
+        {
+          "text": "The researchers plan to sell AutoDNA to hospitals.",
+          "answer": "NG",
+          "explain": "Nothing in the article mentions selling it or hospitals.",
+          "zh": "研究人員打算把 AutoDNA 賣給醫院。"
+        }
+      ],
+      "q_zh": "True（對）、False（錯）還是 Not Given（沒提到）？"
     },
     {
       "type": "mcq",
@@ -107,7 +241,14 @@
         "The robots make too many errors that humans must fix"
       ],
       "answer": 0,
-      "explain": "Paragraph 8: labs remain 'expensive custom builds until instrument makers agree on a common way...'. B reverses the facts: AI designs molecules in MINUTES."
+      "explain": "Paragraph 8: labs remain 'expensive custom builds until instrument makers agree on a common way...'. B reverses the facts: AI designs molecules in MINUTES.",
+      "q_zh": "根據 Zou 的說法，為什麼自主實驗室目前仍會很昂貴？",
+      "options_zh": [
+        "每間實驗室都得客製化建置，因為儀器製造商缺乏讓軟體控制機器的共同方式",
+        "AI 模型設計新分子仍要花好幾週",
+        "DNA 實驗用的試劑稀少又昂貴",
+        "機器人出太多錯，需要人類修正"
+      ]
     },
     {
       "type": "mcq",
@@ -120,7 +261,14 @@
         "the claim is protected by law"
       ],
       "answer": 0,
-      "explain": "The sentences that follow list the limits (humans still prepare reagents, fix errors...). Use the context after a new word to guess it."
+      "explain": "The sentences that follow list the limits (humans still prepare reagents, fix errors...). Use the context after a new word to guess it.",
+      "q_zh": "第 7 段的「the claim ... comes with caveats」意思最接近：",
+      "options_zh": [
+        "這個說法成立，但有重要的限制",
+        "這個說法完全錯誤",
+        "這個說法受到專家廣泛讚揚",
+        "這個說法受法律保護"
+      ]
     },
     {
       "type": "mcq",
@@ -133,19 +281,47 @@
         "To prove that the experiment failed"
       ],
       "answer": 0,
-      "explain": "'a further weakness' + 'results must be reproducible' tell you the purpose: it's a limitation."
+      "explain": "'a further weakness' + 'results must be reproducible' tell you the purpose: it's a limitation.",
+      "q_zh": "作者為什麼在最後一段提到「一定的隨機性」？",
+      "options_zh": [
+        "為了指出重複實驗結果時可能出現的問題",
+        "為了解釋這間實驗室為什麼這麼快",
+        "為了顯示這個 AI 很有創意",
+        "為了證明實驗失敗了"
+      ]
     }
   ],
   "sentence": {
     "text": "He described AutoDNA as a step towards closing that gap, but argued that labs will remain expensive custom builds until instrument makers agree on a common way for software to control their machines.",
     "chunks": [
-      { "text": "He", "role": "主詞 Subject" },
-      { "text": "described", "role": "動詞 1 Verb" },
-      { "text": "AutoDNA as a step towards closing that gap,", "role": "受詞 + 補語 Object" },
-      { "text": "but", "role": "轉折 Contrast" },
-      { "text": "argued", "role": "動詞 2 Verb" },
-      { "text": "that labs will remain expensive custom builds", "role": "主張內容 What he argued" },
-      { "text": "until instrument makers agree on a common way for software to control their machines.", "role": "條件／時間 Until when" }
+      {
+        "text": "He",
+        "role": "主詞 Subject"
+      },
+      {
+        "text": "described",
+        "role": "動詞 1 Verb"
+      },
+      {
+        "text": "AutoDNA as a step towards closing that gap,",
+        "role": "受詞 + 補語 Object"
+      },
+      {
+        "text": "but",
+        "role": "轉折 Contrast"
+      },
+      {
+        "text": "argued",
+        "role": "動詞 2 Verb"
+      },
+      {
+        "text": "that labs will remain expensive custom builds",
+        "role": "主張內容 What he argued"
+      },
+      {
+        "text": "until instrument makers agree on a common way for software to control their machines.",
+        "role": "條件／時間 Until when"
+      }
     ],
     "q": "Tap the part that tells you WHEN labs might stop being expensive custom builds.",
     "answer": 6,
@@ -154,5 +330,18 @@
   "write": {
     "prompt": "Would you trust results from a lab run by AI? Write 2-3 sentences in English. Try to use one word from today's word list.",
     "sample": "I would trust the results only if they were reproducible. AutoDNA is impressive, but its claims come with caveats: humans still fix errors, and the same request may not give the same procedure."
-  }
+  },
+  "title_zh": "AI 自己經營生物實驗室，還把一句話存進 DNA",
+  "dek_zh": "中國一間實驗室幾乎不需要人類指示就能規劃並執行實驗，但幕後仍少不了人。",
+  "article_zh": [
+    "中國科學家打造出一間能自行規劃並執行生物實驗的實驗室，幾乎每個決策都由人工智慧（AI）做出。",
+    "這套名為 AutoDNA 的系統由上海交通大學的研究人員開發，並於 11 月 4 日發表在《自然》（Nature）期刊。使用者只要用日常語言打出一句需求，其餘交給實驗室：它會搜尋科學文獻、挑選試劑、設計流程、撰寫控制機器的程式碼，並分析結果。",
+    "在幕後，六個 AI「代理人」（agents）分工合作。一個負責規劃，另一個在結果不理想時提出解釋，其他則負責管理化學耗材，或把指令轉成程式碼。接著由機械手臂把樣本在 20 多種儀器之間搬運。",
+    "在真正移動任何液體之前，程式碼會先在實驗室的虛擬複本中測試。有一次，這項檢查就抓到一個錯誤：某台機器原本會去量測一個根本還沒放進去的樣本。",
+    "最具野心的測試是一趟 DNA 資料儲存的「來回」。數位資訊先被轉換成一串 DNA 字母序列，寫進 78 條人工合成的 DNA 鏈、存放起來，再透過定序讀回並解碼。原本的句子完整回來了——但整個過程花了 11,382 個硬體步驟、超過八天。",
+    "這間實驗室也偵測出一種感染豬隻的病毒，結果和人類技術員的結果在統計上沒有差別；它還在腫瘤組織中找出一個與癌症相關的突變。",
+    "然而，「完全不需要人類」這個說法有但書。仍然是人來選任務、準備試劑、補充耗材並清理廢棄物。在記錄到的 14 次硬體錯誤中，系統自己修好了 8 次，另外 6 次由人類處理。",
+    "史丹佛大學科學家 James Zou 在同一期《自然》撰寫評論。他指出，AI 現在幾分鐘就能設計出候選分子，但在實驗台上測試它們仍要花上數週甚至數月。他認為 AutoDNA 是縮小這道落差的一步，但也主張：在儀器製造商就「軟體如何控制機器」達成共同標準之前，這類實驗室仍會是昂貴的客製化建置。",
+    "研究人員也承認另一項弱點。由於 AI 語言模型帶有一定的隨機性，同樣的需求不一定每次都產生同樣的流程——在要求結果必須可重現的科學裡，這可能是個問題。目前這套系統最適合做標準化的檢測，而不適合像動物實驗這類複雜的工作。"
+  ]
 }
